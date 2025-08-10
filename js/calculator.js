@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function updateVolumeCounter(currentVolume) {
-        const selectedSize = document.querySelector('input[name="container-size"]:checked').value;
+        const selectedSize = document.querySelector('input[name="container-size"]:checked')?.value || 'regular';
         const maxVolume = selectedSize === 'deluxe' ? 710 : 473;
         const volumeSpan = document.getElementById('total-volume');
         const volumeCounter = document.querySelector('.volume-counter');
