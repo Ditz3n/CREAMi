@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialiseringsfunktion
     async function init() {
         try {
-            const response = await fetch('/ingredients.json');
+            const response = await fetch(siteBaseURL + 'ingredients.json');
             ingredientsData = await response.json();
             populateDatalist();
             setupInitialRows();
