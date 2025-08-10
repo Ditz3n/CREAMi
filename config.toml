@@ -14,14 +14,24 @@ theme = "PaperMod"
     identifier = "recipes"
     name = "Opskrifter"
     url = "/recipes/"
-    weight = 10
+    weight = 10 # Juster 'weight' for at ændre rækkefølgen (lavere tal er først)
+  [[menu.main]]
+    identifier = "calculator"
+    name = "Udregner"
+    url = "/calculator/"
+    weight = 15
   [[menu.main]]
     identifier = "stabilizer"
     name = "Stabilizer Mix"
     url = "/stabilizer-mix/"
-    weight = 15 # Juster 'weight' for at ændre rækkefølgen (lavere tal er først)
+    weight = 20
   [[menu.main]]
     identifier = "ingredients"
     name = "Ingrediensdatabase"
     url = "/ingredients/"
-    weight = 20
+    weight = 25
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

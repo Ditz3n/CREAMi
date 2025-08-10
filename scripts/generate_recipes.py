@@ -174,6 +174,60 @@ Når din Ninja CREAMi-opskrift kræver sødning og stabilisering, skal du blot a
     
     write_if_changed(STABILIZER_PAGE_PATH, markdown_content)
 
+# ---- FUNKTION TIL AT SKABE EN JSON-DATABASE FOR JAVASCRIPT ----
+def generate_ingredients_json():
+    """
+    Læser Ingrediensdatabasen robust.
+    - Finder headeren korrekt.
+    - Fjerner overflødige header-rækker og andre ikke-ingrediens-rækker
+      fra dataen før den numeriske konvertering.
+    """
+    print("\nGenererer ingrediens-database i JSON-format (endelig robust metode)...")
+    source_file = os.path.join(DATA_DIR, 'Ingrediensdatabase.csv')
+    output_path = os.path.join(BASE_DIR, 'static', 'ingredients.json')
+
+    try:
+        # Trin 1: Find den præcise linje, hvor den første tabel starter
+        header_row_index = 0
+        with open(source_file, 'r', encoding='utf-8-sig') as f:
+            for i, line in enumerate(f):
+                if 'Ingrediens,Energi (kcal)' in line:
+                    header_row_index = i
+                    break
+        
+        if header_row_index == 0:
+            raise ValueError("Kunne ikke finde header-rækken i Ingrediensdatabase.csv")
+
+        # Trin 2: Læs CSV'en fra den korrekte startlinje
+        df = pd.read_csv(source_file, skiprows=header_row_index, encoding='utf-8')
+        
+        # Trin 3: Ryd op i data - DETTE ER DEN VIGTIGE DEL
+        df.dropna(how='all', inplace=True)
+        
+        # === KORREKTION: Fjern alle rækker, der er en gentagelse af headeren ===
+        df = df[df['Ingrediens'] != 'Ingrediens']
+        
+        # Fjern rækker, der kun er kategori-titler (hvor alle andre kolonner er tomme)
+        df = df.dropna(subset=df.columns.drop('Ingrediens'), how='all')
+
+        # Fortsæt med den eksisterende oprydning
+        df = df.fillna(0)
+        
+        numeric_cols = ['Energi (kcal)', 'Fedt', 'Kulhydrater', 'Sukker', 'Protein', 'Salt', 'PAC', 'MSNF', 'HF']
+        for col in numeric_cols:
+            # Gør konverteringen mere robust: Konverter ugyldige tal til NaN (Not a Number)
+            df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '.', regex=False), errors='coerce')
+        
+        # Erstat eventuelle NaN's (som opstod fra 'coerce') med 0
+        df = df.fillna(0)
+
+        # Gem som en ren JSON-fil
+        df.to_json(output_path, orient='records', indent=2, force_ascii=False)
+        print("Success! 'ingredients.json' er blevet genereret.")
+
+    except Exception as e:
+        print(f"FEJL under generering af ingredients.json: {e}")
+
 # ---- FUNKTION TIL AT GENERERE OPSKRIFTS-SIDER ----
 def generate_all_recipe_pages():
     recipe_files = glob.glob(os.path.join(RECIPE_DATA_DIR, '*.csv'))
@@ -240,6 +294,7 @@ draft: false
 # ---- HOVED-BLOK: KØR HELE SYSTEMET ----
 if __name__ == "__main__":
     generate_ingredients_page()
-    generate_stabilizer_page() # <-- KALD TIL DEN NYE FUNKTION
+    generate_stabilizer_page() 
+    generate_ingredients_json()
     generate_all_recipe_pages()
     print("\nAlle sider er blevet tjekket og eventuelt opdateret. Du er klar til at køre 'hugo server'.")

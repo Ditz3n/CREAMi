@@ -1,0 +1,157 @@
+{{ define "main" }}
+
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+    </header>
+
+     <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    <div class="calculator-container">
+
+        <!-- Container størrelse valg -->
+        <h3>Størrelse</h3>
+        <div class="container-size-toggle">
+            <label class="toggle-label">
+                <input type="radio" name="container-size" value="regular">
+                <span class="toggle-option">Ninja CREAMi Pint (473ml)</span>
+            </label>
+            <label class="toggle-label">
+                <input type="radio" name="container-size" value="deluxe">
+                <span class="toggle-option">Ninja CREAMi Deluxe (710ml)</span>
+            </label>
+        </div>
+
+        <div class="calculator-sections disabled">
+            <!-- Opskriftsnavn felt -->
+            <h3>Opskriftsnavn</h3>
+            <div class="recipe-name-wrapper">
+                <input type="text" id="recipe-name-input" placeholder="Indtast navnet på din opskrift...">
+            </div>
+
+            <h3>Ingredienser</h3>
+            <!-- Volume counter under ingredienser -->
+            <div class="volume-counter">
+                <span>Total volumen: </span>
+                <span id="total-volume" class="volume-value">0ml</span>
+                <span class="volume-limit"> / <span id="max-volume">473ml</span></span>
+            </div>
+            
+            <div class="table-wrapper">
+                <table id="ingredients-table">
+                    <thead>
+                        <tr>
+                            <th>Ingrediens</th>
+                            <th>Mængde (g)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ingredients-tbody">
+                        <!-- Rækker tilføjes af JavaScript -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="button-cell">
+                                <button id="add-row-btn">+ Tilføj ingrediens</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <hr>
+
+            <h3>Næringsindhold</h3>
+            
+            <!-- Næringsindhold Total -->
+            <h4>Per Total Opskrift</h4>
+            <div class="table-wrapper">
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Næringsemne</th>
+                            <th>Værdi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Energi</td><td id="total-kcal">0.0</td></tr>
+                        <tr><td>Fedt</td><td id="total-fat">0.0g</td></tr>
+                        <tr><td>Kulhydrater</td><td id="total-carbs">0.0g</td></tr>
+                        <tr><td>Sukker</td><td id="total-sugar">0.0g</td></tr>
+                        <tr><td>Protein</td><td id="total-protein">0.0g</td></tr>
+                        <tr><td>Salt</td><td id="total-salt">0.0g</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Næringsindhold per 100g/ml -->
+            <h4>Per 100g/ml</h4>
+            <div class="table-wrapper">
+                <table id="per100-table">
+                    <thead>
+                        <tr>
+                            <th>Næringsemne</th>
+                            <th>Værdi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Energi</td><td id="per100-kcal">0.0 kcal</td></tr>
+                        <tr><td>Fedt</td><td id="per100-fat">0.0g</td></tr>
+                        <tr><td>Kulhydrater</td><td id="per100-carbs">0.0g</td></tr>
+                        <tr><td>Sukker</td><td id="per100-sugar">0.0g</td></tr>
+                        <tr><td>Protein</td><td id="per100-protein">0.0g</td></tr>
+                        <tr><td>Salt</td><td id="per100-salt">0.0g</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FPDF og MSNF værdier -->
+            <h4>Tekniske Værdier</h4>
+            <div class="table-wrapper">
+                <table id="technical-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Værdi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>FPDF</b></td><td id="total-fpdf"><b>0.0</b></td></tr>
+                        <tr><td><b>MSNF %</b></td><td id="total-msnf-perc"><b>0.0%</b></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <hr>
+
+            <!-- Fremgangsmåde -->
+            <h3>Fremgangsmåde</h3>
+            <textarea id="instructions-box" placeholder="Skriv hver instruktion på en ny linje&#10;De bliver automatisk til en nummereret liste"></textarea>
+
+            <!-- Noter -->
+            <h3>Noter</h3>
+            <textarea id="notes-box" placeholder="Skriv hver note på en ny linje&#10;De bliver automatisk til punkter"></textarea>
+
+            <!-- Download knap -->
+            <div class="button-container">
+                <button id="download-btn">Download Opskrift (.md)</button>
+            </div>
+        </div>
+
+    </div>
+
+    <datalist id="ingredient-options"></datalist>
+
+    <!-- Trin 1: Definer en global JavaScript variabel med den korrekte sti fra Hugo -->
+    <script>
+        const siteBaseURL = "{{ .Site.BaseURL }}";
+    </script>
+
+    <!-- Trin 2: Hent selve script-filen -->
+    <script src="{{ .Site.BaseURL }}js/calculator.js"></script>
+
+    </article>
+</article>
+
+{{ end }}

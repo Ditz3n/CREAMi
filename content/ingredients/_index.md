@@ -32,7 +32,7 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | EASIS Perfect Sød | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | Xanthan Gum | 180 | 0 | 80 | 0 | 5 | 0 | 0 | 85 | 0 |  |
 | Locust Bean Gum (LBG) | 300 | 0 | 89 | 0 | 6 | 0 | 0 | 95 | 0 | Meget effektiv stabilisator. Skal ofte varmes op for at virke optimalt. |
-| Carboxymethyl cellulose (CMC) | 333 | 0 | 66,7 | 0 | 0 | 20 | 0 | 66,7 | 0 |  |
+| Carboxymethyl Cellulose (CMC) | 333 | 0 | 66,7 | 0 | 0 | 20 | 0 | 66,7 | 0 |  |
 | GMS (Glycerol Monostearate) | 700 | 80 | 20 | 0 | 0 | 0 | 0 | 20 | 0 | Professionel emulgator. Skaber ekstremt glat tekstur. |
 | Cremodan Coldline | 710 | 78 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |  |
 
@@ -101,8 +101,10 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
 | Arla® Pro Soft Ice Mix (Laktosefri) | 147 | 6 | 20 | 20 | 3,3 | 0,23 | 38 | 23,3 | 5,4 | Laktosefri! Professionel base. |
 | Matilde® Milkshake m. vanilje 4% | 128 | 4 | 19 | 19 | 3,8 | 0,14 | 19 | 22,8 | 3,6 |  |
-| Matilde® Milkshake Mix | 120 | 3,9 | 18 | 18 | 3,5 | 0,11 | 18 | 21,5 | 3,5 | Færdigblandet base. Meget høj PAC. |
 | Arla® LactoFREE Yoghurt Pære/Banan | 71 | 1,4 | 11 | 10 | 4,1 | 0,1 | 19 | 15,1 | 1,3 | Laktosefri! |
+| Arla® LactoFREE Yoghurt Pære/Banan | 71 | 1,4 | 11 | 10 | 4,1 | 0,1 | 19 | 15,1 | 1,3 | Laktosefri! |
+| Arla® LactoFREE Yoghurt Jordbær/Vanilje | 68 | 1,4 | 9,9 | 9,5 | 4 | 0,1 | 18,1 | 13,9 | 1,3 | Laktosefri! |
+| Matilde® Milkshake Mix | 120 | 3,9 | 18 | 18 | 3,5 | 0,11 | 18 | 21,5 | 3,5 | Færdigblandet base. Meget høj PAC. |
 | Matilde® Softice Mix | 141 | 3 | 25 | 17 | 3 | 0,15 | 17 | 28 | 2,7 | Indeholder glukosesirup. |
 | Arla LactoFREE Økologisk Kakao Letmælk | 63 | 1,5 | 8,8 | 8,7 | 3,4 | 0,1 | 16,5 | 12,2 | 1,4 | Laktosefri! |
 | Arla® Karolines Køkken® Vaniljesauce 10% | 175 | 10 | 18 | 15 | 3,2 | 0,1 | 15 | 21,2 | 9 | En færdig "custard" base. Høj PAC & HF. |
@@ -131,54 +133,40 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | YoPro Protein Drikkeyoghurt Jordbær/Hindbær | 60 | 0,5 | 5,5 | 5,2 | 8,4 | 0,17 | 9,9 | 13,9 | 0,5 | Laktosefri! |
 | YoPro Protein Drikkeyoghurt Blåbær | 61 | 0,5 | 5,5 | 5,2 | 8,3 | 0,17 | 9,9 | 13,8 | 0,5 | Laktosefri! |
 | Yoggi® Yoghurt Pære & Banan | 72 | 1,4 | 10 | 9,8 | 3,9 | 0,09 | 9,8 | 13,9 | 1,3 |  |
-| Arla® LactoFREE Yoghurt Pære/Banan | 71 | 1,4 | 11 | 10 | 4,1 | 0,1 | 19 | 15,1 | 1,3 | Laktosefri! |
-| Arla® PROTEIN Hindbær Yoghurtdrik | 53 | 0,5 | 7,5 | 7,2 | 4,1 | 0,1 | 7,2 | 11,6 | 0,5 |  |
 | Yoggi® Yoghurt Jordbær | 69 | 1,4 | 9,7 | 9,5 | 3,8 | 0,1 | 9,5 | 13,5 | 1,3 |  |
 | Yoggi® Yoghurt Havens Bær | 70 | 1,4 | 9,7 | 9,5 | 3,8 | 0,1 | 9,5 | 13,5 | 1,3 |  |
-| Arla® LactoFREE Yoghurt Jordbær/Vanilje | 68 | 1,4 | 9,9 | 9,5 | 4 | 0,1 | 18,1 | 13,9 | 1,3 | Laktosefri! |
 | Arla Cultura® Laktosefri Kefir Vanilje | 58 | 2,3 | 5,3 | 5 | 3,1 | 0,1 | 9,5 | 8,4 | 2,1 | Laktosefri! |
 | Stay Strong Proteindrik Chokolade | 50 | 0,5 | 5 | 4,9 | 6 | 0,11 | 9,3 | 11 | 0,5 | Laktosefri! |
 | ProPud Protein Milkshake (alle varianter) | 58 | 1,5 | 4,9 | 4,9 | 6,1 | 0,1 | 9,3 | 11 | 1,4 | Laktosefri! Næsten identisk næringindhold i alle varianterne. God all-round base. |
 | Arla® PROTEIN Caffe Latte | 65 | 1 | 6 | 4,9 | 6,1 | 0,1 | 9,3 | 12,1 | 0,9 | Laktosefri! |
 | Yoggi® Yoghurt Tropisk | 68 | 1,3 | 9,6 | 9,2 | 3,8 | 0,1 | 9,2 | 13,4 | 1,2 |  |
 | Arla® ØKO Yoghurt Jordbær (0,4%) | 62 | 0,4 | 9,1 | 9,1 | 4,8 | 0,09 | 9,1 | 13,9 | 0,4 |  |
-| Yoggi® Yoghurt Kirsebær | 67 | 1,3 | 9,5 | 8,8 | 3,8 | 0,1 | 8,8 | 13,3 | 1,2 |  |
 | Arla® PROTEIN Mousse Chokolade Fudge | 81 | 1,8 | 8,7 | 4,7 | 10 | 0,22 | 8,9 | 18,7 | 1,6 | Laktosefri! |
 | Arla® PROTEIN Pudding Chokolade | 76 | 1,5 | 7 | 4,7 | 10 | 0,21 | 8,9 | 17 | 1,4 | Laktosefri! |
 | Arla® PROTEIN Pudding Salted Caramel | 74 | 1,5 | 7,9 | 4,7 | 10 | 0,29 | 8,9 | 17,9 | 1,4 | Laktosefri! |
 | Arla® PROTEIN Chokolade mælkedrik (1L) | 51 | 0,9 | 4,9 | 4,7 | 5,7 | 0,17 | 8,9 | 10,6 | 0,8 | Laktosefri! |
+| Yoggi® Yoghurt Kirsebær | 67 | 1,3 | 9,5 | 8,8 | 3,8 | 0,1 | 8,8 | 13,3 | 1,2 |  |
+| Stay Strong Proteindrik Vanilje | 50 | 0,3 | 5,6 | 4,6 | 6 | 0,12 | 8,7 | 11,6 | 0,3 | Laktosefri! |
+| Arla® Koldskål m. tykmælk og æg | 70 | 2 | 8,7 | 8,7 | 3,5 | 0,11 | 8,7 | 12,2 | 1,8 |  |
 | Stay Strong Kollagen Proteindrik Chokolade | 52 | 0,2 | 4,7 | 4,5 | 7,5 | 0,13 | 8,6 | 12,2 | 0,2 | Laktosefri! |
 | Stay Strong Kollagen Proteindrik Jordbær | 49 | 0,1 | 4,5 | 4,5 | 7,5 | 0,13 | 8,6 | 12 | 0,1 | Laktosefri! |
-| Stay Strong Proteindrik Vanilje | 50 | 0,3 | 5,6 | 4,6 | 6 | 0,12 | 8,7 | 11,6 | 0,3 | Laktosefri! |
 | Stay Strong Proteindrik Jordbær | 48 | 0,3 | 5,3 | 4,4 | 6 | 0,12 | 8,4 | 11,3 | 0,3 | Laktosefri! |
 | Arla® ØKO Yoghurt Vanilje (0,5%) | 59 | 0,5 | 8,3 | 8,3 | 4,9 | 0,1 | 8,3 | 13,2 | 0,5 |  |
 | Arla LactoFREE Madlavningsfløde 13% | 146 | 13 | 4,2 | 4,1 | 3,1 | 0,08 | 7,8 | 7,3 | 11,7 | Laktosefri! |
-| Arla® Koldskål m. tykmælk og æg | 70 | 2 | 8,7 | 8,7 | 3,5 | 0,11 | 8,7 | 12,2 | 1,8 |  |
+| A38® Hindbær 0,4% | 53 | 0,4 | 7,5 | 7,3 | 4 | 0,1 | 7,3 | 11,5 | 0,4 | Giver en frisk, syrlig smag, der er god til at balancere sødme. |
+| Arla® PROTEIN Hindbær Yoghurtdrik | 53 | 0,5 | 7,5 | 7,2 | 4,1 | 0,1 | 7,2 | 11,6 | 0,5 |  |
 | Arla Cultura® Laktosefri Kefir Naturel | 54 | 2,5 | 3,7 | 3,7 | 3,4 | 0,1 | 7 | 7,1 | 2,3 | Laktosefri! |
-| Cheasy® Koldskål A38 | 42 | 1,2 | 3,7 | 3,5 | 3,4 | 0,1 | 6,7 | 7,1 | 1,1 | Laktosefri! |
+| Arla® LactoFREE Yoghurt Naturel 1,5% | 48 | 1,5 | 3,6 | 3,6 | 4,3 | 0,11 | 6,8 | 7,9 | 1,4 | Laktosefri! |
+| heasy | 42 | 1,2 | 3,7 | 3,5 | 3,4 | 0,1 | 6,7 | 7,1 | 1,1 | Laktosefri! |
 | Stay Strong Protein Koldskål | 48 | 1,4 | 3,8 | 3,3 | 5 | 0,1 | 6,3 | 8,8 | 1,3 | Laktosefri! |
 | Arla® LactoFREE Friskost 16% | 190 | 16 | 3,3 | 3,3 | 7,8 | 0,8 | 6,3 | 11,1 | 14,4 | Laktosefri! |
-| Arla® LactoFREE Yoghurt Naturel 1,5% | 48 | 1,5 | 3,6 | 3,6 | 4,3 | 0,11 | 6,8 | 7,9 | 1,4 | Laktosefri! |
-| Arla® ØKO Latte Art 2,6% | 59 | 2,6 | 5,1 | 5,1 | 3,9 | 0,09 | 5,1 | 9 | 2,3 |  |
-| Cheasy® Yoghurt Mango/Banan | 40 | 0,1 | 4,8 | 4,5 | 4,2 | 0,13 | 4,5 | 9 | 0,1 |  |
-| Cheasy® Yoghurt Fersken/Passionsfrugt | 41 | 0,1 | 4,8 | 4,5 | 4,4 | 0,13 | 4,5 | 9,2 | 0,1 |  |
-| Cheasy® Skyr Mango & Lime | 59 | 0,2 | 5,1 | 4,8 | 8,3 | 0,12 | 4,8 | 13,4 | 0,2 |  |
-| Cheasy® Yoghurt Jordbær/Rabarber | 37 | 0,1 | 4,1 | 4 | 4,2 | 0,13 | 4 | 8,3 | 0,1 |  |
-| Cheasy® Yoghurt Skovbær | 37 | 0,1 | 4,3 | 4 | 4,2 | 0,15 | 4 | 8,5 | 0,1 |  |
-| Cheasy® Skyr Skovbær | 55 | 0,2 | 4,5 | 4,1 | 8,2 | 0,15 | 4,1 | 12,7 | 0,2 |  |
-| Cheasy® Yoghurt Blåbær/Granatæble/Acai | 38 | 0,1 | 4,4 | 3,9 | 4,1 | 0,13 | 3,9 | 8,5 | 0,1 |  |
-| Cheasy® Yoghurt Naturel 0,1% | 37 | 0,1 | 3,9 | 3,9 | 4,6 | 0,14 | 3,9 | 8,5 | 0,1 |  |
-| Cheasy® Skyr Vanilje | 55 | 0,2 | 4 | 3,6 | 8,6 | 0,13 | 3,6 | 12,6 | 0,2 |  |
-| Cheasy® Yoghurt Vanilje | 36 | 0,1 | 3,6 | 3,6 | 4,3 | 0,13 | 3,6 | 7,9 | 0,1 |  |
-| Cheasy® Fraiche 5% | 81 | 5 | 3,4 | 3,4 | 4,8 | 0,11 | 3,4 | 8,2 | 4,5 |  |
-| Cheasy® Yoghurt Jordbær/Chia/Vanilje | 41 | 0,5 | 4,2 | 3,3 | 4,1 | 0,12 | 3,3 | 8,3 | 0,5 |  |
-| Arla® LactoFREE Hytteost 4% | 98 | 4 | 1,8 | 1,8 | 14 | 0,8 | 3,4 | 15,8 | 3,6 | Laktosefri! |
-| Cheasy® Skyr Naturel | 61 | 0,2 | 4 | 4 | 10 | 0,14 | 4 | 14 | 0,2 | God, fedtfattig base med meget høj MSNF. |
 | Arla® LactoFREE Piskefløde 36% | 345 | 36 | 2,9 | 2,9 | 2,3 | 0,06 | 5,5 | 5,2 | 32,4 | Laktosefri! |
 | Stay Strong Skyr Mango & Passionsfrugt | 60 | 0,2 | 3,2 | 2,9 | 12 | 0,1 | 5,5 | 15,2 | 0,2 | Laktosefri! |
 | Stay Strong Skyr Jordbær & Lime | 48 | 0,3 | 3,2 | 2,9 | 8 | 0,13 | 5,5 | 11,2 | 0,3 | Laktosefri! |
 | Stay Strong Skyr Rabarber & Vanilje | 47 | 0,3 | 3,1 | 2,9 | 8 | 0,13 | 5,5 | 11,1 | 0,3 | Laktosefri! |
 | Stay Strong Skyr Vanilje | 47 | 0,3 | 3,1 | 2,9 | 8 | 0,13 | 5,5 | 11,1 | 0,3 | Laktosefri! |
+| Arla® ØKO Latte Art 0,9% | 46 | 0,9 | 5,5 | 5,5 | 4,1 | 0,1 | 5,5 | 9,6 | 0,8 |  |
+| Arla® ØKO Latte Art 2,6% | 59 | 2,6 | 5,1 | 5,1 | 3,9 | 0,09 | 5,1 | 9 | 2,3 |  |
 | Stay Strong PRO Skyr Blåbær & Vanilje | 65 | 0,5 | 3 | 2,7 | 12 | 0,09 | 5,1 | 15 | 0,5 | Laktosefri! |
 | Stay Strong PRO Skyr Hindbær & Vanilje | 65 | 0,5 | 3 | 2,7 | 12 | 0,09 | 5,1 | 15 | 0,5 | Laktosefri! |
 | Stay Strong PRO Skyr Lemon Cheesecake | 60 | 0,2 | 3 | 2,7 | 12 | 0,1 | 5,1 | 15 | 0,2 | Laktosefri! |
@@ -186,23 +174,38 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | Cocio® Light | 47 | 1 | 5,2 | 5 | 3,9 | 0,13 | 5 | 9,1 | 0,9 |  |
 | Stay Strong PRO Skyr Hindbær & Blåbær | 60 | 0,2 | 3 | 2,6 | 12 | 0,1 | 4,9 | 15 | 0,2 | Laktosefri! |
 | Arla LactoFREE Økologisk Minimælk | 28 | 0,4 | 2,6 | 2,6 | 3,4 | 0,07 | 4,9 | 6 | 0,4 | Laktosefri! PAC = Sukker * 1,9. |
+| Cheasy® Skyr Mango & Lime | 59 | 0,2 | 5,1 | 4,8 | 8,3 | 0,12 | 4,8 | 13,4 | 0,2 |  |
 | Arla LactoFREE Letmælk | 38 | 1,5 | 2,6 | 2,5 | 3,4 | 0,07 | 4,8 | 6 | 1,4 | Laktosefri! PAC = Sukker * 1,9. |
 | Arla Sødmælk 3,5% | 64 | 3,5 | 4,6 | 4,6 | 3,4 | 0,1 | 4,6 | 8 | 3,2 | PAC er baseret på laktose (sukker). PAC Faktor = 1,0. |
 | Rema 1000 Letmælk 1,5% | 46 | 1,5 | 4,6 | 4,6 | 3,5 | 0,11 | 4,6 | 8,1 | 1,4 | God all-round base med lidt lavere fedt end sødmælk. |
-| Arla® ØKO Latte Art 0,9% | 46 | 0,9 | 5,5 | 5,5 | 4,1 | 0,1 | 5,5 | 9,6 | 0,8 |  |
+| Cheasy® Yoghurt Mango/Banan | 40 | 0,1 | 4,8 | 4,5 | 4,2 | 0,13 | 4,5 | 9 | 0,1 |  |
+| Cheasy® Yoghurt Fersken/Passionsfrugt | 41 | 0,1 | 4,8 | 4,5 | 4,4 | 0,13 | 4,5 | 9,2 | 0,1 |  |
 | Arla Karolines Køkken® Madlavningsfløde 8% | 113 | 8 | 6,7 | 4,4 | 3,5 | 0,1 | 4,4 | 10,2 | 7,2 | Indeholder hvedemel. |
 | Arla® UHT Kaffefløde 10% | 120 | 10 | 4,3 | 4,3 | 3,1 | 0,1 | 4,3 | 7,4 | 9 |  |
 | Philadelphia Original | 226 | 21 | 4,3 | 4,3 | 5,4 | 0,75 | 4,3 | 9,7 | 18,9 | Maksimal cremethed og rigdom pga. højt fedtindhold. Meget høj HF. |
+| Cheasy® Skyr Skovbær | 55 | 0,2 | 4,5 | 4,1 | 8,2 | 0,15 | 4,1 | 12,7 | 0,2 |  |
 | Arla Karolines Køkken® Madlavningsfløde 15% | 171 | 15 | 6 | 4,1 | 3,2 | 0,09 | 4,1 | 9,2 | 13,5 | Indeholder hvedemel. |
+| Cheasy® Yoghurt Jordbær/Rabarber | 37 | 0,1 | 4,1 | 4 | 4,2 | 0,13 | 4 | 8,3 | 0,1 |  |
+| Cheasy® Yoghurt Skovbær | 37 | 0,1 | 4,3 | 4 | 4,2 | 0,15 | 4 | 8,5 | 0,1 |  |
+| Cheasy® Skyr Naturel | 61 | 0,2 | 4 | 4 | 10 | 0,14 | 4 | 14 | 0,2 | God, fedtfattig base med meget høj MSNF. |
+| Cheasy® Yoghurt Blåbær/Granatæble/Acai | 38 | 0,1 | 4,4 | 3,9 | 4,1 | 0,13 | 3,9 | 8,5 | 0,1 |  |
+| Cheasy® Yoghurt Naturel 0,1% | 37 | 0,1 | 3,9 | 3,9 | 4,6 | 0,14 | 3,9 | 8,5 | 0,1 |  |
 | Arla LactoFREE Sødmælk | 56 | 3 | 2 | 2 | 3 | 0 | 3,8 | 5 | 2,7 | Laktosefri! PAC = Sukker * 1,9. |
 | Arla Kærnemælk 0,3% | 34 | 0,3 | 3,8 | 3,8 | 3,3 | 0,11 | 3,8 | 7,1 | 0,3 | Giver en let syrlig og frisk smag. |
 | Arla® ØKO Kærnemælk 0,3% | 34 | 0,3 | 3,8 | 3,8 | 3,3 | 0,11 | 3,8 | 7,1 | 0,3 |  |
-| Arla® Karolines Køkken® Piskefløde 36% | 346 | 36 | 3,3 | 3,3 | 2,2 | 0,07 | 3,3 | 5,5 | 32,4 | Ekstremt høj HF fra fedt. |
+| Cheasy® Skyr Vanilje | 55 | 0,2 | 4 | 3,6 | 8,6 | 0,13 | 3,6 | 12,6 | 0,2 |  |
+| Cheasy® Yoghurt Vanilje | 36 | 0,1 | 3,6 | 3,6 | 4,3 | 0,13 | 3,6 | 7,9 | 0,1 |  |
+| A38® Naturel 1,5% | 46 | 1,5 | 3,6 | 3,6 | 3,8 | 0,11 | 3,6 | 7,4 | 1,4 | Klassisk syrnet mælkeprodukt. Giver en frisk og syrlig note til isen. |
+| A38® Naturel 0,4% | 39 | 0,4 | 3,6 | 3,6 | 4,3 | 0,11 | 3,6 | 7,9 | 0,4 | Lettere version med højere protein. God til at øge MSNF med færre kalorier. |
 | Arla® ØKO Tykmælk 3,5% | 63 | 3,5 | 3,5 | 3,5 | 3,5 | 0,11 | 3,5 | 7 | 3,2 |  |
 | Arla® ØKO Yoghurt Naturel 0,5% | 44 | 0,5 | 3,5 | 3,5 | 5,5 | 0,11 | 3,5 | 9 | 0,5 |  |
+| Cheasy® Fraiche 5% | 81 | 5 | 3,4 | 3,4 | 4,8 | 0,11 | 3,4 | 8,2 | 4,5 |  |
+| Arla® LactoFREE Hytteost 4% | 98 | 4 | 1,8 | 1,8 | 14 | 0,8 | 3,4 | 15,8 | 3,6 | Laktosefri! |
+| Cheasy® Yoghurt Jordbær/Chia/Vanilje | 41 | 0,5 | 4,2 | 3,3 | 4,1 | 0,12 | 3,3 | 8,3 | 0,5 |  |
+| Arla® Karolines Køkken® Piskefløde 36% | 346 | 36 | 3,3 | 3,3 | 2,2 | 0,07 | 3,3 | 5,5 | 32,4 | Ekstremt høj HF fra fedt. |
+| Mammen Hytteost 1,5% (Laktosefri) | 75 | 1,5 | 2,3 | 1,5 | 13 | 0,84 | 2,9 | 15,3 | 1,4 | Laktosefri! |
 | Cheasy® Hytteost 1,5% | 79 | 1,5 | 3,1 | 2,5 | 13 | 0,79 | 2,5 | 16,1 | 1,4 | God til at øge protein og MSNF uden meget fedt. |
 | Mammen Hytteost 4% | 102 | 4 | 2,3 | 2,3 | 14 | 0,84 | 2,3 | 16,3 | 3,6 |  |
-| Mammen Hytteost 1,5% (Laktosefri) | 75 | 1,5 | 2,3 | 1,5 | 13 | 0,84 | 2,9 | 15,3 | 1,4 | Laktosefri! |
 | Æggehvide (Past.) | 52 | 0,2 | 0,7 | 0,7 | 10,9 | 0,16 | 0,7 | 11,6 | 0,2 | Fantastisk til at øge MSNF og give "krop". |
 | Æggeblomme (Past.) | 322 | 26,5 | 3,6 | 0,6 | 15,9 | 0,08 | 0,6 | 19,5 | 23,9 | Nøglen til Gelato. |
 
