@@ -1,0 +1,11 @@
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# Python
+__pycache__/
+*.pyc
+
+# OS-specifikke filer
+.DS_Store

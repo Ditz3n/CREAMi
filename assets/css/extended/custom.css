@@ -1,0 +1,26 @@
+/*
+====================================
+CUSTOM HEADER STYLING
+====================================
+*/
+
+/* Definer CSS variabler til forskellige temaer */
+:root {
+    --header-bg-light: #7abfff;
+    --header-bg-dark: #7700ff;
+}
+
+/* Light theme */
+body:not(.dark) .header {
+    background: var(--header-bg-light) !important;
+}
+
+/* Dark theme */
+body.dark .header {
+    background: var(--header-bg-dark) !important;
+}
+
+.header {
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s, border-color 0.3s;
+}

@@ -1,0 +1,27 @@
+baseURL = "https://ditz3n.github.io/CREAMi/"
+languageCode = "da-dk"
+title = "Ditz3n's Ninja CREAMi Laboratorium"
+theme = "PaperMod"
+
+[params]
+    defaultTheme = "dark"
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowReadingTime = false
+
+[menu]
+  [[menu.main]]
+    identifier = "recipes"
+    name = "Opskrifter"
+    url = "/recipes/"
+    weight = 10
+  [[menu.main]]
+    identifier = "stabilizer"
+    name = "Stabilizer Mix"
+    url = "/stabilizer-mix/"
+    weight = 15 # Juster 'weight' for at ændre rækkefølgen (lavere tal er først)
+  [[menu.main]]
+    identifier = "ingredients"
+    name = "Ingrediensdatabase"
+    url = "/ingredients/"
+    weight = 20

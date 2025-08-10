@@ -1,0 +1,53 @@
+# Navnet på din automatiske proces
+name: Deploy Hugo Site to GitHub Pages
+
+# Udløser: Kør denne proces hver gang der bliver pushet til 'master'-branchen
+on:
+  push:
+    branches:
+      - main  # Eller 'main', hvis det er din primære branch
+
+jobs:
+  # Jobbet, der skal køres
+  build-and-deploy:
+    # Miljø: Kør på den nyeste version af Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      # Trin 1: Tjek koden ud fra dit repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # Vigtigt for at hente PaperMod-temaet
+
+      # Trin 2: Sæt Python op
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # Du kan bruge en anden version hvis nødvendigt
+
+      # Trin 3: Installer Python-pakker fra din requirements-fil
+      - name: Install Python dependencies
+        run: pip install -r scripts/requirements.txt
+
+      # Trin 4: Kør dit script for at generere Markdown-filerne
+      - name: Run content generation script
+        run: python scripts/generate_recipes.py
+
+      # Trin 5: Sæt Hugo op
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest' # Bruger altid den nyeste version af Hugo
+          extended: true
+
+      # Trin 6: Byg hjemmesiden med Hugo (genererer 'public'-mappen)
+      - name: Build Hugo site
+        run: hugo --minify
+
+      # Trin 7: Upload den byggede side til GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
