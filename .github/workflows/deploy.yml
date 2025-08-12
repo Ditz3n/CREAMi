@@ -31,8 +31,8 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       # Trin 4: Kør dit script for at generere Markdown-filerne
-      - name: Run content generation script
-        run: python scripts/generate_recipes.py
+      - name: Run Python script to generate content
+        run: python scripts/generate_content.py
 
       # Trin 5: Sæt Hugo op
       - name: Setup Hugo

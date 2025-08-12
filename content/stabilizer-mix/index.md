@@ -1,7 +1,7 @@
 ---
 title: "Ditz3n Stabilizer Mix"
-date: 2025-08-10
-lastmod: 2025-08-10
+date: 2025-08-12
+lastmod: 2025-08-12
 draft: false
 showReadingTime: false
 ---
@@ -11,17 +11,17 @@ At lave denne blanding handler om præcision og om at undgå klumper. Følg diss
 ### Ingredienser
 | Ingrediens | Mængde (g) | Energi (kcal) | Fedt | Kulhydrater | Sukker | Protein | Salt | Total PAC | Total MSNF | Total HF |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Erythritol | 100 | 0 | 0.0 | 100 | 0.0 | 0 | 0 | 280 | 100 | 0.0 |
-| Inulin | 100 | 200 | 0.0 | 95 | 8.0 | 0 | 0 | 0.8 | 95 | 0.0 |
-| Carboxymethyl Cellulose (CMC) | 10 | 33.3 | 0.0 | 6.7 | 0.0 | 0 | 2 | 0 | 6.7 | 0.0 |
-| Guar Gum | 3.5 | 6.7 | 0.0 | 0 | 0.0 | 0.1 | 0 | 0 | 0.2 | 0.0 |
-| Xanthan Gum | 1 | 1.8 | 0.0 | 0.8 | 0.0 | 0.1 | 0 | 0 | 0.9 | 0.0 |
-| Salt (Natriumklorid) | 3.5 | 0 | 0.0 | 0 | 0.0 | 0 | 3.5 | 20.7 | 0 | 0.0 |
+| Erythritol | 100.0 | 0.0 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 280.0 | 100.0 | 0.0 |
+| Inulin | 100.0 | 200.0 | 0.0 | 95.0 | 8.0 | 0.0 | 0.0 | 0.8 | 95.0 | 0.0 |
+| Carboxymethyl Cellulose (CMC) | 10.0 | 33.300000000000004 | 0.0 | 6.670000000000001 | 0.0 | 0.0 | 2.0 | 0.0 | 6.670000000000001 | 0.0 |
+| Guar Gum | 3.5 | 6.6850000000000005 | 0.0175 | 0.035 | 0.035 | 0.14 | 0.0 | 0.00035000000000000005 | 0.17500000000000002 | 0.0 |
+| Xanthan Gum | 1.0 | 1.8 | 0.0 | 0.8 | 0.0 | 0.05 | 0.0 | 0.0 | 0.85 | 0.0 |
+| Salt (Natriumklorid) | 3.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 3.5000000000000004 | 20.650000000000002 | 0.0 | 0.0 |
 
 ### Totaler
 | Ingrediens | Mængde (g) | Energi (kcal) | Fedt | Kulhydrater | Sukker | Protein | Salt | Total PAC | Total MSNF | Total HF |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Total: | 218 | 241.8 | 0.0 | 202.5 | 8.0 | 0.2 | 5.5 | 301.5 | 202.7 | 0.0 |
+| Total: | 218.0 | 241.78500000000003 | 0.0175 | 202.505 | 8.035 | 0.19 | 5.5 | 301.45035 | 202.695 | 0.0 |
 
 ### Nødvendigt udstyr:
 - En præcis digitalvægt (en juvelérvægt, der kan måle 0.01g, er ideel til de små mængder gummi).

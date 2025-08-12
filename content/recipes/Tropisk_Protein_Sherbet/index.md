@@ -1,7 +1,7 @@
 ---
 title: "Tropisk Protein Sherbet"
-date: 2025-08-10
-lastmod: 2025-08-10
+date: 2025-08-12
+lastmod: 2025-08-12
 draft: false
 ---
 

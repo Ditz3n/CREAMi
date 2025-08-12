@@ -1,7 +1,7 @@
 [
   {
     "Ingrediens":"Salt (Natriumklorid)",
-    "Energi (kcal)":0,
+    "Energi (kcal)":0.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -14,7 +14,7 @@
   },
   {
     "Ingrediens":"Glycerin (VG, E422)",
-    "Energi (kcal)":400,
+    "Energi (kcal)":400.0,
     "Fedt":0.0,
     "Kulhydrater":99.0,
     "Sukker":0.0,
@@ -27,7 +27,7 @@
   },
   {
     "Ingrediens":"Sprit (40%)",
-    "Energi (kcal)":221,
+    "Energi (kcal)":221.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -40,7 +40,7 @@
   },
   {
     "Ingrediens":"Erythritol",
-    "Energi (kcal)":0,
+    "Energi (kcal)":0.0,
     "Fedt":0.0,
     "Kulhydrater":100.0,
     "Sukker":0.0,
@@ -53,7 +53,7 @@
   },
   {
     "Ingrediens":"Xylitol",
-    "Energi (kcal)":240,
+    "Energi (kcal)":240.0,
     "Fedt":0.0,
     "Kulhydrater":100.0,
     "Sukker":100.0,
@@ -66,7 +66,7 @@
   },
   {
     "Ingrediens":"Allulose",
-    "Energi (kcal)":40,
+    "Energi (kcal)":40.0,
     "Fedt":0.0,
     "Kulhydrater":100.0,
     "Sukker":100.0,
@@ -79,7 +79,7 @@
   },
   {
     "Ingrediens":"Dextrose (Glukose)",
-    "Energi (kcal)":375,
+    "Energi (kcal)":375.0,
     "Fedt":0.0,
     "Kulhydrater":92.0,
     "Sukker":92.0,
@@ -88,11 +88,11 @@
     "PAC":174.8,
     "MSNF":92.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Ditz3n Stabilizer Mix",
-    "Energi (kcal)":111,
+    "Energi (kcal)":111.0,
     "Fedt":0.0,
     "Kulhydrater":92.9,
     "Sukker":3.7,
@@ -105,7 +105,7 @@
   },
   {
     "Ingrediens":"Hvidt Sukker (Sakkarose)",
-    "Energi (kcal)":400,
+    "Energi (kcal)":400.0,
     "Fedt":0.0,
     "Kulhydrater":100.0,
     "Sukker":100.0,
@@ -118,7 +118,7 @@
   },
   {
     "Ingrediens":"Honning",
-    "Energi (kcal)":304,
+    "Energi (kcal)":304.0,
     "Fedt":0.0,
     "Kulhydrater":82.0,
     "Sukker":82.0,
@@ -131,7 +131,7 @@
   },
   {
     "Ingrediens":"Brun Farin",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":0.0,
     "Kulhydrater":97.0,
     "Sukker":97.0,
@@ -140,11 +140,11 @@
     "PAC":97.0,
     "MSNF":97.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Rema 1000 Vaniljesukker",
-    "Energi (kcal)":390,
+    "Energi (kcal)":390.0,
     "Fedt":0.1,
     "Kulhydrater":97.0,
     "Sukker":91.0,
@@ -157,7 +157,7 @@
   },
   {
     "Ingrediens":"Dadelsirup",
-    "Energi (kcal)":290,
+    "Energi (kcal)":290.0,
     "Fedt":0.0,
     "Kulhydrater":70.0,
     "Sukker":68.0,
@@ -170,7 +170,7 @@
   },
   {
     "Ingrediens":"Ahornsirup",
-    "Energi (kcal)":260,
+    "Energi (kcal)":260.0,
     "Fedt":0.0,
     "Kulhydrater":67.0,
     "Sukker":60.0,
@@ -183,7 +183,7 @@
   },
   {
     "Ingrediens":"Skummetmælkspulver (SMP)",
-    "Energi (kcal)":360,
+    "Energi (kcal)":360.0,
     "Fedt":1.0,
     "Kulhydrater":52.0,
     "Sukker":52.0,
@@ -196,7 +196,7 @@
   },
   {
     "Ingrediens":"Inulin",
-    "Energi (kcal)":200,
+    "Energi (kcal)":200.0,
     "Fedt":0.0,
     "Kulhydrater":95.0,
     "Sukker":8.0,
@@ -205,11 +205,11 @@
     "PAC":0.8,
     "MSNF":95.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Guar Gum",
-    "Energi (kcal)":191,
+    "Energi (kcal)":191.0,
     "Fedt":0.5,
     "Kulhydrater":1.0,
     "Sukker":1.0,
@@ -218,11 +218,11 @@
     "PAC":0.01,
     "MSNF":5.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Perfect Sød",
-    "Energi (kcal)":1,
+    "Energi (kcal)":1.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -231,11 +231,11 @@
     "PAC":0.0,
     "MSNF":0.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Xanthan Gum",
-    "Energi (kcal)":180,
+    "Energi (kcal)":180.0,
     "Fedt":0.0,
     "Kulhydrater":80.0,
     "Sukker":0.0,
@@ -244,11 +244,11 @@
     "PAC":0.0,
     "MSNF":85.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Locust Bean Gum (LBG)",
-    "Energi (kcal)":300,
+    "Energi (kcal)":300.0,
     "Fedt":0.0,
     "Kulhydrater":89.0,
     "Sukker":0.0,
@@ -261,7 +261,7 @@
   },
   {
     "Ingrediens":"Carboxymethyl Cellulose (CMC)",
-    "Energi (kcal)":333,
+    "Energi (kcal)":333.0,
     "Fedt":0.0,
     "Kulhydrater":66.7,
     "Sukker":0.0,
@@ -270,11 +270,11 @@
     "PAC":0.0,
     "MSNF":66.7,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"GMS (Glycerol Monostearate)",
-    "Energi (kcal)":700,
+    "Energi (kcal)":700.0,
     "Fedt":80.0,
     "Kulhydrater":20.0,
     "Sukker":0.0,
@@ -287,7 +287,7 @@
   },
   {
     "Ingrediens":"Cremodan Coldline",
-    "Energi (kcal)":710,
+    "Energi (kcal)":710.0,
     "Fedt":78.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -296,11 +296,37 @@
     "PAC":0.0,
     "MSNF":1.0,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
+  },
+  {
+    "Ingrediens":"Test Ingrediens",
+    "Energi (kcal)":10.0,
+    "Fedt":1.0,
+    "Kulhydrater":2.0,
+    "Sukker":3.0,
+    "Protein":4.0,
+    "Salt":5.0,
+    "PAC":6.0,
+    "MSNF":7.0,
+    "HF":8.0,
+    "Kommentar":"Test"
+  },
+  {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
   },
   {
     "Ingrediens":"Wispy Whey 100 Vanilla Milkshake",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":5.7,
     "Kulhydrater":10.4,
     "Sukker":9.0,
@@ -309,11 +335,11 @@
     "PAC":9.0,
     "MSNF":80.4,
     "HF":5.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Strawberry White Chocolate",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":5.7,
     "Kulhydrater":10.4,
     "Sukker":9.0,
@@ -322,11 +348,11 @@
     "PAC":9.0,
     "MSNF":80.4,
     "HF":5.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Caramel Cappuccino",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":5.7,
     "Kulhydrater":10.4,
     "Sukker":9.0,
@@ -335,11 +361,11 @@
     "PAC":9.0,
     "MSNF":80.4,
     "HF":5.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Tropical Summer",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":5.7,
     "Kulhydrater":10.4,
     "Sukker":9.0,
@@ -348,11 +374,11 @@
     "PAC":9.0,
     "MSNF":80.4,
     "HF":5.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Hindbærsnitte",
-    "Energi (kcal)":407,
+    "Energi (kcal)":407.0,
     "Fedt":4.9,
     "Kulhydrater":10.0,
     "Sukker":8.2,
@@ -361,11 +387,11 @@
     "PAC":8.2,
     "MSNF":84.0,
     "HF":4.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Raspberry Swirl",
-    "Energi (kcal)":379,
+    "Energi (kcal)":379.0,
     "Fedt":6.3,
     "Kulhydrater":10.0,
     "Sukker":6.9,
@@ -374,11 +400,11 @@
     "PAC":6.9,
     "MSNF":80.0,
     "HF":5.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Deluxe Vanilla Fudge Cookie",
-    "Energi (kcal)":413,
+    "Energi (kcal)":413.0,
     "Fedt":11.0,
     "Kulhydrater":14.0,
     "Sukker":11.0,
@@ -387,11 +413,11 @@
     "PAC":11.0,
     "MSNF":79.0,
     "HF":9.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Deluxe Latte Macchiato Caramel",
-    "Energi (kcal)":406,
+    "Energi (kcal)":406.0,
     "Fedt":10.0,
     "Kulhydrater":13.0,
     "Sukker":10.0,
@@ -400,11 +426,11 @@
     "PAC":10.0,
     "MSNF":78.0,
     "HF":9.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Chocolate Milkshake",
-    "Energi (kcal)":390,
+    "Energi (kcal)":390.0,
     "Fedt":7.0,
     "Kulhydrater":7.4,
     "Sukker":6.4,
@@ -413,11 +439,11 @@
     "PAC":6.4,
     "MSNF":77.4,
     "HF":6.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Wispy Whey 100 Chocolate Hazelnut",
-    "Energi (kcal)":390,
+    "Energi (kcal)":390.0,
     "Fedt":7.0,
     "Kulhydrater":7.4,
     "Sukker":6.4,
@@ -426,11 +452,11 @@
     "PAC":6.4,
     "MSNF":77.4,
     "HF":6.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Strawberry Milkshake",
-    "Energi (kcal)":396,
+    "Energi (kcal)":396.0,
     "Fedt":7.1,
     "Kulhydrater":8.1,
     "Sukker":6.4,
@@ -439,11 +465,11 @@
     "PAC":6.4,
     "MSNF":83.1,
     "HF":6.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Cookies & Cream",
-    "Energi (kcal)":391,
+    "Energi (kcal)":391.0,
     "Fedt":7.9,
     "Kulhydrater":9.6,
     "Sukker":6.3,
@@ -452,11 +478,11 @@
     "PAC":6.3,
     "MSNF":79.6,
     "HF":7.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey100 Vanilla Milkshake",
-    "Energi (kcal)":394,
+    "Energi (kcal)":394.0,
     "Fedt":7.1,
     "Kulhydrater":7.4,
     "Sukker":6.0,
@@ -465,11 +491,11 @@
     "PAC":6.0,
     "MSNF":82.4,
     "HF":6.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Strawberry & White Chocolate",
-    "Energi (kcal)":395,
+    "Energi (kcal)":395.0,
     "Fedt":7.1,
     "Kulhydrater":7.8,
     "Sukker":5.9,
@@ -478,11 +504,11 @@
     "PAC":5.9,
     "MSNF":82.8,
     "HF":6.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Chocolate Hazelnut",
-    "Energi (kcal)":395,
+    "Energi (kcal)":395.0,
     "Fedt":8.4,
     "Kulhydrater":10.0,
     "Sukker":5.9,
@@ -491,11 +517,11 @@
     "PAC":5.9,
     "MSNF":80.0,
     "HF":7.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Vanilla Ice Coffee",
-    "Energi (kcal)":393,
+    "Energi (kcal)":393.0,
     "Fedt":6.6,
     "Kulhydrater":8.0,
     "Sukker":5.8,
@@ -504,11 +530,11 @@
     "PAC":5.8,
     "MSNF":83.0,
     "HF":5.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Chocolate Banana Swirl",
-    "Energi (kcal)":391,
+    "Energi (kcal)":391.0,
     "Fedt":8.1,
     "Kulhydrater":9.0,
     "Sukker":5.4,
@@ -517,11 +543,11 @@
     "PAC":5.4,
     "MSNF":79.0,
     "HF":7.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 Neutral",
-    "Energi (kcal)":394,
+    "Energi (kcal)":394.0,
     "Fedt":6.3,
     "Kulhydrater":4.3,
     "Sukker":4.3,
@@ -530,11 +556,11 @@
     "PAC":4.3,
     "MSNF":82.3,
     "HF":5.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Casein Protein Vanilla Milkshake",
-    "Energi (kcal)":364,
+    "Energi (kcal)":364.0,
     "Fedt":3.1,
     "Kulhydrater":8.1,
     "Sukker":4.0,
@@ -543,11 +569,11 @@
     "PAC":4.0,
     "MSNF":81.1,
     "HF":2.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey100 Ultimate Chocolate",
-    "Energi (kcal)":387,
+    "Energi (kcal)":387.0,
     "Fedt":7.4,
     "Kulhydrater":8.0,
     "Sukker":3.9,
@@ -556,11 +582,11 @@
     "PAC":3.9,
     "MSNF":78.0,
     "HF":6.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Casein Protein Ultimate Chocolate",
-    "Energi (kcal)":364,
+    "Energi (kcal)":364.0,
     "Fedt":4.7,
     "Kulhydrater":9.5,
     "Sukker":3.3,
@@ -569,11 +595,11 @@
     "PAC":3.3,
     "MSNF":80.5,
     "HF":4.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 ISO Pure Latte Macchiato Caramel",
-    "Energi (kcal)":353,
+    "Energi (kcal)":353.0,
     "Fedt":1.4,
     "Kulhydrater":5.3,
     "Sukker":2.5,
@@ -586,7 +612,7 @@
   },
   {
     "Ingrediens":"Myvegan Protein Blend (Chocolate)",
-    "Energi (kcal)":360,
+    "Energi (kcal)":360.0,
     "Fedt":2.5,
     "Kulhydrater":11.0,
     "Sukker":0.0,
@@ -599,7 +625,7 @@
   },
   {
     "Ingrediens":"Bodylab Clear Whey Bubblegum Blast",
-    "Energi (kcal)":338,
+    "Energi (kcal)":338.0,
     "Fedt":0.1,
     "Kulhydrater":2.1,
     "Sukker":1.0,
@@ -612,7 +638,7 @@
   },
   {
     "Ingrediens":"Bodylab Clear Whey Lemon Lime",
-    "Energi (kcal)":336,
+    "Energi (kcal)":336.0,
     "Fedt":0.1,
     "Kulhydrater":1.2,
     "Sukker":0.8,
@@ -621,11 +647,11 @@
     "PAC":0.8,
     "MSNF":81.2,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Raspberry Rush",
-    "Energi (kcal)":337,
+    "Energi (kcal)":337.0,
     "Fedt":0.1,
     "Kulhydrater":1.8,
     "Sukker":0.8,
@@ -634,11 +660,11 @@
     "PAC":0.8,
     "MSNF":81.8,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Blackcurrant",
-    "Energi (kcal)":338,
+    "Energi (kcal)":338.0,
     "Fedt":0.1,
     "Kulhydrater":2.5,
     "Sukker":0.7,
@@ -647,11 +673,11 @@
     "PAC":0.7,
     "MSNF":82.5,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Pink Grape",
-    "Energi (kcal)":338,
+    "Energi (kcal)":338.0,
     "Fedt":0.1,
     "Kulhydrater":2.2,
     "Sukker":0.6,
@@ -660,11 +686,11 @@
     "PAC":0.6,
     "MSNF":82.2,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Cola",
-    "Energi (kcal)":338,
+    "Energi (kcal)":338.0,
     "Fedt":0.1,
     "Kulhydrater":1.7,
     "Sukker":0.5,
@@ -673,11 +699,11 @@
     "PAC":0.5,
     "MSNF":81.7,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Ice Tea Peach",
-    "Energi (kcal)":337,
+    "Energi (kcal)":337.0,
     "Fedt":0.1,
     "Kulhydrater":1.5,
     "Sukker":0.6,
@@ -686,11 +712,11 @@
     "PAC":0.6,
     "MSNF":81.5,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Clear Whey Watermelon Splash",
-    "Energi (kcal)":331,
+    "Energi (kcal)":331.0,
     "Fedt":0.1,
     "Kulhydrater":1.1,
     "Sukker":0.4,
@@ -699,11 +725,11 @@
     "PAC":0.4,
     "MSNF":81.1,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 ISO Pure Ultimate Chocolate",
-    "Energi (kcal)":351,
+    "Energi (kcal)":351.0,
     "Fedt":1.5,
     "Kulhydrater":3.2,
     "Sukker":0.3,
@@ -712,11 +738,11 @@
     "PAC":0.3,
     "MSNF":84.2,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bodylab Whey 100 ISO Pure Vanilla Milkshake",
-    "Energi (kcal)":351,
+    "Energi (kcal)":351.0,
     "Fedt":1.1,
     "Kulhydrater":0.6,
     "Sukker":0.1,
@@ -725,11 +751,24 @@
     "PAC":0.1,
     "MSNF":85.6,
     "HF":1.0,
-    "Kommentar":0
+    "Kommentar":null
+  },
+  {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
   },
   {
     "Ingrediens":"PB2 Chokolade Pulver",
-    "Energi (kcal)":375,
+    "Energi (kcal)":375.0,
     "Fedt":8.3,
     "Kulhydrater":50.0,
     "Sukker":25.0,
@@ -742,7 +781,7 @@
   },
   {
     "Ingrediens":"Myprotein Peanut Butter Powder Stevia",
-    "Energi (kcal)":393,
+    "Energi (kcal)":393.0,
     "Fedt":8.2,
     "Kulhydrater":18.0,
     "Sukker":7.8,
@@ -755,7 +794,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Kakaopulver",
-    "Energi (kcal)":361,
+    "Energi (kcal)":361.0,
     "Fedt":21.0,
     "Kulhydrater":7.0,
     "Sukker":0.8,
@@ -768,7 +807,7 @@
   },
   {
     "Ingrediens":"Cacao Barry Noir Intense",
-    "Energi (kcal)":310,
+    "Energi (kcal)":310.0,
     "Fedt":11.0,
     "Kulhydrater":13.0,
     "Sukker":0.5,
@@ -780,8 +819,21 @@
     "Kommentar":"Gør isen hårdere. Lavt fedtindhold (11%). Skal \"bloomes\" for bedste smag."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Decocino Vaniljeekstrakt",
-    "Energi (kcal)":296,
+    "Energi (kcal)":296.0,
     "Fedt":0.5,
     "Kulhydrater":74.0,
     "Sukker":72.0,
@@ -794,7 +846,7 @@
   },
   {
     "Ingrediens":"Tailor & Colledge Vaniljeekstrakt",
-    "Energi (kcal)":297,
+    "Energi (kcal)":297.0,
     "Fedt":0.0,
     "Kulhydrater":55.5,
     "Sukker":55.5,
@@ -807,7 +859,7 @@
   },
   {
     "Ingrediens":"EASIS Perfect Flavour Drops (alle)",
-    "Energi (kcal)":1,
+    "Energi (kcal)":1.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -819,8 +871,21 @@
     "Kommentar":"Ren sødme (sucralose). Ingen effekt på PAC, MSNF eller kalorier. Perfekt til finjustering."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Arla® Pro Soft Ice Mix (Laktosefri)",
-    "Energi (kcal)":147,
+    "Energi (kcal)":147.0,
     "Fedt":6.0,
     "Kulhydrater":20.0,
     "Sukker":20.0,
@@ -833,7 +898,7 @@
   },
   {
     "Ingrediens":"Matilde® Milkshake m. vanilje 4%",
-    "Energi (kcal)":128,
+    "Energi (kcal)":128.0,
     "Fedt":4.0,
     "Kulhydrater":19.0,
     "Sukker":19.0,
@@ -842,11 +907,11 @@
     "PAC":19.0,
     "MSNF":22.8,
     "HF":3.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® LactoFREE Yoghurt Pære\/Banan",
-    "Energi (kcal)":71,
+    "Energi (kcal)":71.0,
     "Fedt":1.4,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -859,7 +924,7 @@
   },
   {
     "Ingrediens":"Arla® LactoFREE Yoghurt Pære\/Banan",
-    "Energi (kcal)":71,
+    "Energi (kcal)":71.0,
     "Fedt":1.4,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -872,7 +937,7 @@
   },
   {
     "Ingrediens":"Arla® LactoFREE Yoghurt Jordbær\/Vanilje",
-    "Energi (kcal)":68,
+    "Energi (kcal)":68.0,
     "Fedt":1.4,
     "Kulhydrater":9.9,
     "Sukker":9.5,
@@ -885,7 +950,7 @@
   },
   {
     "Ingrediens":"Matilde® Milkshake Mix",
-    "Energi (kcal)":120,
+    "Energi (kcal)":120.0,
     "Fedt":3.9,
     "Kulhydrater":18.0,
     "Sukker":18.0,
@@ -898,7 +963,7 @@
   },
   {
     "Ingrediens":"Matilde® Softice Mix",
-    "Energi (kcal)":141,
+    "Energi (kcal)":141.0,
     "Fedt":3.0,
     "Kulhydrater":25.0,
     "Sukker":17.0,
@@ -911,7 +976,7 @@
   },
   {
     "Ingrediens":"Arla LactoFREE Økologisk Kakao Letmælk",
-    "Energi (kcal)":63,
+    "Energi (kcal)":63.0,
     "Fedt":1.5,
     "Kulhydrater":8.8,
     "Sukker":8.7,
@@ -924,7 +989,7 @@
   },
   {
     "Ingrediens":"Arla® Karolines Køkken® Vaniljesauce 10%",
-    "Energi (kcal)":175,
+    "Energi (kcal)":175.0,
     "Fedt":10.0,
     "Kulhydrater":18.0,
     "Sukker":15.0,
@@ -937,7 +1002,7 @@
   },
   {
     "Ingrediens":"Arla Cultura® Drikkeyoghurt Blåbær",
-    "Energi (kcal)":56,
+    "Energi (kcal)":56.0,
     "Fedt":1.0,
     "Kulhydrater":7.7,
     "Sukker":7.3,
@@ -950,7 +1015,7 @@
   },
   {
     "Ingrediens":"Arla Cultura® Drikkeyoghurt Jordbær",
-    "Energi (kcal)":55,
+    "Energi (kcal)":55.0,
     "Fedt":1.0,
     "Kulhydrater":7.5,
     "Sukker":7.1,
@@ -963,7 +1028,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Drikkemåltid Vanilje\/Hasselnød",
-    "Energi (kcal)":77,
+    "Energi (kcal)":77.0,
     "Fedt":2.0,
     "Kulhydrater":7.3,
     "Sukker":7.0,
@@ -976,7 +1041,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Drikkemåltid Chokolade\/Karamel",
-    "Energi (kcal)":78,
+    "Energi (kcal)":78.0,
     "Fedt":2.1,
     "Kulhydrater":7.3,
     "Sukker":7.0,
@@ -989,7 +1054,7 @@
   },
   {
     "Ingrediens":"Crushed Ice m. vanilje",
-    "Energi (kcal)":103,
+    "Energi (kcal)":103.0,
     "Fedt":3.2,
     "Kulhydrater":15.0,
     "Sukker":13.0,
@@ -1002,7 +1067,7 @@
   },
   {
     "Ingrediens":"Matilde® Kakaomælk Premium",
-    "Energi (kcal)":89,
+    "Energi (kcal)":89.0,
     "Fedt":2.7,
     "Kulhydrater":12.0,
     "Sukker":12.0,
@@ -1015,7 +1080,7 @@
   },
   {
     "Ingrediens":"Crushed Ice Classic (Chokolade)",
-    "Energi (kcal)":103,
+    "Energi (kcal)":103.0,
     "Fedt":3.2,
     "Kulhydrater":14.0,
     "Sukker":12.0,
@@ -1024,11 +1089,11 @@
     "PAC":12.0,
     "MSNF":18.0,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Crushed Ice m. Cappuccino",
-    "Energi (kcal)":109,
+    "Energi (kcal)":109.0,
     "Fedt":3.2,
     "Kulhydrater":16.0,
     "Sukker":12.0,
@@ -1037,11 +1102,11 @@
     "PAC":12.0,
     "MSNF":19.6,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Crushed Ice m. Jordbær",
-    "Energi (kcal)":100,
+    "Energi (kcal)":100.0,
     "Fedt":3.2,
     "Kulhydrater":14.0,
     "Sukker":12.0,
@@ -1050,11 +1115,11 @@
     "PAC":12.0,
     "MSNF":17.7,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Matilde® Milkshake Jordbærsmag",
-    "Energi (kcal)":76,
+    "Energi (kcal)":76.0,
     "Fedt":1.4,
     "Kulhydrater":12.0,
     "Sukker":12.0,
@@ -1063,11 +1128,11 @@
     "PAC":12.0,
     "MSNF":15.6,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Matilde® Milkshake Vaniljesmag",
-    "Energi (kcal)":78,
+    "Energi (kcal)":78.0,
     "Fedt":1.4,
     "Kulhydrater":12.0,
     "Sukker":12.0,
@@ -1076,11 +1141,11 @@
     "PAC":12.0,
     "MSNF":15.6,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Matilde® Milkshake Kakaosmag",
-    "Energi (kcal)":80,
+    "Energi (kcal)":80.0,
     "Fedt":1.5,
     "Kulhydrater":12.0,
     "Sukker":12.0,
@@ -1089,11 +1154,11 @@
     "PAC":12.0,
     "MSNF":16.0,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® ØKO Yoghurt Pære\/Banan (3,1%)",
-    "Energi (kcal)":91,
+    "Energi (kcal)":91.0,
     "Fedt":3.1,
     "Kulhydrater":12.0,
     "Sukker":12.0,
@@ -1102,11 +1167,11 @@
     "PAC":12.0,
     "MSNF":15.2,
     "HF":2.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® PROTEIN Skyr Jordbær",
-    "Energi (kcal)":72,
+    "Energi (kcal)":72.0,
     "Fedt":0.2,
     "Kulhydrater":6.6,
     "Sukker":6.3,
@@ -1119,7 +1184,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Skyr Blåbær",
-    "Energi (kcal)":71,
+    "Energi (kcal)":71.0,
     "Fedt":0.2,
     "Kulhydrater":6.4,
     "Sukker":6.0,
@@ -1132,7 +1197,7 @@
   },
   {
     "Ingrediens":"Arla® ØKO Yoghurt Jordbær (3,1%)",
-    "Energi (kcal)":87,
+    "Energi (kcal)":87.0,
     "Fedt":3.1,
     "Kulhydrater":11.0,
     "Sukker":11.0,
@@ -1141,11 +1206,11 @@
     "PAC":11.0,
     "MSNF":14.2,
     "HF":2.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cocio® Classic",
-    "Energi (kcal)":78,
+    "Energi (kcal)":78.0,
     "Fedt":2.1,
     "Kulhydrater":11.0,
     "Sukker":11.0,
@@ -1154,11 +1219,11 @@
     "PAC":11.0,
     "MSNF":14.6,
     "HF":1.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla Cultura® Laktosefri Kefir Blåbær",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":2.3,
     "Kulhydrater":5.7,
     "Sukker":5.4,
@@ -1171,7 +1236,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Vanilje mælkedrik",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.9,
     "Kulhydrater":5.3,
     "Sukker":5.3,
@@ -1184,7 +1249,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Jordbær\/Hindbær",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.9,
     "Kulhydrater":5.3,
     "Sukker":5.3,
@@ -1197,7 +1262,7 @@
   },
   {
     "Ingrediens":"Matilde® Kakaoskummetmælk",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":0.5,
     "Kulhydrater":10.0,
     "Sukker":9.9,
@@ -1206,11 +1271,11 @@
     "PAC":9.9,
     "MSNF":13.8,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Matilde® Kakaoskummetmælk Øko",
-    "Energi (kcal)":60,
+    "Energi (kcal)":60.0,
     "Fedt":0.4,
     "Kulhydrater":10.0,
     "Sukker":9.9,
@@ -1219,11 +1284,11 @@
     "PAC":9.9,
     "MSNF":13.8,
     "HF":0.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"YoPro Protein Drikkeyoghurt Jordbær\/Hindbær",
-    "Energi (kcal)":60,
+    "Energi (kcal)":60.0,
     "Fedt":0.5,
     "Kulhydrater":5.5,
     "Sukker":5.2,
@@ -1236,7 +1301,7 @@
   },
   {
     "Ingrediens":"YoPro Protein Drikkeyoghurt Blåbær",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":0.5,
     "Kulhydrater":5.5,
     "Sukker":5.2,
@@ -1249,7 +1314,7 @@
   },
   {
     "Ingrediens":"Yoggi® Yoghurt Pære & Banan",
-    "Energi (kcal)":72,
+    "Energi (kcal)":72.0,
     "Fedt":1.4,
     "Kulhydrater":10.0,
     "Sukker":9.8,
@@ -1258,11 +1323,11 @@
     "PAC":9.8,
     "MSNF":13.9,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Yoggi® Yoghurt Jordbær",
-    "Energi (kcal)":69,
+    "Energi (kcal)":69.0,
     "Fedt":1.4,
     "Kulhydrater":9.7,
     "Sukker":9.5,
@@ -1271,11 +1336,11 @@
     "PAC":9.5,
     "MSNF":13.5,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Yoggi® Yoghurt Havens Bær",
-    "Energi (kcal)":70,
+    "Energi (kcal)":70.0,
     "Fedt":1.4,
     "Kulhydrater":9.7,
     "Sukker":9.5,
@@ -1284,11 +1349,11 @@
     "PAC":9.5,
     "MSNF":13.5,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla Cultura® Laktosefri Kefir Vanilje",
-    "Energi (kcal)":58,
+    "Energi (kcal)":58.0,
     "Fedt":2.3,
     "Kulhydrater":5.3,
     "Sukker":5.0,
@@ -1301,7 +1366,7 @@
   },
   {
     "Ingrediens":"Stay Strong Proteindrik Chokolade",
-    "Energi (kcal)":50,
+    "Energi (kcal)":50.0,
     "Fedt":0.5,
     "Kulhydrater":5.0,
     "Sukker":4.9,
@@ -1314,7 +1379,7 @@
   },
   {
     "Ingrediens":"ProPud Protein Milkshake (alle varianter)",
-    "Energi (kcal)":58,
+    "Energi (kcal)":58.0,
     "Fedt":1.5,
     "Kulhydrater":4.9,
     "Sukker":4.9,
@@ -1327,7 +1392,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Caffe Latte",
-    "Energi (kcal)":65,
+    "Energi (kcal)":65.0,
     "Fedt":1.0,
     "Kulhydrater":6.0,
     "Sukker":4.9,
@@ -1340,7 +1405,7 @@
   },
   {
     "Ingrediens":"Yoggi® Yoghurt Tropisk",
-    "Energi (kcal)":68,
+    "Energi (kcal)":68.0,
     "Fedt":1.3,
     "Kulhydrater":9.6,
     "Sukker":9.2,
@@ -1349,11 +1414,11 @@
     "PAC":9.2,
     "MSNF":13.4,
     "HF":1.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® ØKO Yoghurt Jordbær (0,4%)",
-    "Energi (kcal)":62,
+    "Energi (kcal)":62.0,
     "Fedt":0.4,
     "Kulhydrater":9.1,
     "Sukker":9.1,
@@ -1362,11 +1427,11 @@
     "PAC":9.1,
     "MSNF":13.9,
     "HF":0.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® PROTEIN Mousse Chokolade Fudge",
-    "Energi (kcal)":81,
+    "Energi (kcal)":81.0,
     "Fedt":1.8,
     "Kulhydrater":8.7,
     "Sukker":4.7,
@@ -1379,7 +1444,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Pudding Chokolade",
-    "Energi (kcal)":76,
+    "Energi (kcal)":76.0,
     "Fedt":1.5,
     "Kulhydrater":7.0,
     "Sukker":4.7,
@@ -1392,7 +1457,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Pudding Salted Caramel",
-    "Energi (kcal)":74,
+    "Energi (kcal)":74.0,
     "Fedt":1.5,
     "Kulhydrater":7.9,
     "Sukker":4.7,
@@ -1405,7 +1470,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Chokolade mælkedrik (1L)",
-    "Energi (kcal)":51,
+    "Energi (kcal)":51.0,
     "Fedt":0.9,
     "Kulhydrater":4.9,
     "Sukker":4.7,
@@ -1418,7 +1483,7 @@
   },
   {
     "Ingrediens":"Yoggi® Yoghurt Kirsebær",
-    "Energi (kcal)":67,
+    "Energi (kcal)":67.0,
     "Fedt":1.3,
     "Kulhydrater":9.5,
     "Sukker":8.8,
@@ -1427,11 +1492,11 @@
     "PAC":8.8,
     "MSNF":13.3,
     "HF":1.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Stay Strong Proteindrik Vanilje",
-    "Energi (kcal)":50,
+    "Energi (kcal)":50.0,
     "Fedt":0.3,
     "Kulhydrater":5.6,
     "Sukker":4.6,
@@ -1444,7 +1509,7 @@
   },
   {
     "Ingrediens":"Arla® Koldskål m. tykmælk og æg",
-    "Energi (kcal)":70,
+    "Energi (kcal)":70.0,
     "Fedt":2.0,
     "Kulhydrater":8.7,
     "Sukker":8.7,
@@ -1453,11 +1518,11 @@
     "PAC":8.7,
     "MSNF":12.2,
     "HF":1.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Stay Strong Kollagen Proteindrik Chokolade",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.2,
     "Kulhydrater":4.7,
     "Sukker":4.5,
@@ -1470,7 +1535,7 @@
   },
   {
     "Ingrediens":"Stay Strong Kollagen Proteindrik Jordbær",
-    "Energi (kcal)":49,
+    "Energi (kcal)":49.0,
     "Fedt":0.1,
     "Kulhydrater":4.5,
     "Sukker":4.5,
@@ -1483,7 +1548,7 @@
   },
   {
     "Ingrediens":"Stay Strong Proteindrik Jordbær",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":0.3,
     "Kulhydrater":5.3,
     "Sukker":4.4,
@@ -1496,7 +1561,7 @@
   },
   {
     "Ingrediens":"Arla® ØKO Yoghurt Vanilje (0,5%)",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":0.5,
     "Kulhydrater":8.3,
     "Sukker":8.3,
@@ -1505,11 +1570,11 @@
     "PAC":8.3,
     "MSNF":13.2,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla LactoFREE Madlavningsfløde 13%",
-    "Energi (kcal)":146,
+    "Energi (kcal)":146.0,
     "Fedt":13.0,
     "Kulhydrater":4.2,
     "Sukker":4.1,
@@ -1522,7 +1587,7 @@
   },
   {
     "Ingrediens":"A38® Hindbær 0,4%",
-    "Energi (kcal)":53,
+    "Energi (kcal)":53.0,
     "Fedt":0.4,
     "Kulhydrater":7.5,
     "Sukker":7.3,
@@ -1535,7 +1600,7 @@
   },
   {
     "Ingrediens":"Arla® PROTEIN Hindbær Yoghurtdrik",
-    "Energi (kcal)":53,
+    "Energi (kcal)":53.0,
     "Fedt":0.5,
     "Kulhydrater":7.5,
     "Sukker":7.2,
@@ -1544,11 +1609,11 @@
     "PAC":7.2,
     "MSNF":11.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla Cultura® Laktosefri Kefir Naturel",
-    "Energi (kcal)":54,
+    "Energi (kcal)":54.0,
     "Fedt":2.5,
     "Kulhydrater":3.7,
     "Sukker":3.7,
@@ -1561,7 +1626,7 @@
   },
   {
     "Ingrediens":"Arla® LactoFREE Yoghurt Naturel 1,5%",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":1.5,
     "Kulhydrater":3.6,
     "Sukker":3.6,
@@ -1574,7 +1639,7 @@
   },
   {
     "Ingrediens":"heasy",
-    "Energi (kcal)":42,
+    "Energi (kcal)":42.0,
     "Fedt":1.2,
     "Kulhydrater":3.7,
     "Sukker":3.5,
@@ -1587,7 +1652,7 @@
   },
   {
     "Ingrediens":"Stay Strong Protein Koldskål",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":1.4,
     "Kulhydrater":3.8,
     "Sukker":3.3,
@@ -1600,7 +1665,7 @@
   },
   {
     "Ingrediens":"Arla® LactoFREE Friskost 16%",
-    "Energi (kcal)":190,
+    "Energi (kcal)":190.0,
     "Fedt":16.0,
     "Kulhydrater":3.3,
     "Sukker":3.3,
@@ -1613,7 +1678,7 @@
   },
   {
     "Ingrediens":"Arla® LactoFREE Piskefløde 36%",
-    "Energi (kcal)":345,
+    "Energi (kcal)":345.0,
     "Fedt":36.0,
     "Kulhydrater":2.9,
     "Sukker":2.9,
@@ -1626,7 +1691,7 @@
   },
   {
     "Ingrediens":"Stay Strong Skyr Mango & Passionsfrugt",
-    "Energi (kcal)":60,
+    "Energi (kcal)":60.0,
     "Fedt":0.2,
     "Kulhydrater":3.2,
     "Sukker":2.9,
@@ -1639,7 +1704,7 @@
   },
   {
     "Ingrediens":"Stay Strong Skyr Jordbær & Lime",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":0.3,
     "Kulhydrater":3.2,
     "Sukker":2.9,
@@ -1652,7 +1717,7 @@
   },
   {
     "Ingrediens":"Stay Strong Skyr Rabarber & Vanilje",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.3,
     "Kulhydrater":3.1,
     "Sukker":2.9,
@@ -1665,7 +1730,7 @@
   },
   {
     "Ingrediens":"Stay Strong Skyr Vanilje",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.3,
     "Kulhydrater":3.1,
     "Sukker":2.9,
@@ -1678,7 +1743,7 @@
   },
   {
     "Ingrediens":"Arla® ØKO Latte Art 0,9%",
-    "Energi (kcal)":46,
+    "Energi (kcal)":46.0,
     "Fedt":0.9,
     "Kulhydrater":5.5,
     "Sukker":5.5,
@@ -1687,11 +1752,11 @@
     "PAC":5.5,
     "MSNF":9.6,
     "HF":0.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® ØKO Latte Art 2,6%",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":2.6,
     "Kulhydrater":5.1,
     "Sukker":5.1,
@@ -1700,11 +1765,11 @@
     "PAC":5.1,
     "MSNF":9.0,
     "HF":2.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Stay Strong PRO Skyr Blåbær & Vanilje",
-    "Energi (kcal)":65,
+    "Energi (kcal)":65.0,
     "Fedt":0.5,
     "Kulhydrater":3.0,
     "Sukker":2.7,
@@ -1717,7 +1782,7 @@
   },
   {
     "Ingrediens":"Stay Strong PRO Skyr Hindbær & Vanilje",
-    "Energi (kcal)":65,
+    "Energi (kcal)":65.0,
     "Fedt":0.5,
     "Kulhydrater":3.0,
     "Sukker":2.7,
@@ -1730,7 +1795,7 @@
   },
   {
     "Ingrediens":"Stay Strong PRO Skyr Lemon Cheesecake",
-    "Energi (kcal)":60,
+    "Energi (kcal)":60.0,
     "Fedt":0.2,
     "Kulhydrater":3.0,
     "Sukker":2.7,
@@ -1743,7 +1808,7 @@
   },
   {
     "Ingrediens":"Philadelphia Light",
-    "Energi (kcal)":147,
+    "Energi (kcal)":147.0,
     "Fedt":11.0,
     "Kulhydrater":5.2,
     "Sukker":5.1,
@@ -1756,7 +1821,7 @@
   },
   {
     "Ingrediens":"Cocio® Light",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":1.0,
     "Kulhydrater":5.2,
     "Sukker":5.0,
@@ -1765,11 +1830,11 @@
     "PAC":5.0,
     "MSNF":9.1,
     "HF":0.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Stay Strong PRO Skyr Hindbær & Blåbær",
-    "Energi (kcal)":60,
+    "Energi (kcal)":60.0,
     "Fedt":0.2,
     "Kulhydrater":3.0,
     "Sukker":2.6,
@@ -1782,7 +1847,7 @@
   },
   {
     "Ingrediens":"Arla LactoFREE Økologisk Minimælk",
-    "Energi (kcal)":28,
+    "Energi (kcal)":28.0,
     "Fedt":0.4,
     "Kulhydrater":2.6,
     "Sukker":2.6,
@@ -1795,7 +1860,7 @@
   },
   {
     "Ingrediens":"Cheasy® Skyr Mango & Lime",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":0.2,
     "Kulhydrater":5.1,
     "Sukker":4.8,
@@ -1804,11 +1869,11 @@
     "PAC":4.8,
     "MSNF":13.4,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla LactoFREE Letmælk",
-    "Energi (kcal)":38,
+    "Energi (kcal)":38.0,
     "Fedt":1.5,
     "Kulhydrater":2.6,
     "Sukker":2.5,
@@ -1821,7 +1886,7 @@
   },
   {
     "Ingrediens":"Arla Sødmælk 3,5%",
-    "Energi (kcal)":64,
+    "Energi (kcal)":64.0,
     "Fedt":3.5,
     "Kulhydrater":4.6,
     "Sukker":4.6,
@@ -1834,7 +1899,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Letmælk 1,5%",
-    "Energi (kcal)":46,
+    "Energi (kcal)":46.0,
     "Fedt":1.5,
     "Kulhydrater":4.6,
     "Sukker":4.6,
@@ -1847,7 +1912,7 @@
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Mango\/Banan",
-    "Energi (kcal)":40,
+    "Energi (kcal)":40.0,
     "Fedt":0.1,
     "Kulhydrater":4.8,
     "Sukker":4.5,
@@ -1856,11 +1921,11 @@
     "PAC":4.5,
     "MSNF":9.0,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Fersken\/Passionsfrugt",
-    "Energi (kcal)":41,
+    "Energi (kcal)":41.0,
     "Fedt":0.1,
     "Kulhydrater":4.8,
     "Sukker":4.5,
@@ -1869,11 +1934,11 @@
     "PAC":4.5,
     "MSNF":9.2,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla Karolines Køkken® Madlavningsfløde 8%",
-    "Energi (kcal)":113,
+    "Energi (kcal)":113.0,
     "Fedt":8.0,
     "Kulhydrater":6.7,
     "Sukker":4.4,
@@ -1886,7 +1951,7 @@
   },
   {
     "Ingrediens":"Arla® UHT Kaffefløde 10%",
-    "Energi (kcal)":120,
+    "Energi (kcal)":120.0,
     "Fedt":10.0,
     "Kulhydrater":4.3,
     "Sukker":4.3,
@@ -1895,11 +1960,11 @@
     "PAC":4.3,
     "MSNF":7.4,
     "HF":9.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Philadelphia Original",
-    "Energi (kcal)":226,
+    "Energi (kcal)":226.0,
     "Fedt":21.0,
     "Kulhydrater":4.3,
     "Sukker":4.3,
@@ -1912,7 +1977,7 @@
   },
   {
     "Ingrediens":"Cheasy® Skyr Skovbær",
-    "Energi (kcal)":55,
+    "Energi (kcal)":55.0,
     "Fedt":0.2,
     "Kulhydrater":4.5,
     "Sukker":4.1,
@@ -1921,11 +1986,11 @@
     "PAC":4.1,
     "MSNF":12.7,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla Karolines Køkken® Madlavningsfløde 15%",
-    "Energi (kcal)":171,
+    "Energi (kcal)":171.0,
     "Fedt":15.0,
     "Kulhydrater":6.0,
     "Sukker":4.1,
@@ -1938,7 +2003,7 @@
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Jordbær\/Rabarber",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.1,
     "Kulhydrater":4.1,
     "Sukker":4.0,
@@ -1947,11 +2012,11 @@
     "PAC":4.0,
     "MSNF":8.3,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Skovbær",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.1,
     "Kulhydrater":4.3,
     "Sukker":4.0,
@@ -1960,11 +2025,11 @@
     "PAC":4.0,
     "MSNF":8.5,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Skyr Naturel",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":0.2,
     "Kulhydrater":4.0,
     "Sukker":4.0,
@@ -1977,7 +2042,7 @@
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Blåbær\/Granatæble\/Acai",
-    "Energi (kcal)":38,
+    "Energi (kcal)":38.0,
     "Fedt":0.1,
     "Kulhydrater":4.4,
     "Sukker":3.9,
@@ -1986,11 +2051,11 @@
     "PAC":3.9,
     "MSNF":8.5,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Naturel 0,1%",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.1,
     "Kulhydrater":3.9,
     "Sukker":3.9,
@@ -1999,11 +2064,11 @@
     "PAC":3.9,
     "MSNF":8.5,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla LactoFREE Sødmælk",
-    "Energi (kcal)":56,
+    "Energi (kcal)":56.0,
     "Fedt":3.0,
     "Kulhydrater":2.0,
     "Sukker":2.0,
@@ -2016,7 +2081,7 @@
   },
   {
     "Ingrediens":"Arla Kærnemælk 0,3%",
-    "Energi (kcal)":34,
+    "Energi (kcal)":34.0,
     "Fedt":0.3,
     "Kulhydrater":3.8,
     "Sukker":3.8,
@@ -2029,7 +2094,7 @@
   },
   {
     "Ingrediens":"Arla® ØKO Kærnemælk 0,3%",
-    "Energi (kcal)":34,
+    "Energi (kcal)":34.0,
     "Fedt":0.3,
     "Kulhydrater":3.8,
     "Sukker":3.8,
@@ -2038,11 +2103,11 @@
     "PAC":3.8,
     "MSNF":7.1,
     "HF":0.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Skyr Vanilje",
-    "Energi (kcal)":55,
+    "Energi (kcal)":55.0,
     "Fedt":0.2,
     "Kulhydrater":4.0,
     "Sukker":3.6,
@@ -2051,11 +2116,11 @@
     "PAC":3.6,
     "MSNF":12.6,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Vanilje",
-    "Energi (kcal)":36,
+    "Energi (kcal)":36.0,
     "Fedt":0.1,
     "Kulhydrater":3.6,
     "Sukker":3.6,
@@ -2064,11 +2129,11 @@
     "PAC":3.6,
     "MSNF":7.9,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"A38® Naturel 1,5%",
-    "Energi (kcal)":46,
+    "Energi (kcal)":46.0,
     "Fedt":1.5,
     "Kulhydrater":3.6,
     "Sukker":3.6,
@@ -2081,7 +2146,7 @@
   },
   {
     "Ingrediens":"A38® Naturel 0,4%",
-    "Energi (kcal)":39,
+    "Energi (kcal)":39.0,
     "Fedt":0.4,
     "Kulhydrater":3.6,
     "Sukker":3.6,
@@ -2094,7 +2159,7 @@
   },
   {
     "Ingrediens":"Arla® ØKO Tykmælk 3,5%",
-    "Energi (kcal)":63,
+    "Energi (kcal)":63.0,
     "Fedt":3.5,
     "Kulhydrater":3.5,
     "Sukker":3.5,
@@ -2103,11 +2168,11 @@
     "PAC":3.5,
     "MSNF":7.0,
     "HF":3.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® ØKO Yoghurt Naturel 0,5%",
-    "Energi (kcal)":44,
+    "Energi (kcal)":44.0,
     "Fedt":0.5,
     "Kulhydrater":3.5,
     "Sukker":3.5,
@@ -2116,11 +2181,11 @@
     "PAC":3.5,
     "MSNF":9.0,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cheasy® Fraiche 5%",
-    "Energi (kcal)":81,
+    "Energi (kcal)":81.0,
     "Fedt":5.0,
     "Kulhydrater":3.4,
     "Sukker":3.4,
@@ -2129,11 +2194,11 @@
     "PAC":3.4,
     "MSNF":8.2,
     "HF":4.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® LactoFREE Hytteost 4%",
-    "Energi (kcal)":98,
+    "Energi (kcal)":98.0,
     "Fedt":4.0,
     "Kulhydrater":1.8,
     "Sukker":1.8,
@@ -2146,7 +2211,7 @@
   },
   {
     "Ingrediens":"Cheasy® Yoghurt Jordbær\/Chia\/Vanilje",
-    "Energi (kcal)":41,
+    "Energi (kcal)":41.0,
     "Fedt":0.5,
     "Kulhydrater":4.2,
     "Sukker":3.3,
@@ -2155,11 +2220,11 @@
     "PAC":3.3,
     "MSNF":8.3,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® Karolines Køkken® Piskefløde 36%",
-    "Energi (kcal)":346,
+    "Energi (kcal)":346.0,
     "Fedt":36.0,
     "Kulhydrater":3.3,
     "Sukker":3.3,
@@ -2172,7 +2237,7 @@
   },
   {
     "Ingrediens":"Mammen Hytteost 1,5% (Laktosefri)",
-    "Energi (kcal)":75,
+    "Energi (kcal)":75.0,
     "Fedt":1.5,
     "Kulhydrater":2.3,
     "Sukker":1.5,
@@ -2185,7 +2250,7 @@
   },
   {
     "Ingrediens":"Cheasy® Hytteost 1,5%",
-    "Energi (kcal)":79,
+    "Energi (kcal)":79.0,
     "Fedt":1.5,
     "Kulhydrater":3.1,
     "Sukker":2.5,
@@ -2198,7 +2263,7 @@
   },
   {
     "Ingrediens":"Mammen Hytteost 4%",
-    "Energi (kcal)":102,
+    "Energi (kcal)":102.0,
     "Fedt":4.0,
     "Kulhydrater":2.3,
     "Sukker":2.3,
@@ -2207,11 +2272,11 @@
     "PAC":2.3,
     "MSNF":16.3,
     "HF":3.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Æggehvide (Past.)",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.2,
     "Kulhydrater":0.7,
     "Sukker":0.7,
@@ -2224,7 +2289,7 @@
   },
   {
     "Ingrediens":"Æggeblomme (Past.)",
-    "Energi (kcal)":322,
+    "Energi (kcal)":322.0,
     "Fedt":26.5,
     "Kulhydrater":3.6,
     "Sukker":0.6,
@@ -2236,8 +2301,21 @@
     "Kommentar":"Nøglen til Gelato."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Alpro Dessert m. Mørk Chokolade",
-    "Energi (kcal)":95,
+    "Energi (kcal)":95.0,
     "Fedt":2.3,
     "Kulhydrater":14.7,
     "Sukker":11.8,
@@ -2250,7 +2328,7 @@
   },
   {
     "Ingrediens":"Alpro Plantgurt Lemon & Lime",
-    "Energi (kcal)":77,
+    "Energi (kcal)":77.0,
     "Fedt":2.0,
     "Kulhydrater":10.0,
     "Sukker":9.7,
@@ -2259,11 +2337,11 @@
     "PAC":12.6,
     "MSNF":13.6,
     "HF":1.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Greek Style Strawberry",
-    "Energi (kcal)":85,
+    "Energi (kcal)":85.0,
     "Fedt":3.0,
     "Kulhydrater":8.5,
     "Sukker":8.2,
@@ -2272,11 +2350,11 @@
     "PAC":10.7,
     "MSNF":13.7,
     "HF":2.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plantgurt Blueberry",
-    "Energi (kcal)":70,
+    "Energi (kcal)":70.0,
     "Fedt":1.9,
     "Kulhydrater":8.5,
     "Sukker":8.3,
@@ -2285,11 +2363,11 @@
     "PAC":10.8,
     "MSNF":12.1,
     "HF":1.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soyaprodukt m. Blåbær",
-    "Energi (kcal)":69,
+    "Energi (kcal)":69.0,
     "Fedt":2.1,
     "Kulhydrater":8.1,
     "Sukker":7.9,
@@ -2298,11 +2376,11 @@
     "PAC":10.3,
     "MSNF":11.8,
     "HF":1.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soyaprodukt m. Jordbær",
-    "Energi (kcal)":68,
+    "Energi (kcal)":68.0,
     "Fedt":2.1,
     "Kulhydrater":8.1,
     "Sukker":7.9,
@@ -2311,11 +2389,11 @@
     "PAC":10.3,
     "MSNF":11.7,
     "HF":1.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plantgurt Vanilla",
-    "Energi (kcal)":66,
+    "Energi (kcal)":66.0,
     "Fedt":2.2,
     "Kulhydrater":7.5,
     "Sukker":7.5,
@@ -2324,11 +2402,11 @@
     "PAC":9.8,
     "MSNF":11.2,
     "HF":2.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soyaiskaffe",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":1.7,
     "Kulhydrater":8.2,
     "Sukker":6.2,
@@ -2337,11 +2415,11 @@
     "PAC":8.1,
     "MSNF":11.2,
     "HF":1.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Sojadrik Vanilje",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":1.7,
     "Kulhydrater":6.2,
     "Sukker":6.2,
@@ -2350,11 +2428,11 @@
     "PAC":8.1,
     "MSNF":9.1,
     "HF":1.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Protein Soyaprodukt Røde Bær",
-    "Energi (kcal)":82,
+    "Energi (kcal)":82.0,
     "Fedt":2.3,
     "Kulhydrater":7.0,
     "Sukker":6.8,
@@ -2363,11 +2441,11 @@
     "PAC":8.8,
     "MSNF":14.5,
     "HF":2.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Protein Soyaprodukt Tropical",
-    "Energi (kcal)":83,
+    "Energi (kcal)":83.0,
     "Fedt":2.3,
     "Kulhydrater":7.2,
     "Sukker":7.0,
@@ -2376,11 +2454,11 @@
     "PAC":9.1,
     "MSNF":14.7,
     "HF":2.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Mango",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":2.0,
     "Kulhydrater":5.8,
     "Sukker":5.6,
@@ -2389,11 +2467,11 @@
     "PAC":7.3,
     "MSNF":9.5,
     "HF":1.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly Havredrik Chokolade",
-    "Energi (kcal)":65,
+    "Energi (kcal)":65.0,
     "Fedt":1.5,
     "Kulhydrater":11.0,
     "Sukker":6.8,
@@ -2402,11 +2480,11 @@
     "PAC":8.8,
     "MSNF":12.3,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plant Protein Pudding Chocolate",
-    "Energi (kcal)":97,
+    "Energi (kcal)":97.0,
     "Fedt":2.9,
     "Kulhydrater":7.0,
     "Sukker":4.9,
@@ -2415,11 +2493,11 @@
     "PAC":6.4,
     "MSNF":17.2,
     "HF":2.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plant Protein Pudding Vanilla",
-    "Energi (kcal)":95,
+    "Energi (kcal)":95.0,
     "Fedt":2.5,
     "Kulhydrater":7.7,
     "Sukker":4.9,
@@ -2428,11 +2506,11 @@
     "PAC":6.4,
     "MSNF":17.7,
     "HF":2.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Proteindrik Chokolade (15g)",
-    "Energi (kcal)":75,
+    "Energi (kcal)":75.0,
     "Fedt":3.0,
     "Kulhydrater":5.2,
     "Sukker":4.9,
@@ -2441,11 +2519,11 @@
     "PAC":6.4,
     "MSNF":11.3,
     "HF":2.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soyaiskaffe Nutty Almond",
-    "Energi (kcal)":30,
+    "Energi (kcal)":30.0,
     "Fedt":0.8,
     "Kulhydrater":4.9,
     "Sukker":4.9,
@@ -2454,11 +2532,11 @@
     "PAC":6.4,
     "MSNF":5.2,
     "HF":0.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Proteindrik Chokolade (50g)",
-    "Energi (kcal)":69,
+    "Energi (kcal)":69.0,
     "Fedt":2.8,
     "Kulhydrater":5.3,
     "Sukker":5.0,
@@ -2467,11 +2545,11 @@
     "PAC":6.5,
     "MSNF":10.3,
     "HF":2.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Proteindrik Vanilje (50g)",
-    "Energi (kcal)":67,
+    "Energi (kcal)":67.0,
     "Fedt":2.8,
     "Kulhydrater":4.8,
     "Sukker":4.8,
@@ -2480,11 +2558,11 @@
     "PAC":6.2,
     "MSNF":9.8,
     "HF":2.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly iKaffe Karamel",
-    "Energi (kcal)":70,
+    "Energi (kcal)":70.0,
     "Fedt":3.2,
     "Kulhydrater":8.8,
     "Sukker":5.1,
@@ -2493,11 +2571,11 @@
     "PAC":6.6,
     "MSNF":9.9,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly iKaffe Vanilje",
-    "Energi (kcal)":72,
+    "Energi (kcal)":72.0,
     "Fedt":3.2,
     "Kulhydrater":9.2,
     "Sukker":5.1,
@@ -2506,11 +2584,11 @@
     "PAC":6.6,
     "MSNF":10.3,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plantgurt No Added Sugar Mango\/Apple",
-    "Energi (kcal)":56,
+    "Energi (kcal)":56.0,
     "Fedt":2.2,
     "Kulhydrater":4.3,
     "Sukker":3.7,
@@ -2519,11 +2597,11 @@
     "PAC":4.8,
     "MSNF":7.9,
     "HF":2.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soya (Piskbar)",
-    "Energi (kcal)":262,
+    "Energi (kcal)":262.0,
     "Fedt":24.0,
     "Kulhydrater":9.5,
     "Sukker":3.3,
@@ -2536,7 +2614,7 @@
   },
   {
     "Ingrediens":"Oatly Havredrik 1,5%",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":1.5,
     "Kulhydrater":7.0,
     "Sukker":3.4,
@@ -2545,11 +2623,11 @@
     "PAC":4.4,
     "MSNF":8.1,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly Havredrik 2,8%",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":2.8,
     "Kulhydrater":7.0,
     "Sukker":3.4,
@@ -2558,11 +2636,11 @@
     "PAC":4.4,
     "MSNF":8.1,
     "HF":2.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly Havredrik Barista Edition",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":3.0,
     "Kulhydrater":7.1,
     "Sukker":3.4,
@@ -2571,11 +2649,11 @@
     "PAC":4.4,
     "MSNF":8.2,
     "HF":2.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly Havredrik Økologisk",
-    "Energi (kcal)":39,
+    "Energi (kcal)":39.0,
     "Fedt":0.5,
     "Kulhydrater":7.2,
     "Sukker":3.4,
@@ -2584,11 +2662,11 @@
     "PAC":4.4,
     "MSNF":8.3,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Barista Kokosdrik m. Soya",
-    "Energi (kcal)":33,
+    "Energi (kcal)":33.0,
     "Fedt":1.4,
     "Kulhydrater":3.3,
     "Sukker":3.3,
@@ -2597,11 +2675,11 @@
     "PAC":4.3,
     "MSNF":4.8,
     "HF":1.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plantgurt No Added Sugar Pear\/Vanilla",
-    "Energi (kcal)":54,
+    "Energi (kcal)":54.0,
     "Fedt":2.0,
     "Kulhydrater":4.0,
     "Sukker":3.2,
@@ -2610,11 +2688,11 @@
     "PAC":4.2,
     "MSNF":7.7,
     "HF":1.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly Havredrik 0,5%",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.5,
     "Kulhydrater":6.7,
     "Sukker":3.2,
@@ -2623,11 +2701,11 @@
     "PAC":4.2,
     "MSNF":7.7,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Arla® JÖRÐ Barista Havredrik",
-    "Energi (kcal)":61,
+    "Energi (kcal)":61.0,
     "Fedt":3.0,
     "Kulhydrater":7.4,
     "Sukker":3.9,
@@ -2640,7 +2718,7 @@
   },
   {
     "Ingrediens":"Alpro Soyadrik Barista",
-    "Energi (kcal)":42,
+    "Energi (kcal)":42.0,
     "Fedt":1.9,
     "Kulhydrater":2.6,
     "Sukker":2.5,
@@ -2649,11 +2727,11 @@
     "PAC":3.3,
     "MSNF":5.9,
     "HF":1.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Mandeldrik Barista",
-    "Energi (kcal)":25,
+    "Energi (kcal)":25.0,
     "Fedt":1.2,
     "Kulhydrater":2.5,
     "Sukker":2.5,
@@ -2662,11 +2740,11 @@
     "PAC":3.3,
     "MSNF":3.0,
     "HF":1.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Plantgurt Naturel",
-    "Energi (kcal)":51,
+    "Energi (kcal)":51.0,
     "Fedt":2.3,
     "Kulhydrater":2.2,
     "Sukker":2.2,
@@ -2675,11 +2753,11 @@
     "PAC":2.9,
     "MSNF":6.2,
     "HF":2.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Naturel med Kokos",
-    "Energi (kcal)":54,
+    "Energi (kcal)":54.0,
     "Fedt":2.8,
     "Kulhydrater":2.4,
     "Sukker":2.2,
@@ -2688,11 +2766,11 @@
     "PAC":2.9,
     "MSNF":6.3,
     "HF":2.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oatly iKaffe Økologisk",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":3.2,
     "Kulhydrater":6.3,
     "Sukker":2.2,
@@ -2701,11 +2779,11 @@
     "PAC":2.9,
     "MSNF":7.3,
     "HF":2.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Risdrik m. Kokos",
-    "Energi (kcal)":20,
+    "Energi (kcal)":20.0,
     "Fedt":0.8,
     "Kulhydrater":2.7,
     "Sukker":1.9,
@@ -2714,11 +2792,11 @@
     "PAC":2.5,
     "MSNF":2.8,
     "HF":0.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Soya (Madlavning)",
-    "Energi (kcal)":142,
+    "Energi (kcal)":142.0,
     "Fedt":14.0,
     "Kulhydrater":1.2,
     "Sukker":1.2,
@@ -2731,7 +2809,7 @@
   },
   {
     "Ingrediens":"Philadelphia Plant Based",
-    "Energi (kcal)":219,
+    "Energi (kcal)":219.0,
     "Fedt":21.0,
     "Kulhydrater":2.5,
     "Sukker":0.8,
@@ -2744,7 +2822,7 @@
   },
   {
     "Ingrediens":"Naturli' Økologisk Soyadrik Usødet",
-    "Energi (kcal)":28,
+    "Energi (kcal)":28.0,
     "Fedt":1.5,
     "Kulhydrater":0.5,
     "Sukker":0.4,
@@ -2753,11 +2831,11 @@
     "PAC":0.4,
     "MSNF":3.5,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Kokosdrik Usødet",
-    "Energi (kcal)":14,
+    "Energi (kcal)":14.0,
     "Fedt":1.2,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -2766,11 +2844,11 @@
     "PAC":0.0,
     "MSNF":0.1,
     "HF":1.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Havredrik Usødet",
-    "Energi (kcal)":40,
+    "Energi (kcal)":40.0,
     "Fedt":1.5,
     "Kulhydrater":5.8,
     "Sukker":0.0,
@@ -2779,11 +2857,11 @@
     "PAC":0.0,
     "MSNF":6.0,
     "HF":1.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Alpro Mandeldrik Usødet",
-    "Energi (kcal)":15,
+    "Energi (kcal)":15.0,
     "Fedt":1.1,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -2792,11 +2870,11 @@
     "PAC":0.0,
     "MSNF":0.5,
     "HF":1.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Naturli' Mandel 0% Sukker",
-    "Energi (kcal)":15,
+    "Energi (kcal)":15.0,
     "Fedt":1.3,
     "Kulhydrater":0.1,
     "Sukker":0.0,
@@ -2805,11 +2883,11 @@
     "PAC":0.0,
     "MSNF":0.6,
     "HF":1.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Vemondo Usødet Mandeldrik",
-    "Energi (kcal)":13,
+    "Energi (kcal)":13.0,
     "Fedt":1.1,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -2818,11 +2896,24 @@
     "PAC":0.0,
     "MSNF":0.4,
     "HF":1.0,
-    "Kommentar":0
+    "Kommentar":null
+  },
+  {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
   },
   {
     "Ingrediens":"Citronsaft (Frisk)",
-    "Energi (kcal)":29,
+    "Energi (kcal)":29.0,
     "Fedt":0.3,
     "Kulhydrater":9.3,
     "Sukker":2.5,
@@ -2835,7 +2926,7 @@
   },
   {
     "Ingrediens":"Vand",
-    "Energi (kcal)":0,
+    "Energi (kcal)":0.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -2847,8 +2938,21 @@
     "Kommentar":"Den ultimative neutrale base. Har ingen effekt på FPDF eller tekstur."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Ribena Solbær",
-    "Energi (kcal)":270,
+    "Energi (kcal)":270.0,
     "Fedt":0.1,
     "Kulhydrater":67.0,
     "Sukker":66.0,
@@ -2861,7 +2965,7 @@
   },
   {
     "Ingrediens":"Innocent Ananas, Jordbær & Æble",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.0,
     "Kulhydrater":11.0,
     "Sukker":11.0,
@@ -2874,7 +2978,7 @@
   },
   {
     "Ingrediens":"Innocent Green Antioxidant",
-    "Energi (kcal)":53,
+    "Energi (kcal)":53.0,
     "Fedt":0.1,
     "Kulhydrater":11.0,
     "Sukker":11.0,
@@ -2883,11 +2987,11 @@
     "PAC":14.3,
     "MSNF":12.3,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Blåbær, Solbær & Æble",
-    "Energi (kcal)":45,
+    "Energi (kcal)":45.0,
     "Fedt":0.2,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -2896,11 +3000,11 @@
     "PAC":13.0,
     "MSNF":11.3,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Æble, Drue & Granatæble",
-    "Energi (kcal)":45,
+    "Energi (kcal)":45.0,
     "Fedt":0.0,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -2909,11 +3013,11 @@
     "PAC":13.0,
     "MSNF":11.2,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Berry Energise",
-    "Energi (kcal)":53,
+    "Energi (kcal)":53.0,
     "Fedt":0.0,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -2922,11 +3026,11 @@
     "PAC":13.0,
     "MSNF":12.5,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Citrus Defence",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":0.1,
     "Kulhydrater":11.0,
     "Sukker":10.0,
@@ -2935,11 +3039,11 @@
     "PAC":13.0,
     "MSNF":11.4,
     "HF":0.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Tropical Defence",
-    "Energi (kcal)":57,
+    "Energi (kcal)":57.0,
     "Fedt":0.7,
     "Kulhydrater":12.0,
     "Sukker":10.0,
@@ -2948,11 +3052,11 @@
     "PAC":13.0,
     "MSNF":12.5,
     "HF":0.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Exotic Energise",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.0,
     "Kulhydrater":11.0,
     "Sukker":9.9,
@@ -2961,11 +3065,11 @@
     "PAC":12.9,
     "MSNF":11.3,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Æblejuice",
-    "Energi (kcal)":42,
+    "Energi (kcal)":42.0,
     "Fedt":0.2,
     "Kulhydrater":11.0,
     "Sukker":9.5,
@@ -2974,11 +3078,11 @@
     "PAC":12.4,
     "MSNF":11.3,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Berry Antioxidant",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.2,
     "Kulhydrater":11.0,
     "Sukker":9.1,
@@ -2987,11 +3091,11 @@
     "PAC":11.8,
     "MSNF":11.3,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Citrus Shield",
-    "Energi (kcal)":40,
+    "Energi (kcal)":40.0,
     "Fedt":0.2,
     "Kulhydrater":10.0,
     "Sukker":9.0,
@@ -3000,11 +3104,11 @@
     "PAC":11.7,
     "MSNF":10.3,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Æble & Hindbær",
-    "Energi (kcal)":40,
+    "Energi (kcal)":40.0,
     "Fedt":0.2,
     "Kulhydrater":9.6,
     "Sukker":8.9,
@@ -3013,11 +3117,11 @@
     "PAC":11.6,
     "MSNF":9.9,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Tropisk",
-    "Energi (kcal)":41,
+    "Energi (kcal)":41.0,
     "Fedt":0.2,
     "Kulhydrater":10.0,
     "Sukker":8.9,
@@ -3026,11 +3130,11 @@
     "PAC":11.6,
     "MSNF":10.3,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Blue Spark",
-    "Energi (kcal)":39,
+    "Energi (kcal)":39.0,
     "Fedt":0.0,
     "Kulhydrater":9.6,
     "Sukker":8.9,
@@ -3039,11 +3143,11 @@
     "PAC":11.6,
     "MSNF":9.8,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Inner Winner",
-    "Energi (kcal)":41,
+    "Energi (kcal)":41.0,
     "Fedt":0.2,
     "Kulhydrater":9.6,
     "Sukker":8.4,
@@ -3052,11 +3156,11 @@
     "PAC":10.9,
     "MSNF":9.9,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Appelsinjuice (begge)",
-    "Energi (kcal)":35,
+    "Energi (kcal)":35.0,
     "Fedt":0.2,
     "Kulhydrater":7.8,
     "Sukker":7.8,
@@ -3069,7 +3173,7 @@
   },
   {
     "Ingrediens":"Innocent Appelsin & Gulerod",
-    "Energi (kcal)":43,
+    "Energi (kcal)":43.0,
     "Fedt":0.2,
     "Kulhydrater":10.0,
     "Sukker":7.8,
@@ -3078,11 +3182,11 @@
     "PAC":10.1,
     "MSNF":10.6,
     "HF":0.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Innocent Kokosvand",
-    "Energi (kcal)":14,
+    "Energi (kcal)":14.0,
     "Fedt":0.2,
     "Kulhydrater":3.5,
     "Sukker":2.2,
@@ -3094,8 +3198,21 @@
     "Kommentar":"Meget lav PAC og MSNF, fungerer mere som en let smagfuld vandbase."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Dadler (Medjool, udstenet)",
-    "Energi (kcal)":277,
+    "Energi (kcal)":277.0,
     "Fedt":0.2,
     "Kulhydrater":75.0,
     "Sukker":66.5,
@@ -3108,7 +3225,7 @@
   },
   {
     "Ingrediens":"Vindruer",
-    "Energi (kcal)":69,
+    "Energi (kcal)":69.0,
     "Fedt":0.2,
     "Kulhydrater":18.1,
     "Sukker":15.5,
@@ -3121,7 +3238,7 @@
   },
   {
     "Ingrediens":"Kirsebær",
-    "Energi (kcal)":63,
+    "Energi (kcal)":63.0,
     "Fedt":0.2,
     "Kulhydrater":16.0,
     "Sukker":12.8,
@@ -3134,7 +3251,7 @@
   },
   {
     "Ingrediens":"Banan",
-    "Energi (kcal)":89,
+    "Energi (kcal)":89.0,
     "Fedt":0.3,
     "Kulhydrater":22.8,
     "Sukker":12.2,
@@ -3147,7 +3264,7 @@
   },
   {
     "Ingrediens":"Mango",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.0,
     "Kulhydrater":10.6,
     "Sukker":10.6,
@@ -3160,7 +3277,7 @@
   },
   {
     "Ingrediens":"Æble",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.2,
     "Kulhydrater":13.8,
     "Sukker":10.4,
@@ -3173,7 +3290,7 @@
   },
   {
     "Ingrediens":"Blåbær",
-    "Energi (kcal)":57,
+    "Energi (kcal)":57.0,
     "Fedt":0.3,
     "Kulhydrater":14.5,
     "Sukker":10.0,
@@ -3186,7 +3303,7 @@
   },
   {
     "Ingrediens":"Blommer",
-    "Energi (kcal)":46,
+    "Energi (kcal)":46.0,
     "Fedt":0.3,
     "Kulhydrater":11.4,
     "Sukker":9.9,
@@ -3199,7 +3316,7 @@
   },
   {
     "Ingrediens":"Ananas",
-    "Energi (kcal)":50,
+    "Energi (kcal)":50.0,
     "Fedt":0.1,
     "Kulhydrater":13.1,
     "Sukker":9.9,
@@ -3212,7 +3329,7 @@
   },
   {
     "Ingrediens":"Pære",
-    "Energi (kcal)":57,
+    "Energi (kcal)":57.0,
     "Fedt":0.1,
     "Kulhydrater":15.2,
     "Sukker":9.7,
@@ -3225,7 +3342,7 @@
   },
   {
     "Ingrediens":"Appelsin",
-    "Energi (kcal)":47,
+    "Energi (kcal)":47.0,
     "Fedt":0.1,
     "Kulhydrater":11.8,
     "Sukker":9.4,
@@ -3238,7 +3355,7 @@
   },
   {
     "Ingrediens":"Fersken",
-    "Energi (kcal)":39,
+    "Energi (kcal)":39.0,
     "Fedt":0.3,
     "Kulhydrater":9.5,
     "Sukker":8.4,
@@ -3251,7 +3368,7 @@
   },
   {
     "Ingrediens":"Sød Kartoffel (kogt, blendet)",
-    "Energi (kcal)":90,
+    "Energi (kcal)":90.0,
     "Fedt":0.1,
     "Kulhydrater":20.7,
     "Sukker":6.5,
@@ -3264,7 +3381,7 @@
   },
   {
     "Ingrediens":"Vandmelon",
-    "Energi (kcal)":30,
+    "Energi (kcal)":30.0,
     "Fedt":0.2,
     "Kulhydrater":7.6,
     "Sukker":6.2,
@@ -3277,7 +3394,7 @@
   },
   {
     "Ingrediens":"Jordbær",
-    "Energi (kcal)":32,
+    "Energi (kcal)":32.0,
     "Fedt":0.3,
     "Kulhydrater":7.7,
     "Sukker":4.9,
@@ -3290,7 +3407,7 @@
   },
   {
     "Ingrediens":"Hindbær",
-    "Energi (kcal)":52,
+    "Energi (kcal)":52.0,
     "Fedt":0.7,
     "Kulhydrater":11.9,
     "Sukker":4.4,
@@ -3303,7 +3420,7 @@
   },
   {
     "Ingrediens":"Citron",
-    "Energi (kcal)":29,
+    "Energi (kcal)":29.0,
     "Fedt":0.3,
     "Kulhydrater":9.3,
     "Sukker":2.5,
@@ -3316,7 +3433,7 @@
   },
   {
     "Ingrediens":"Broccoli (Kogt)",
-    "Energi (kcal)":35,
+    "Energi (kcal)":35.0,
     "Fedt":0.4,
     "Kulhydrater":7.2,
     "Sukker":1.4,
@@ -3329,7 +3446,7 @@
   },
   {
     "Ingrediens":"Avocado",
-    "Energi (kcal)":160,
+    "Energi (kcal)":160.0,
     "Fedt":14.7,
     "Kulhydrater":8.5,
     "Sukker":0.7,
@@ -3342,7 +3459,7 @@
   },
   {
     "Ingrediens":"Spinat (Frisk)",
-    "Energi (kcal)":23,
+    "Energi (kcal)":23.0,
     "Fedt":0.4,
     "Kulhydrater":3.6,
     "Sukker":0.4,
@@ -3355,7 +3472,7 @@
   },
   {
     "Ingrediens":"Matcha Pulver (Grøn te)",
-    "Energi (kcal)":324,
+    "Energi (kcal)":324.0,
     "Fedt":5.3,
     "Kulhydrater":39.0,
     "Sukker":0.0,
@@ -3367,8 +3484,21 @@
     "Kommentar":"Potent antioxidant. Giver en intens, let bitter grøn te-smag og en smuk farve."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Rema 1000 Blåbær",
-    "Energi (kcal)":69,
+    "Energi (kcal)":69.0,
     "Fedt":0.5,
     "Kulhydrater":14.0,
     "Sukker":12.0,
@@ -3381,7 +3511,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Vilde Nordiske Blåbær (Øko)",
-    "Energi (kcal)":67,
+    "Energi (kcal)":67.0,
     "Fedt":0.5,
     "Kulhydrater":14.0,
     "Sukker":12.0,
@@ -3394,7 +3524,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Mango (Øko)",
-    "Energi (kcal)":48,
+    "Energi (kcal)":48.0,
     "Fedt":0.5,
     "Kulhydrater":10.0,
     "Sukker":10.0,
@@ -3407,7 +3537,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Bærmix (Øko)",
-    "Energi (kcal)":53,
+    "Energi (kcal)":53.0,
     "Fedt":0.6,
     "Kulhydrater":9.5,
     "Sukker":8.7,
@@ -3420,7 +3550,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Jordbær (Øko)",
-    "Energi (kcal)":34,
+    "Energi (kcal)":34.0,
     "Fedt":0.5,
     "Kulhydrater":6.6,
     "Sukker":6.6,
@@ -3433,7 +3563,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Jordbær",
-    "Energi (kcal)":41,
+    "Energi (kcal)":41.0,
     "Fedt":0.5,
     "Kulhydrater":8.1,
     "Sukker":6.1,
@@ -3446,7 +3576,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Hindbær",
-    "Energi (kcal)":29,
+    "Energi (kcal)":29.0,
     "Fedt":0.5,
     "Kulhydrater":3.2,
     "Sukker":3.2,
@@ -3458,8 +3588,21 @@
     "Kommentar":"Meget lav PAC og MSNF. Giver intens smag, men kræver meget hjælp fra andre ingredienser."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Rema 1000 Ananasstykker i egen juice",
-    "Energi (kcal)":57,
+    "Energi (kcal)":57.0,
     "Fedt":0.5,
     "Kulhydrater":13.0,
     "Sukker":13.0,
@@ -3471,8 +3614,21 @@
     "Kommentar":"Meget høj PAC pga. den tilsatte juice. Nem at bruge."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Den Gamle Fabrik Bitter Orangemarmelade",
-    "Energi (kcal)":281,
+    "Energi (kcal)":281.0,
     "Fedt":0.5,
     "Kulhydrater":68.0,
     "Sukker":67.0,
@@ -3485,7 +3641,7 @@
   },
   {
     "Ingrediens":"Fynbo Delight Jordbær",
-    "Energi (kcal)":26,
+    "Energi (kcal)":26.0,
     "Fedt":0.5,
     "Kulhydrater":24.0,
     "Sukker":3.7,
@@ -3498,7 +3654,7 @@
   },
   {
     "Ingrediens":"Fynbo Delight Hindbær\/Blåbær",
-    "Energi (kcal)":35,
+    "Energi (kcal)":35.0,
     "Fedt":0.5,
     "Kulhydrater":24.0,
     "Sukker":4.1,
@@ -3511,7 +3667,7 @@
   },
   {
     "Ingrediens":"Den Gamle Fabrik Blåbærmarmelade",
-    "Energi (kcal)":224,
+    "Energi (kcal)":224.0,
     "Fedt":0.5,
     "Kulhydrater":54.0,
     "Sukker":52.0,
@@ -3520,11 +3676,11 @@
     "PAC":57.2,
     "MSNF":54.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Boysenbærmarmelade",
-    "Energi (kcal)":212,
+    "Energi (kcal)":212.0,
     "Fedt":0.5,
     "Kulhydrater":51.0,
     "Sukker":51.0,
@@ -3533,11 +3689,11 @@
     "PAC":56.1,
     "MSNF":51.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Solbærmarmelade",
-    "Energi (kcal)":214,
+    "Energi (kcal)":214.0,
     "Fedt":0.5,
     "Kulhydrater":50.0,
     "Sukker":49.0,
@@ -3546,11 +3702,11 @@
     "PAC":53.9,
     "MSNF":50.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Abrikosmarmelade",
-    "Energi (kcal)":205,
+    "Energi (kcal)":205.0,
     "Fedt":0.5,
     "Kulhydrater":49.0,
     "Sukker":48.0,
@@ -3559,11 +3715,11 @@
     "PAC":52.8,
     "MSNF":49.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Hybenmarmelade m. Æble (Cremet)",
-    "Energi (kcal)":204,
+    "Energi (kcal)":204.0,
     "Fedt":0.5,
     "Kulhydrater":49.0,
     "Sukker":48.0,
@@ -3572,11 +3728,11 @@
     "PAC":52.8,
     "MSNF":49.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Jordbærmarmelade (Cremet)",
-    "Energi (kcal)":201,
+    "Energi (kcal)":201.0,
     "Fedt":0.5,
     "Kulhydrater":48.0,
     "Sukker":47.0,
@@ -3585,11 +3741,11 @@
     "PAC":51.7,
     "MSNF":48.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Jordbærmarmelade (380g)",
-    "Energi (kcal)":200,
+    "Energi (kcal)":200.0,
     "Fedt":0.0,
     "Kulhydrater":48.0,
     "Sukker":47.0,
@@ -3598,11 +3754,11 @@
     "PAC":51.7,
     "MSNF":48.5,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Brombærmarmelade",
-    "Energi (kcal)":204,
+    "Energi (kcal)":204.0,
     "Fedt":0.5,
     "Kulhydrater":48.0,
     "Sukker":47.0,
@@ -3611,11 +3767,11 @@
     "PAC":51.7,
     "MSNF":48.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Abrikos\/Appelsin (Cremet)",
-    "Energi (kcal)":199,
+    "Energi (kcal)":199.0,
     "Fedt":0.5,
     "Kulhydrater":48.0,
     "Sukker":47.0,
@@ -3624,11 +3780,11 @@
     "PAC":51.7,
     "MSNF":48.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Jordbær\/Rabarber",
-    "Energi (kcal)":201,
+    "Energi (kcal)":201.0,
     "Fedt":0.5,
     "Kulhydrater":48.0,
     "Sukker":47.0,
@@ -3637,11 +3793,11 @@
     "PAC":51.7,
     "MSNF":48.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Hybenmarmelade (380g)",
-    "Energi (kcal)":196,
+    "Energi (kcal)":196.0,
     "Fedt":0.5,
     "Kulhydrater":47.0,
     "Sukker":47.0,
@@ -3650,11 +3806,11 @@
     "PAC":51.7,
     "MSNF":47.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Appelsinmarmelade",
-    "Energi (kcal)":198,
+    "Energi (kcal)":198.0,
     "Fedt":0.5,
     "Kulhydrater":47.0,
     "Sukker":46.0,
@@ -3663,11 +3819,11 @@
     "PAC":50.6,
     "MSNF":47.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Rabarber\/Hindbær",
-    "Energi (kcal)":199,
+    "Energi (kcal)":199.0,
     "Fedt":0.5,
     "Kulhydrater":47.0,
     "Sukker":46.0,
@@ -3676,11 +3832,11 @@
     "PAC":50.6,
     "MSNF":47.0,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Fynbo Delight Boysenbær",
-    "Energi (kcal)":30,
+    "Energi (kcal)":30.0,
     "Fedt":0.5,
     "Kulhydrater":20.0,
     "Sukker":3.8,
@@ -3693,7 +3849,7 @@
   },
   {
     "Ingrediens":"Den Gamle Fabrik Solbærmarmelade (Cremet)",
-    "Energi (kcal)":198,
+    "Energi (kcal)":198.0,
     "Fedt":0.5,
     "Kulhydrater":46.0,
     "Sukker":45.0,
@@ -3702,11 +3858,11 @@
     "PAC":49.5,
     "MSNF":46.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Hindbærmarmelade (600g)",
-    "Energi (kcal)":203,
+    "Energi (kcal)":203.0,
     "Fedt":0.6,
     "Kulhydrater":47.0,
     "Sukker":45.0,
@@ -3715,11 +3871,11 @@
     "PAC":49.5,
     "MSNF":47.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Hindbærmarmelade (380g)",
-    "Energi (kcal)":203,
+    "Energi (kcal)":203.0,
     "Fedt":0.6,
     "Kulhydrater":47.0,
     "Sukker":45.0,
@@ -3728,11 +3884,11 @@
     "PAC":49.5,
     "MSNF":47.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Jordbærmarmelade (Tube)",
-    "Energi (kcal)":190,
+    "Energi (kcal)":190.0,
     "Fedt":0.5,
     "Kulhydrater":44.0,
     "Sukker":44.0,
@@ -3741,11 +3897,11 @@
     "PAC":48.4,
     "MSNF":44.0,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Hindbærmarmelade (Tube)",
-    "Energi (kcal)":190,
+    "Energi (kcal)":190.0,
     "Fedt":0.5,
     "Kulhydrater":45.0,
     "Sukker":43.0,
@@ -3754,11 +3910,11 @@
     "PAC":47.3,
     "MSNF":45.0,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Den Gamle Fabrik Jordbærmarmelade (Fintskårne)",
-    "Energi (kcal)":175,
+    "Energi (kcal)":175.0,
     "Fedt":0.0,
     "Kulhydrater":42.0,
     "Sukker":42.0,
@@ -3767,11 +3923,11 @@
     "PAC":46.2,
     "MSNF":42.5,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Ribsgele",
-    "Energi (kcal)":22,
+    "Energi (kcal)":22.0,
     "Fedt":0.0,
     "Kulhydrater":17.0,
     "Sukker":2.8,
@@ -3784,7 +3940,7 @@
   },
   {
     "Ingrediens":"EASIS Pære- & Blommegrød",
-    "Energi (kcal)":27,
+    "Energi (kcal)":27.0,
     "Fedt":0.5,
     "Kulhydrater":15.0,
     "Sukker":2.4,
@@ -3797,7 +3953,7 @@
   },
   {
     "Ingrediens":"EASIS Rabarbergrød",
-    "Energi (kcal)":32,
+    "Energi (kcal)":32.0,
     "Fedt":0.5,
     "Kulhydrater":15.0,
     "Sukker":2.0,
@@ -3810,7 +3966,7 @@
   },
   {
     "Ingrediens":"EASIS Æblegrød",
-    "Energi (kcal)":45,
+    "Energi (kcal)":45.0,
     "Fedt":0.5,
     "Kulhydrater":15.0,
     "Sukker":6.0,
@@ -3823,7 +3979,7 @@
   },
   {
     "Ingrediens":"EASIS Sveskegrød",
-    "Energi (kcal)":59,
+    "Energi (kcal)":59.0,
     "Fedt":0.5,
     "Kulhydrater":18.0,
     "Sukker":5.7,
@@ -3836,7 +3992,7 @@
   },
   {
     "Ingrediens":"EASIS Abrikosmarmelade",
-    "Energi (kcal)":34,
+    "Energi (kcal)":34.0,
     "Fedt":0.5,
     "Kulhydrater":12.0,
     "Sukker":4.9,
@@ -3849,7 +4005,7 @@
   },
   {
     "Ingrediens":"EASIS Appelsinmarmelade",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.0,
     "Kulhydrater":7.8,
     "Sukker":7.0,
@@ -3858,11 +4014,11 @@
     "PAC":7.0,
     "MSNF":8.3,
     "HF":0.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Solbærmarmelade",
-    "Energi (kcal)":33,
+    "Energi (kcal)":33.0,
     "Fedt":0.5,
     "Kulhydrater":6.7,
     "Sukker":6.1,
@@ -3871,11 +4027,11 @@
     "PAC":6.1,
     "MSNF":7.3,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Hyben-Ribs Marmelade",
-    "Energi (kcal)":35,
+    "Energi (kcal)":35.0,
     "Fedt":0.5,
     "Kulhydrater":5.9,
     "Sukker":4.9,
@@ -3884,11 +4040,11 @@
     "PAC":4.9,
     "MSNF":6.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Jordbærmarmelade",
-    "Energi (kcal)":30,
+    "Energi (kcal)":30.0,
     "Fedt":0.5,
     "Kulhydrater":6.1,
     "Sukker":4.6,
@@ -3897,11 +4053,11 @@
     "PAC":4.6,
     "MSNF":6.6,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Kirsebærsauce",
-    "Energi (kcal)":37,
+    "Energi (kcal)":37.0,
     "Fedt":0.5,
     "Kulhydrater":8.0,
     "Sukker":4.0,
@@ -3910,11 +4066,11 @@
     "PAC":4.0,
     "MSNF":8.5,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Hindbærmarmelade",
-    "Energi (kcal)":32,
+    "Energi (kcal)":32.0,
     "Fedt":0.5,
     "Kulhydrater":5.8,
     "Sukker":3.1,
@@ -3923,11 +4079,11 @@
     "PAC":3.1,
     "MSNF":6.3,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Jordbærgrød",
-    "Energi (kcal)":38,
+    "Energi (kcal)":38.0,
     "Fedt":0.5,
     "Kulhydrater":8.5,
     "Sukker":2.9,
@@ -3936,11 +4092,11 @@
     "PAC":2.9,
     "MSNF":9.0,
     "HF":0.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"EASIS Perfect Flavour Drops (alle)",
-    "Energi (kcal)":1,
+    "Energi (kcal)":1.0,
     "Fedt":0.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -3952,8 +4108,21 @@
     "Kommentar":"Ren sødme (sucralose). Ingen effekt på PAC."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Soy protein isolate (nature)",
-    "Energi (kcal)":372,
+    "Energi (kcal)":372.0,
     "Fedt":1.0,
     "Kulhydrater":1.0,
     "Sukker":0.0,
@@ -3966,7 +4135,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Kikærter (drænet)",
-    "Energi (kcal)":119,
+    "Energi (kcal)":119.0,
     "Fedt":2.2,
     "Kulhydrater":15.0,
     "Sukker":0.5,
@@ -3979,7 +4148,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Sorte Bønner (drænet)",
-    "Energi (kcal)":107,
+    "Energi (kcal)":107.0,
     "Fedt":1.0,
     "Kulhydrater":13.0,
     "Sukker":0.5,
@@ -3992,7 +4161,7 @@
   },
   {
     "Ingrediens":"Rema 1000 Kidneybønner (drænet)",
-    "Energi (kcal)":101,
+    "Energi (kcal)":101.0,
     "Fedt":0.7,
     "Kulhydrater":12.0,
     "Sukker":0.5,
@@ -4005,7 +4174,7 @@
   },
   {
     "Ingrediens":"Spir Tofu Naturel (Netto)",
-    "Energi (kcal)":144,
+    "Energi (kcal)":144.0,
     "Fedt":7.8,
     "Kulhydrater":1.5,
     "Sukker":0.5,
@@ -4018,7 +4187,7 @@
   },
   {
     "Ingrediens":"Vemondo Tofu Naturel (Lidl)",
-    "Energi (kcal)":125,
+    "Energi (kcal)":125.0,
     "Fedt":7.5,
     "Kulhydrater":2.3,
     "Sukker":0.5,
@@ -4031,7 +4200,7 @@
   },
   {
     "Ingrediens":"Clearspring Silketofu",
-    "Energi (kcal)":64,
+    "Energi (kcal)":64.0,
     "Fedt":3.0,
     "Kulhydrater":1.9,
     "Sukker":1.3,
@@ -4044,7 +4213,7 @@
   },
   {
     "Ingrediens":"Naturli' Creme Frisk",
-    "Energi (kcal)":183,
+    "Energi (kcal)":183.0,
     "Fedt":18.0,
     "Kulhydrater":4.3,
     "Sukker":0.5,
@@ -4057,7 +4226,7 @@
   },
   {
     "Ingrediens":"Rema Inspiring Foods Kokosmælk",
-    "Energi (kcal)":185,
+    "Energi (kcal)":185.0,
     "Fedt":18.0,
     "Kulhydrater":3.8,
     "Sukker":1.5,
@@ -4070,7 +4239,7 @@
   },
   {
     "Ingrediens":"Rema Inspiring Foods Kokosmælk (Øko)",
-    "Energi (kcal)":103,
+    "Energi (kcal)":103.0,
     "Fedt":10.0,
     "Kulhydrater":2.1,
     "Sukker":0.8,
@@ -4083,7 +4252,7 @@
   },
   {
     "Ingrediens":"Rema Inspiring Foods Kokosmælk Light",
-    "Energi (kcal)":86,
+    "Energi (kcal)":86.0,
     "Fedt":8.9,
     "Kulhydrater":1.0,
     "Sukker":0.9,
@@ -4095,8 +4264,21 @@
     "Kommentar":"Let version. Mindre 'krop' og cremethed. God til lettere sorbet-agtige is."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Kakaopulver (21%)",
-    "Energi (kcal)":380,
+    "Energi (kcal)":380.0,
     "Fedt":21.0,
     "Kulhydrater":10.0,
     "Sukker":0.5,
@@ -4109,7 +4291,7 @@
   },
   {
     "Ingrediens":"Kakaosmør \/ Vegetabilsk Fedt",
-    "Energi (kcal)":900,
+    "Energi (kcal)":900.0,
     "Fedt":100.0,
     "Kulhydrater":0.0,
     "Sukker":0.0,
@@ -4121,8 +4303,21 @@
     "Kommentar":"Rent fedt. Giver cremethed, men øger hårdheden markant."
   },
   {
+    "Ingrediens":"Ingrediens",
+    "Energi (kcal)":0.0,
+    "Fedt":0.0,
+    "Kulhydrater":0.0,
+    "Sukker":0.0,
+    "Protein":0.0,
+    "Salt":0.0,
+    "PAC":0.0,
+    "MSNF":0.0,
+    "HF":0.0,
+    "Kommentar":"Kommentar"
+  },
+  {
     "Ingrediens":"Anthon Berg Chocolate Treasures Caramel",
-    "Energi (kcal)":490,
+    "Energi (kcal)":490.0,
     "Fedt":26.0,
     "Kulhydrater":58.0,
     "Sukker":44.0,
@@ -4131,11 +4326,11 @@
     "PAC":48.4,
     "MSNF":62.8,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Chocolate Treasures Mix",
-    "Energi (kcal)":532,
+    "Energi (kcal)":532.0,
     "Fedt":31.0,
     "Kulhydrater":55.0,
     "Sukker":47.0,
@@ -4144,11 +4339,11 @@
     "PAC":51.7,
     "MSNF":60.6,
     "HF":27.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Chocolate Treasures Salty Liqourice",
-    "Energi (kcal)":489,
+    "Energi (kcal)":489.0,
     "Fedt":25.0,
     "Kulhydrater":59.0,
     "Sukker":49.0,
@@ -4157,11 +4352,11 @@
     "PAC":53.9,
     "MSNF":64.7,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Chocolate Treasures Strong & Salty",
-    "Energi (kcal)":479,
+    "Energi (kcal)":479.0,
     "Fedt":23.0,
     "Kulhydrater":63.0,
     "Sukker":51.0,
@@ -4170,11 +4365,11 @@
     "PAC":56.1,
     "MSNF":67.7,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Chocolate Treasures Sweet & Salty",
-    "Energi (kcal)":463,
+    "Energi (kcal)":463.0,
     "Fedt":20.0,
     "Kulhydrater":64.0,
     "Sukker":57.0,
@@ -4183,11 +4378,11 @@
     "PAC":62.7,
     "MSNF":68.9,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Cognac Marzipan Bar",
-    "Energi (kcal)":498,
+    "Energi (kcal)":498.0,
     "Fedt":26.0,
     "Kulhydrater":52.0,
     "Sukker":36.0,
@@ -4196,11 +4391,11 @@
     "PAC":39.6,
     "MSNF":60.2,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipan",
-    "Energi (kcal)":480,
+    "Energi (kcal)":480.0,
     "Fedt":31.0,
     "Kulhydrater":34.0,
     "Sukker":24.0,
@@ -4209,11 +4404,11 @@
     "PAC":26.4,
     "MSNF":47.0,
     "HF":27.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipanbar m. Cremelikørsmag",
-    "Energi (kcal)":510,
+    "Energi (kcal)":510.0,
     "Fedt":31.0,
     "Kulhydrater":46.0,
     "Sukker":39.0,
@@ -4222,11 +4417,11 @@
     "PAC":42.9,
     "MSNF":55.5,
     "HF":27.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipanbar m. Kaffesmag",
-    "Energi (kcal)":522,
+    "Energi (kcal)":522.0,
     "Fedt":32.0,
     "Kulhydrater":45.0,
     "Sukker":38.0,
@@ -4235,11 +4430,11 @@
     "PAC":41.8,
     "MSNF":56.0,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipanbrød m. Hasselnødder",
-    "Energi (kcal)":558,
+    "Energi (kcal)":558.0,
     "Fedt":36.0,
     "Kulhydrater":46.0,
     "Sukker":39.0,
@@ -4248,11 +4443,11 @@
     "PAC":42.9,
     "MSNF":55.7,
     "HF":32.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipanbrød m. Nougat",
-    "Energi (kcal)":542,
+    "Energi (kcal)":542.0,
     "Fedt":34.0,
     "Kulhydrater":47.0,
     "Sukker":42.0,
@@ -4261,11 +4456,11 @@
     "PAC":46.2,
     "MSNF":56.2,
     "HF":30.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marzipan Bar",
-    "Energi (kcal)":520,
+    "Energi (kcal)":520.0,
     "Fedt":32.0,
     "Kulhydrater":45.0,
     "Sukker":36.0,
@@ -4274,11 +4469,11 @@
     "PAC":39.6,
     "MSNF":56.0,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipantærte Baileys",
-    "Energi (kcal)":520,
+    "Energi (kcal)":520.0,
     "Fedt":32.0,
     "Kulhydrater":47.0,
     "Sukker":42.0,
@@ -4287,11 +4482,11 @@
     "PAC":46.2,
     "MSNF":56.1,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Marcipantærte m. Nougat",
-    "Energi (kcal)":552,
+    "Energi (kcal)":552.0,
     "Fedt":35.0,
     "Kulhydrater":47.0,
     "Sukker":42.0,
@@ -4300,11 +4495,11 @@
     "PAC":46.2,
     "MSNF":56.8,
     "HF":31.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mini Marcipantærte Blomme i Madeira",
-    "Energi (kcal)":470,
+    "Energi (kcal)":470.0,
     "Fedt":23.0,
     "Kulhydrater":53.0,
     "Sukker":40.0,
@@ -4313,11 +4508,11 @@
     "PAC":44.0,
     "MSNF":60.6,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mørk Chokolade 70%",
-    "Energi (kcal)":588,
+    "Energi (kcal)":588.0,
     "Fedt":46.0,
     "Kulhydrater":30.0,
     "Sukker":27.0,
@@ -4326,11 +4521,11 @@
     "PAC":29.7,
     "MSNF":38.2,
     "HF":41.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mørk Chokolade m. Karamel",
-    "Energi (kcal)":532,
+    "Energi (kcal)":532.0,
     "Fedt":32.0,
     "Kulhydrater":52.0,
     "Sukker":48.0,
@@ -4339,11 +4534,11 @@
     "PAC":52.8,
     "MSNF":56.2,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mørk Chokolade m. Havsalt",
-    "Energi (kcal)":544,
+    "Energi (kcal)":544.0,
     "Fedt":35.0,
     "Kulhydrater":48.0,
     "Sukker":46.0,
@@ -4352,11 +4547,11 @@
     "PAC":50.6,
     "MSNF":52.7,
     "HF":31.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mørk Chokolade m. Mandel\/Orange",
-    "Energi (kcal)":553,
+    "Energi (kcal)":553.0,
     "Fedt":37.0,
     "Kulhydrater":45.0,
     "Sukker":43.0,
@@ -4365,11 +4560,11 @@
     "PAC":47.3,
     "MSNF":51.4,
     "HF":33.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Anthon Berg Mørk Chokolade m. Marcipan\/Blåbær\/Vodka",
-    "Energi (kcal)":411,
+    "Energi (kcal)":411.0,
     "Fedt":21.0,
     "Kulhydrater":45.0,
     "Sukker":39.0,
@@ -4378,11 +4573,11 @@
     "PAC":42.9,
     "MSNF":51.2,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bahlsen Hit Hazelnut",
-    "Energi (kcal)":506,
+    "Energi (kcal)":506.0,
     "Fedt":25.0,
     "Kulhydrater":63.0,
     "Sukker":31.0,
@@ -4391,11 +4586,11 @@
     "PAC":34.1,
     "MSNF":68.9,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bahlsen Hit Vanilla",
-    "Energi (kcal)":508,
+    "Energi (kcal)":508.0,
     "Fedt":25.0,
     "Kulhydrater":64.0,
     "Sukker":31.0,
@@ -4404,11 +4599,11 @@
     "PAC":34.1,
     "MSNF":69.8,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bahlsen Pick Up! Choco & Milk",
-    "Energi (kcal)":516,
+    "Energi (kcal)":516.0,
     "Fedt":27.0,
     "Kulhydrater":61.0,
     "Sukker":34.0,
@@ -4417,11 +4612,11 @@
     "PAC":37.4,
     "MSNF":67.3,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bahlsen Pick Up! Original",
-    "Energi (kcal)":511,
+    "Energi (kcal)":511.0,
     "Fedt":26.0,
     "Kulhydrater":61.0,
     "Sukker":35.0,
@@ -4430,11 +4625,11 @@
     "PAC":38.5,
     "MSNF":67.9,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bahlsen Pick Up! Salted Caramel",
-    "Energi (kcal)":502,
+    "Energi (kcal)":502.0,
     "Fedt":24.0,
     "Kulhydrater":64.0,
     "Sukker":36.0,
@@ -4443,11 +4638,11 @@
     "PAC":39.6,
     "MSNF":70.1,
     "HF":21.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Bounty",
-    "Energi (kcal)":487,
+    "Energi (kcal)":487.0,
     "Fedt":26.0,
     "Kulhydrater":60.0,
     "Sukker":48.0,
@@ -4456,11 +4651,11 @@
     "PAC":52.8,
     "MSNF":63.8,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti Brazil",
-    "Energi (kcal)":429,
+    "Energi (kcal)":429.0,
     "Fedt":17.0,
     "Kulhydrater":65.0,
     "Sukker":57.0,
@@ -4469,11 +4664,11 @@
     "PAC":62.7,
     "MSNF":69.7,
     "HF":15.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti Bridgeblanding",
-    "Energi (kcal)":467,
+    "Energi (kcal)":467.0,
     "Fedt":20.0,
     "Kulhydrater":65.0,
     "Sukker":61.0,
@@ -4482,11 +4677,11 @@
     "PAC":67.1,
     "MSNF":69.3,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti Maritza",
-    "Energi (kcal)":358,
+    "Energi (kcal)":358.0,
     "Fedt":7.5,
     "Kulhydrater":71.0,
     "Sukker":60.0,
@@ -4495,11 +4690,11 @@
     "PAC":66.0,
     "MSNF":71.9,
     "HF":6.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti P-tærter Extra Dark",
-    "Energi (kcal)":405,
+    "Energi (kcal)":405.0,
     "Fedt":17.0,
     "Kulhydrater":57.0,
     "Sukker":45.0,
@@ -4508,11 +4703,11 @@
     "PAC":49.5,
     "MSNF":62.6,
     "HF":15.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti P-tærter Karamel",
-    "Energi (kcal)":444,
+    "Energi (kcal)":444.0,
     "Fedt":22.0,
     "Kulhydrater":55.0,
     "Sukker":45.0,
@@ -4521,11 +4716,11 @@
     "PAC":49.5,
     "MSNF":60.8,
     "HF":19.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti P-tærter Original",
-    "Energi (kcal)":415,
+    "Energi (kcal)":415.0,
     "Fedt":18.0,
     "Kulhydrater":58.0,
     "Sukker":47.0,
@@ -4534,11 +4729,11 @@
     "PAC":51.7,
     "MSNF":63.5,
     "HF":16.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Carletti Skumbananer",
-    "Energi (kcal)":374,
+    "Energi (kcal)":374.0,
     "Fedt":8.5,
     "Kulhydrater":70.0,
     "Sukker":59.0,
@@ -4547,11 +4742,11 @@
     "PAC":64.9,
     "MSNF":73.7,
     "HF":7.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cloetta Center Original",
-    "Energi (kcal)":482,
+    "Energi (kcal)":482.0,
     "Fedt":23.0,
     "Kulhydrater":63.0,
     "Sukker":48.0,
@@ -4560,11 +4755,11 @@
     "PAC":52.8,
     "MSNF":67.1,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cloetta Center Salted Caramel",
-    "Energi (kcal)":479,
+    "Energi (kcal)":479.0,
     "Fedt":23.0,
     "Kulhydrater":63.0,
     "Sukker":47.0,
@@ -4573,11 +4768,11 @@
     "PAC":51.7,
     "MSNF":67.1,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cloetta Polly Milk Chocolate",
-    "Energi (kcal)":467,
+    "Energi (kcal)":467.0,
     "Fedt":18.0,
     "Kulhydrater":71.0,
     "Sukker":68.0,
@@ -4586,11 +4781,11 @@
     "PAC":74.8,
     "MSNF":75.6,
     "HF":16.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cloetta Polly Original",
-    "Energi (kcal)":464,
+    "Energi (kcal)":464.0,
     "Fedt":18.0,
     "Kulhydrater":71.0,
     "Sukker":68.0,
@@ -4599,11 +4794,11 @@
     "PAC":74.8,
     "MSNF":75.1,
     "HF":16.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Cloetta Sport Lunch",
-    "Energi (kcal)":526,
+    "Energi (kcal)":526.0,
     "Fedt":28.0,
     "Kulhydrater":61.0,
     "Sukker":52.0,
@@ -4612,11 +4807,11 @@
     "PAC":57.2,
     "MSNF":67.4,
     "HF":25.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Daim Original",
-    "Energi (kcal)":536,
+    "Energi (kcal)":536.0,
     "Fedt":31.0,
     "Kulhydrater":60.0,
     "Sukker":60.0,
@@ -4625,11 +4820,11 @@
     "PAC":66.0,
     "MSNF":63.0,
     "HF":27.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Easis Peanut Butter Cups",
-    "Energi (kcal)":469,
+    "Energi (kcal)":469.0,
     "Fedt":39.0,
     "Kulhydrater":23.0,
     "Sukker":3.9,
@@ -4642,7 +4837,7 @@
   },
   {
     "Ingrediens":"Easis Sandwich Cookies Vanilla",
-    "Energi (kcal)":330,
+    "Energi (kcal)":330.0,
     "Fedt":16.0,
     "Kulhydrater":32.0,
     "Sukker":2.3,
@@ -4655,7 +4850,7 @@
   },
   {
     "Ingrediens":"Easis Sandwichkiks m. Kakao",
-    "Energi (kcal)":345,
+    "Energi (kcal)":345.0,
     "Fedt":17.0,
     "Kulhydrater":33.0,
     "Sukker":3.5,
@@ -4668,7 +4863,7 @@
   },
   {
     "Ingrediens":"Fazer Dumle",
-    "Energi (kcal)":474,
+    "Energi (kcal)":474.0,
     "Fedt":21.0,
     "Kulhydrater":66.0,
     "Sukker":53.0,
@@ -4677,11 +4872,11 @@
     "PAC":58.3,
     "MSNF":69.4,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Ferrero Nutella B-Ready",
-    "Energi (kcal)":521,
+    "Energi (kcal)":521.0,
     "Fedt":27.0,
     "Kulhydrater":60.7,
     "Sukker":47.1,
@@ -4690,11 +4885,11 @@
     "PAC":51.8,
     "MSNF":67.9,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Ferrero Nutella Biscuits",
-    "Energi (kcal)":515,
+    "Energi (kcal)":515.0,
     "Fedt":24.8,
     "Kulhydrater":64.0,
     "Sukker":35.8,
@@ -4703,11 +4898,11 @@
     "PAC":39.4,
     "MSNF":71.9,
     "HF":22.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Ferrero Rocher Kugler",
-    "Energi (kcal)":603,
+    "Energi (kcal)":603.0,
     "Fedt":42.7,
     "Kulhydrater":44.4,
     "Sukker":39.9,
@@ -4716,11 +4911,11 @@
     "PAC":43.9,
     "MSNF":52.6,
     "HF":38.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kex",
-    "Energi (kcal)":502,
+    "Energi (kcal)":502.0,
     "Fedt":24.0,
     "Kulhydrater":61.0,
     "Sukker":42.0,
@@ -4729,11 +4924,11 @@
     "PAC":46.2,
     "MSNF":70.7,
     "HF":21.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Bueno",
-    "Energi (kcal)":572,
+    "Energi (kcal)":572.0,
     "Fedt":37.3,
     "Kulhydrater":49.5,
     "Sukker":41.2,
@@ -4742,11 +4937,11 @@
     "PAC":45.3,
     "MSNF":58.1,
     "HF":33.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Bueno White",
-    "Energi (kcal)":571,
+    "Energi (kcal)":571.0,
     "Fedt":35.9,
     "Kulhydrater":53.0,
     "Sukker":43.6,
@@ -4755,11 +4950,11 @@
     "PAC":48.0,
     "MSNF":61.5,
     "HF":32.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Cards",
-    "Energi (kcal)":516,
+    "Energi (kcal)":516.0,
     "Fedt":26.9,
     "Kulhydrater":55.5,
     "Sukker":43.0,
@@ -4768,11 +4963,11 @@
     "PAC":47.3,
     "MSNF":67.4,
     "HF":24.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Choco Fresh",
-    "Energi (kcal)":583,
+    "Energi (kcal)":583.0,
     "Fedt":43.7,
     "Kulhydrater":39.3,
     "Sukker":39.3,
@@ -4781,11 +4976,11 @@
     "PAC":43.2,
     "MSNF":46.6,
     "HF":39.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Country",
-    "Energi (kcal)":561,
+    "Energi (kcal)":561.0,
     "Fedt":33.8,
     "Kulhydrater":54.9,
     "Sukker":49.1,
@@ -4794,11 +4989,11 @@
     "PAC":54.0,
     "MSNF":63.5,
     "HF":30.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Crispy",
-    "Energi (kcal)":573,
+    "Energi (kcal)":573.0,
     "Fedt":36.8,
     "Kulhydrater":51.8,
     "Sukker":43.5,
@@ -4807,11 +5002,11 @@
     "PAC":47.9,
     "MSNF":59.6,
     "HF":33.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Happy Hippo",
-    "Energi (kcal)":593,
+    "Energi (kcal)":593.0,
     "Fedt":38.6,
     "Kulhydrater":53.6,
     "Sukker":45.1,
@@ -4820,11 +5015,11 @@
     "PAC":49.6,
     "MSNF":60.3,
     "HF":34.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Joy",
-    "Energi (kcal)":550,
+    "Energi (kcal)":550.0,
     "Fedt":32.0,
     "Kulhydrater":56.5,
     "Sukker":51.0,
@@ -4833,11 +5028,11 @@
     "PAC":56.1,
     "MSNF":64.7,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Maxi",
-    "Energi (kcal)":566,
+    "Energi (kcal)":566.0,
     "Fedt":35.0,
     "Kulhydrater":53.5,
     "Sukker":53.3,
@@ -4846,11 +5041,11 @@
     "PAC":58.6,
     "MSNF":62.2,
     "HF":31.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Maxi King",
-    "Energi (kcal)":521,
+    "Energi (kcal)":521.0,
     "Fedt":37.5,
     "Kulhydrater":38.2,
     "Sukker":35.6,
@@ -4859,11 +5054,11 @@
     "PAC":39.2,
     "MSNF":44.9,
     "HF":33.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Milk-slice",
-    "Energi (kcal)":421,
+    "Energi (kcal)":421.0,
     "Fedt":27.9,
     "Kulhydrater":34.0,
     "Sukker":29.5,
@@ -4872,11 +5067,11 @@
     "PAC":32.5,
     "MSNF":41.9,
     "HF":25.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Pingui",
-    "Energi (kcal)":450,
+    "Energi (kcal)":450.0,
     "Fedt":29.7,
     "Kulhydrater":37.8,
     "Sukker":33.1,
@@ -4885,11 +5080,11 @@
     "PAC":36.4,
     "MSNF":44.8,
     "HF":26.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Schokobons",
-    "Energi (kcal)":576,
+    "Energi (kcal)":576.0,
     "Fedt":36.6,
     "Kulhydrater":52.5,
     "Sukker":52.2,
@@ -4898,11 +5093,11 @@
     "PAC":57.4,
     "MSNF":60.8,
     "HF":32.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Kinder Surprise",
-    "Energi (kcal)":561,
+    "Energi (kcal)":561.0,
     "Fedt":34.9,
     "Kulhydrater":52.6,
     "Sukker":52.3,
@@ -4911,11 +5106,11 @@
     "PAC":57.5,
     "MSNF":61.0,
     "HF":31.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"KitKat Original",
-    "Energi (kcal)":523,
+    "Energi (kcal)":523.0,
     "Fedt":27.9,
     "Kulhydrater":58.8,
     "Sukker":47.9,
@@ -4924,11 +5119,11 @@
     "PAC":52.7,
     "MSNF":67.0,
     "HF":25.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Lion Bar",
-    "Energi (kcal)":486,
+    "Energi (kcal)":486.0,
     "Fedt":21.8,
     "Kulhydrater":66.5,
     "Sukker":49.5,
@@ -4937,11 +5132,11 @@
     "PAC":54.5,
     "MSNF":71.9,
     "HF":19.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"LU Petit Chocolat",
-    "Energi (kcal)":511,
+    "Energi (kcal)":511.0,
     "Fedt":28.0,
     "Kulhydrater":59.0,
     "Sukker":32.0,
@@ -4950,11 +5145,11 @@
     "PAC":35.2,
     "MSNF":64.2,
     "HF":25.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"LU Petit Ècolier Kiks m. Chokolade",
-    "Energi (kcal)":500,
+    "Energi (kcal)":500.0,
     "Fedt":23.0,
     "Kulhydrater":64.0,
     "Sukker":39.0,
@@ -4963,11 +5158,11 @@
     "PAC":42.9,
     "MSNF":70.8,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"LU Petit Ècolier Dark Chocolate",
-    "Energi (kcal)":502,
+    "Energi (kcal)":502.0,
     "Fedt":25.0,
     "Kulhydrater":61.0,
     "Sukker":36.0,
@@ -4976,11 +5171,11 @@
     "PAC":39.6,
     "MSNF":67.4,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"M&M's Chokolade",
-    "Energi (kcal)":482,
+    "Energi (kcal)":482.0,
     "Fedt":19.0,
     "Kulhydrater":70.0,
     "Sukker":66.0,
@@ -4989,11 +5184,11 @@
     "PAC":72.6,
     "MSNF":75.2,
     "HF":17.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"M&M's Crispy",
-    "Energi (kcal)":484,
+    "Energi (kcal)":484.0,
     "Fedt":21.0,
     "Kulhydrater":68.0,
     "Sukker":57.0,
@@ -5002,11 +5197,11 @@
     "PAC":62.7,
     "MSNF":72.3,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"M&M's Mini",
-    "Energi (kcal)":493,
+    "Energi (kcal)":493.0,
     "Fedt":21.0,
     "Kulhydrater":70.0,
     "Sukker":65.0,
@@ -5015,11 +5210,11 @@
     "PAC":71.5,
     "MSNF":75.5,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"M&M's Peanut",
-    "Energi (kcal)":524,
+    "Energi (kcal)":524.0,
     "Fedt":26.0,
     "Kulhydrater":59.0,
     "Sukker":53.0,
@@ -5028,11 +5223,11 @@
     "PAC":58.3,
     "MSNF":68.8,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Maltesers",
-    "Energi (kcal)":503,
+    "Energi (kcal)":503.0,
     "Fedt":25.0,
     "Kulhydrater":62.0,
     "Sukker":53.0,
@@ -5041,11 +5236,11 @@
     "PAC":58.3,
     "MSNF":70.5,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Bubbly Mjölkchoklad",
-    "Energi (kcal)":550,
+    "Energi (kcal)":550.0,
     "Fedt":32.0,
     "Kulhydrater":59.0,
     "Sukker":58.5,
@@ -5054,11 +5249,11 @@
     "PAC":64.4,
     "MSNF":63.6,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Choco Brookie Brownie & Cookie",
-    "Energi (kcal)":466,
+    "Energi (kcal)":466.0,
     "Fedt":26.0,
     "Kulhydrater":54.0,
     "Sukker":35.0,
@@ -5067,11 +5262,11 @@
     "PAC":38.5,
     "MSNF":59.2,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Choco Brownie",
-    "Energi (kcal)":468,
+    "Energi (kcal)":468.0,
     "Fedt":27.0,
     "Kulhydrater":50.0,
     "Sukker":38.0,
@@ -5080,11 +5275,11 @@
     "PAC":41.8,
     "MSNF":55.0,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Chokoladelinser Daim",
-    "Energi (kcal)":540,
+    "Energi (kcal)":540.0,
     "Fedt":31.5,
     "Kulhydrater":59.0,
     "Sukker":58.5,
@@ -5093,11 +5288,11 @@
     "PAC":64.4,
     "MSNF":63.1,
     "HF":28.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Chokoladelinser Mint",
-    "Energi (kcal)":503,
+    "Energi (kcal)":503.0,
     "Fedt":27.0,
     "Kulhydrater":59.0,
     "Sukker":51.0,
@@ -5106,11 +5301,11 @@
     "PAC":56.1,
     "MSNF":64.8,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Chokoladelinser m. OREO",
-    "Energi (kcal)":536,
+    "Energi (kcal)":536.0,
     "Fedt":30.0,
     "Kulhydrater":57.0,
     "Sukker":12.0,
@@ -5119,11 +5314,11 @@
     "PAC":13.2,
     "MSNF":64.5,
     "HF":27.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Fransk Nougat",
-    "Energi (kcal)":440,
+    "Energi (kcal)":440.0,
     "Fedt":14.0,
     "Kulhydrater":73.0,
     "Sukker":52.0,
@@ -5132,11 +5327,11 @@
     "PAC":57.2,
     "MSNF":76.1,
     "HF":12.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Home Style Choco Filled Cookies",
-    "Energi (kcal)":511,
+    "Energi (kcal)":511.0,
     "Fedt":27.0,
     "Kulhydrater":62.0,
     "Sukker":39.0,
@@ -5145,11 +5340,11 @@
     "PAC":42.9,
     "MSNF":66.4,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Home Style OREO Creme Cookies",
-    "Energi (kcal)":514,
+    "Energi (kcal)":514.0,
     "Fedt":28.0,
     "Kulhydrater":60.0,
     "Sukker":38.0,
@@ -5158,11 +5353,11 @@
     "PAC":41.8,
     "MSNF":64.1,
     "HF":25.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Home Style Soft Inside Cookies",
-    "Energi (kcal)":485,
+    "Energi (kcal)":485.0,
     "Fedt":25.0,
     "Kulhydrater":60.0,
     "Sukker":33.0,
@@ -5171,11 +5366,11 @@
     "PAC":36.3,
     "MSNF":65.2,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Mælkechokolade",
-    "Energi (kcal)":544,
+    "Energi (kcal)":544.0,
     "Fedt":32.0,
     "Kulhydrater":59.0,
     "Sukker":58.0,
@@ -5184,11 +5379,11 @@
     "PAC":63.8,
     "MSNF":63.4,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Mælkechokolade m. Daim",
-    "Energi (kcal)":544,
+    "Energi (kcal)":544.0,
     "Fedt":32.0,
     "Kulhydrater":60.0,
     "Sukker":59.0,
@@ -5197,11 +5392,11 @@
     "PAC":64.9,
     "MSNF":63.8,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Mælkechokolade m. OREO",
-    "Energi (kcal)":538,
+    "Energi (kcal)":538.0,
     "Fedt":30.0,
     "Kulhydrater":60.0,
     "Sukker":55.0,
@@ -5210,11 +5405,11 @@
     "PAC":60.5,
     "MSNF":64.5,
     "HF":27.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Mjölkchoklad XL Cookies",
-    "Energi (kcal)":510,
+    "Energi (kcal)":510.0,
     "Fedt":27.0,
     "Kulhydrater":60.0,
     "Sukker":37.0,
@@ -5223,11 +5418,11 @@
     "PAC":40.7,
     "MSNF":65.3,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Mörk Choklad XL Cookies",
-    "Energi (kcal)":504,
+    "Energi (kcal)":504.0,
     "Fedt":26.0,
     "Kulhydrater":61.0,
     "Sukker":36.0,
@@ -5236,11 +5431,11 @@
     "PAC":39.6,
     "MSNF":65.5,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% Kakao",
-    "Energi (kcal)":600,
+    "Energi (kcal)":600.0,
     "Fedt":47.0,
     "Kulhydrater":32.0,
     "Sukker":28.0,
@@ -5249,11 +5444,11 @@
     "PAC":30.8,
     "MSNF":39.1,
     "HF":42.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% m. Appelsin",
-    "Energi (kcal)":595,
+    "Energi (kcal)":595.0,
     "Fedt":46.0,
     "Kulhydrater":34.0,
     "Sukker":30.0,
@@ -5262,11 +5457,11 @@
     "PAC":33.0,
     "MSNF":40.7,
     "HF":41.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% m. Havsalt\/Pekan",
-    "Energi (kcal)":595,
+    "Energi (kcal)":595.0,
     "Fedt":46.0,
     "Kulhydrater":34.0,
     "Sukker":29.0,
@@ -5275,11 +5470,11 @@
     "PAC":31.9,
     "MSNF":40.9,
     "HF":41.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% m. Karamelliserede Nødder",
-    "Energi (kcal)":576,
+    "Energi (kcal)":576.0,
     "Fedt":43.0,
     "Kulhydrater":35.0,
     "Sukker":30.0,
@@ -5288,11 +5483,11 @@
     "PAC":33.0,
     "MSNF":41.6,
     "HF":38.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% m. Lakrids",
-    "Energi (kcal)":570,
+    "Energi (kcal)":570.0,
     "Fedt":40.0,
     "Kulhydrater":40.0,
     "Sukker":36.0,
@@ -5301,11 +5496,11 @@
     "PAC":39.6,
     "MSNF":46.2,
     "HF":36.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 70% m. Mint",
-    "Energi (kcal)":590,
+    "Energi (kcal)":590.0,
     "Fedt":45.0,
     "Kulhydrater":34.0,
     "Sukker":30.0,
@@ -5314,11 +5509,11 @@
     "PAC":33.0,
     "MSNF":40.6,
     "HF":40.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Marabou Premium 86%",
-    "Energi (kcal)":640,
+    "Energi (kcal)":640.0,
     "Fedt":57.0,
     "Kulhydrater":18.0,
     "Sukker":13.0,
@@ -5331,7 +5526,7 @@
   },
   {
     "Ingrediens":"Marabou Smil Caramel",
-    "Energi (kcal)":494,
+    "Energi (kcal)":494.0,
     "Fedt":26.0,
     "Kulhydrater":60.0,
     "Sukker":49.0,
@@ -5340,11 +5535,11 @@
     "PAC":53.9,
     "MSNF":65.3,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Mars Bar",
-    "Energi (kcal)":443,
+    "Energi (kcal)":443.0,
     "Fedt":16.0,
     "Kulhydrater":70.0,
     "Sukker":61.0,
@@ -5353,11 +5548,11 @@
     "PAC":67.1,
     "MSNF":74.5,
     "HF":14.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Milky Way Magic Stars",
-    "Energi (kcal)":556,
+    "Energi (kcal)":556.0,
     "Fedt":35.0,
     "Kulhydrater":53.0,
     "Sukker":52.0,
@@ -5366,11 +5561,11 @@
     "PAC":57.2,
     "MSNF":60.2,
     "HF":31.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Milky Way Bar",
-    "Energi (kcal)":404,
+    "Energi (kcal)":404.0,
     "Fedt":16.0,
     "Kulhydrater":71.0,
     "Sukker":63.0,
@@ -5379,11 +5574,11 @@
     "PAC":69.3,
     "MSNF":74.8,
     "HF":14.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nestlé Crunch",
-    "Energi (kcal)":513,
+    "Energi (kcal)":513.0,
     "Fedt":25.8,
     "Kulhydrater":62.4,
     "Sukker":50.4,
@@ -5392,11 +5587,11 @@
     "PAC":55.4,
     "MSNF":68.9,
     "HF":23.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nestlé Crunch Noir",
-    "Energi (kcal)":509,
+    "Energi (kcal)":509.0,
     "Fedt":27.3,
     "Kulhydrater":54.4,
     "Sukker":42.4,
@@ -5405,11 +5600,11 @@
     "PAC":46.6,
     "MSNF":60.3,
     "HF":24.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nestlé Crunch White",
-    "Energi (kcal)":527,
+    "Energi (kcal)":527.0,
     "Fedt":28.3,
     "Kulhydrater":61.5,
     "Sukker":48.7,
@@ -5418,11 +5613,11 @@
     "PAC":53.6,
     "MSNF":67.8,
     "HF":25.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nestlé KitKat Ball Milk Chocolate",
-    "Energi (kcal)":523,
+    "Energi (kcal)":523.0,
     "Fedt":27.1,
     "Kulhydrater":62.5,
     "Sukker":47.8,
@@ -5431,11 +5626,11 @@
     "PAC":52.6,
     "MSNF":68.5,
     "HF":24.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nestlé Lion Brownie",
-    "Energi (kcal)":484,
+    "Energi (kcal)":484.0,
     "Fedt":21.5,
     "Kulhydrater":66.3,
     "Sukker":50.3,
@@ -5444,11 +5639,11 @@
     "PAC":55.3,
     "MSNF":71.5,
     "HF":19.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nordthy Toffypops",
-    "Energi (kcal)":465,
+    "Energi (kcal)":465.0,
     "Fedt":20.0,
     "Kulhydrater":65.0,
     "Sukker":36.0,
@@ -5457,11 +5652,11 @@
     "PAC":39.6,
     "MSNF":69.8,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Nordthy Toffypops Salted Caramel",
-    "Energi (kcal)":463,
+    "Energi (kcal)":463.0,
     "Fedt":20.0,
     "Kulhydrater":63.0,
     "Sukker":36.0,
@@ -5470,11 +5665,11 @@
     "PAC":39.6,
     "MSNF":67.8,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oreo Double Creme",
-    "Energi (kcal)":497,
+    "Energi (kcal)":497.0,
     "Fedt":23.0,
     "Kulhydrater":68.0,
     "Sukker":43.0,
@@ -5483,11 +5678,11 @@
     "PAC":47.3,
     "MSNF":72.2,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oreo Enrobed",
-    "Energi (kcal)":530,
+    "Energi (kcal)":530.0,
     "Fedt":25.0,
     "Kulhydrater":69.0,
     "Sukker":49.0,
@@ -5496,11 +5691,11 @@
     "PAC":53.9,
     "MSNF":74.2,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oreo Enrobed White",
-    "Energi (kcal)":532,
+    "Energi (kcal)":532.0,
     "Fedt":25.0,
     "Kulhydrater":70.0,
     "Sukker":51.0,
@@ -5509,11 +5704,11 @@
     "PAC":56.1,
     "MSNF":74.9,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oreo Golden",
-    "Energi (kcal)":484,
+    "Energi (kcal)":484.0,
     "Fedt":20.0,
     "Kulhydrater":69.0,
     "Sukker":35.0,
@@ -5522,11 +5717,11 @@
     "PAC":38.5,
     "MSNF":74.3,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Oreo Mini",
-    "Energi (kcal)":479,
+    "Energi (kcal)":479.0,
     "Fedt":20.0,
     "Kulhydrater":69.0,
     "Sukker":37.0,
@@ -5535,11 +5730,11 @@
     "PAC":40.7,
     "MSNF":74.2,
     "HF":18.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Prince Chokoladekiks Original",
-    "Energi (kcal)":467,
+    "Energi (kcal)":467.0,
     "Fedt":17.0,
     "Kulhydrater":69.0,
     "Sukker":32.0,
@@ -5548,11 +5743,11 @@
     "PAC":35.2,
     "MSNF":75.3,
     "HF":15.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Reese's Sticks",
-    "Energi (kcal)":541,
+    "Energi (kcal)":541.0,
     "Fedt":30.6,
     "Kulhydrater":56.2,
     "Sukker":42.0,
@@ -5561,11 +5756,11 @@
     "PAC":46.2,
     "MSNF":66.3,
     "HF":27.5,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Smash",
-    "Energi (kcal)":540,
+    "Energi (kcal)":540.0,
     "Fedt":33.0,
     "Kulhydrater":52.0,
     "Sukker":39.0,
@@ -5574,11 +5769,11 @@
     "PAC":42.9,
     "MSNF":60.1,
     "HF":29.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Snickers",
-    "Energi (kcal)":481,
+    "Energi (kcal)":481.0,
     "Fedt":23.0,
     "Kulhydrater":61.0,
     "Sukker":52.0,
@@ -5587,11 +5782,11 @@
     "PAC":57.2,
     "MSNF":69.6,
     "HF":20.7,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toffifee",
-    "Energi (kcal)":522,
+    "Energi (kcal)":522.0,
     "Fedt":28.8,
     "Kulhydrater":59.0,
     "Sukker":48.9,
@@ -5600,11 +5795,11 @@
     "PAC":53.8,
     "MSNF":65.0,
     "HF":25.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toblerone Dark",
-    "Energi (kcal)":516,
+    "Energi (kcal)":516.0,
     "Fedt":30.0,
     "Kulhydrater":50.0,
     "Sukker":47.0,
@@ -5613,11 +5808,11 @@
     "PAC":51.7,
     "MSNF":55.9,
     "HF":27.0,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toblerone Original",
-    "Energi (kcal)":528,
+    "Energi (kcal)":528.0,
     "Fedt":28.0,
     "Kulhydrater":61.0,
     "Sukker":60.0,
@@ -5626,11 +5821,11 @@
     "PAC":66.0,
     "MSNF":66.6,
     "HF":25.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toblerone White",
-    "Energi (kcal)":537,
+    "Energi (kcal)":537.0,
     "Fedt":29.0,
     "Kulhydrater":62.0,
     "Sukker":62.0,
@@ -5639,11 +5834,11 @@
     "PAC":68.2,
     "MSNF":68.1,
     "HF":26.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Dronning Mandler",
-    "Energi (kcal)":522,
+    "Energi (kcal)":522.0,
     "Fedt":29.0,
     "Kulhydrater":56.0,
     "Sukker":54.0,
@@ -5652,11 +5847,11 @@
     "PAC":59.4,
     "MSNF":64.5,
     "HF":26.1,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Guldkarameller",
-    "Energi (kcal)":410,
+    "Energi (kcal)":410.0,
     "Fedt":14.0,
     "Kulhydrater":67.0,
     "Sukker":42.0,
@@ -5665,11 +5860,11 @@
     "PAC":46.2,
     "MSNF":70.0,
     "HF":12.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Holly",
-    "Energi (kcal)":511,
+    "Energi (kcal)":511.0,
     "Fedt":28.0,
     "Kulhydrater":58.0,
     "Sukker":43.0,
@@ -5678,11 +5873,11 @@
     "PAC":47.3,
     "MSNF":62.8,
     "HF":25.2,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Mini Karamel Skildpadder",
-    "Energi (kcal)":489,
+    "Energi (kcal)":489.0,
     "Fedt":26.0,
     "Kulhydrater":58.0,
     "Sukker":44.0,
@@ -5691,11 +5886,11 @@
     "PAC":48.4,
     "MSNF":62.8,
     "HF":23.4,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Mini Skildpadder",
-    "Energi (kcal)":473,
+    "Energi (kcal)":473.0,
     "Fedt":21.0,
     "Kulhydrater":63.0,
     "Sukker":50.0,
@@ -5704,11 +5899,11 @@
     "PAC":55.0,
     "MSNF":65.8,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Mini-Muh",
-    "Energi (kcal)":546,
+    "Energi (kcal)":546.0,
     "Fedt":32.0,
     "Kulhydrater":58.0,
     "Sukker":57.0,
@@ -5717,11 +5912,11 @@
     "PAC":62.7,
     "MSNF":63.2,
     "HF":28.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Pariser Linser Pebermynte",
-    "Energi (kcal)":427,
+    "Energi (kcal)":427.0,
     "Fedt":12.0,
     "Kulhydrater":76.0,
     "Sukker":72.0,
@@ -5730,11 +5925,11 @@
     "PAC":79.2,
     "MSNF":78.4,
     "HF":10.8,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Yankie Kokosskum",
-    "Energi (kcal)":469,
+    "Energi (kcal)":469.0,
     "Fedt":21.0,
     "Kulhydrater":67.0,
     "Sukker":51.0,
@@ -5743,11 +5938,11 @@
     "PAC":56.1,
     "MSNF":69.9,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Yankie Mandel",
-    "Energi (kcal)":494,
+    "Energi (kcal)":494.0,
     "Fedt":27.0,
     "Kulhydrater":57.0,
     "Sukker":43.0,
@@ -5756,11 +5951,11 @@
     "PAC":47.3,
     "MSNF":63.5,
     "HF":24.3,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Toms Yankie Original",
-    "Energi (kcal)":467,
+    "Energi (kcal)":467.0,
     "Fedt":21.0,
     "Kulhydrater":67.0,
     "Sukker":50.0,
@@ -5769,11 +5964,11 @@
     "PAC":55.0,
     "MSNF":69.9,
     "HF":18.9,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Twix Original",
-    "Energi (kcal)":493,
+    "Energi (kcal)":493.0,
     "Fedt":24.0,
     "Kulhydrater":65.0,
     "Sukker":48.0,
@@ -5782,11 +5977,11 @@
     "PAC":52.8,
     "MSNF":69.6,
     "HF":21.6,
-    "Kommentar":0
+    "Kommentar":null
   },
   {
     "Ingrediens":"Twix White",
-    "Energi (kcal)":502,
+    "Energi (kcal)":502.0,
     "Fedt":25.0,
     "Kulhydrater":63.0,
     "Sukker":47.0,
@@ -5795,6 +5990,6 @@
     "PAC":51.7,
     "MSNF":68.0,
     "HF":22.5,
-    "Kommentar":0
+    "Kommentar":null
   }
 ]
