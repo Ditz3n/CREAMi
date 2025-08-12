@@ -155,7 +155,24 @@ def generate_stabilizer_page():
             separator = "|:---|:---|" + ":---:|" * (len(dataframe.columns) - 2)
             body_rows = []
             for _, row in dataframe.iterrows():
-                processed_row = [str(cell).replace(',', '.').replace('nan', '') for cell in row]
+                processed_row = []
+                for i, cell in enumerate(row):
+                    if i == 0:  # First column (Ingrediens) - keep as string
+                        processed_row.append(str(cell).replace('nan', ''))
+                    else:  # Numeric columns - format to 1 decimal place
+                        if pd.isna(cell) or cell == '' or str(cell) == 'nan':
+                            processed_row.append('')
+                        else:
+                            try:
+                                # Convert to float and format to 1 decimal place
+                                num_value = float(str(cell).replace(',', '.'))
+                                formatted_value = f"{num_value:.1f}"
+                                # Remove trailing .0 for whole numbers
+                                if formatted_value.endswith('.0'):
+                                    formatted_value = formatted_value[:-2]
+                                processed_row.append(formatted_value)
+                            except (ValueError, TypeError):
+                                processed_row.append(str(cell).replace(',', '.').replace('nan', ''))
                 body_rows.append("| " + " | ".join(processed_row) + " |")
             return "\n".join([header, separator] + body_rows)
 
@@ -204,7 +221,7 @@ Din "Ditz3n Stabilizer Mix" er nu klar. Opbevar den i det tætsluttende glas ved
 ### Sådan bruger du den:
 Når din Ninja CREAMi-opskrift kræver sødning og stabilisering, skal du blot afveje den anbefalede mængde af din nye blanding (f.eks. 30g for en Deluxe pint) og tilføje den til dine andre tørre ingredienser (som proteinpulver), før du pisker det hele sammen med dine våde ingredienser (mælk, vand osv.).
 
-> Ved at lave denne blanding på forhånd, har du fjernet besværet og usikkerheden ved at skulle afveje små, flyvske mængder gummi hver eneste gang. Det gør hele processen hurtigere, nemmere og langt mere præcis. 😇
+Ved at lave denne blanding på forhånd, har du fjernet besværet og usikkerheden ved at skulle afveje små, flyvske mængder gummi hver eneste gang. Det gør hele processen hurtigere, nemmere og langt mere præcis. 😇
 """
     
     write_if_changed(STABILIZER_PAGE_PATH, markdown_content)
