@@ -2,6 +2,7 @@ baseURL = "https://ditz3n.github.io/CREAMi/"
 languageCode = "da-dk"
 title = "Ditz3n's Ninja CREAMi Laboratorium"
 theme = "PaperMod"
+contentDir = "content"
 
 [params]
     defaultTheme = "dark"

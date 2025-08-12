@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import glob
 import hashlib
+import shutil
 from datetime import datetime
 
 # ---- KONFIGURATION ----
@@ -12,12 +13,10 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 EXCEL_FILE_PATH = os.path.join(DATA_DIR, 'laboratorie_data.xlsx')
 
 # Output paths
-RECIPE_DATA_DIR = os.path.join(DATA_DIR, 'recipes')
 INGREDIENTS_PAGE_PATH = os.path.join(CONTENT_DIR, 'ingredients', '_index.md')
 RECIPE_CONTENT_DIR = os.path.join(CONTENT_DIR, 'recipes')
 STABILIZER_PAGE_PATH = os.path.join(CONTENT_DIR, 'stabilizer-mix', 'index.md')
 JSON_OUTPUT_PATH = os.path.join(BASE_DIR, 'static', 'ingredients.json')
-
 
 # ---- HJÆLPEFUNKTION TIL AT SKRIVE FILER KUN VED ÆNDRINGER ----
 def write_if_changed(filepath, new_content):
@@ -180,74 +179,129 @@ def generate_ingredients_json():
     except Exception as e:
         print(f"❌ FEJL! JSON generering: {e}")
 
-
-# ---- OPSKRIFTS-SIDER (CSV) ----
-def generate_all_recipe_pages():
-    recipe_files = glob.glob(os.path.join(RECIPE_DATA_DIR, '*.csv'))
-    if not recipe_files:
-        print("\n❌ ADVARSEL! Ingen opskrifts-filer (.csv) fundet i 'data/recipes/'.")
-        return
+# ---- NY FUNKTION: PROCES PENDING OPSKRIFTER ----
+def process_pending_recipes():
+    """
+    Finder, behandler og publicerer nye opskrifter fra 'pending_recipes'-mappen.
+    Nu med support for flere billeder (image1.png, image2.jpg, etc.)
+    """
+    print("\nScanner efter nye opskrifter i 'pending_recipes'...")
     
-    print(f"\nGenererer {len(recipe_files)} opskrift(er)...")
-    generated_count = 0
-    for recipe_file in recipe_files:
-        filename = os.path.basename(recipe_file)
-        recipe_name = os.path.splitext(filename)[0].replace('_', ' ')
+    pending_dir = os.path.join(BASE_DIR, 'scripts', 'pending_recipes')
+    os.makedirs(pending_dir, exist_ok=True)
+
+    pending_files = glob.glob(os.path.join(pending_dir, '*.md'))
+
+    if not pending_files:
+        print("Ingen nye opskrifter fundet. Alt er up-to-date.")
+        return
+
+    # Filtrer README.md fra listen, før vi tæller
+    actual_recipe_files = [f for f in pending_files if os.path.basename(f).lower() != 'readme.md']
+
+    if not actual_recipe_files:
+        print("Ingen nye opskrifter fundet (kun README.md). Alt er up-to-date.")
+        return
+
+    print(f"Fandt {len(actual_recipe_files)} ny(e) opskrift(er). Starter publicering...")
+    processed_count = 0
+
+    for md_file_path in actual_recipe_files:
         try:
-            df = pd.read_csv(recipe_file, header=9, encoding='utf-8')
-            numeric_cols = df.columns[1:]
-            for col in numeric_cols:
-                df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '.', regex=False), errors='coerce')
+            # --- Trin 1: Læs indhold og find titel ---
+            with open(md_file_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
             
-            total_row = df[df.iloc[:, 0].str.contains('Næringsindhold', na=False)].iloc[0]
-            fpdf_row = df[df.iloc[:, 0].str.contains('Samlet FPDF', na=False)].iloc[0]
-            msnf_row = df[df.iloc[:, 0].str.contains('MSNF %', na=False)].iloc[0]
-            recipe_df = df.dropna(subset=[df.columns[1]])
+            if not lines or not lines[0].startswith('# '):
+                print(f"⚠️ ADVARSEL: Filen '{os.path.basename(md_file_path)}' har ikke en valid titel. Springer over.")
+                continue
 
-            markdown_content = f"""---
-title: "{recipe_name}"
+            recipe_title = lines[0].replace('# ', '').strip()
+            recipe_content = "".join(lines[1:])
+
+            # --- Trin 2: Find ALLE tilhørende billeder ---
+            base_filename = os.path.splitext(os.path.basename(md_file_path))[0]
+            found_images = []
+            
+            # Først: søg efter hovedbillede (uden nummer)
+            for ext in ['jpg', 'jpeg', 'png', 'webp']:
+                potential_image = os.path.join(pending_dir, f"{base_filename}.{ext}")
+                if os.path.exists(potential_image):
+                    found_images.append(os.path.basename(potential_image))
+                    break
+            
+            # Derefter: søg efter nummererede billeder (1, 2, 3, etc.)
+            image_counter = 1
+            while True:
+                found_numbered = False
+                for ext in ['jpg', 'jpeg', 'png', 'webp']:
+                    potential_numbered = os.path.join(pending_dir, f"{base_filename}{image_counter}.{ext}")
+                    if os.path.exists(potential_numbered):
+                        found_images.append(os.path.basename(potential_numbered))
+                        found_numbered = True
+                        break
+                
+                if not found_numbered:
+                    break
+                image_counter += 1
+            
+            # --- Trin 3: Byg den nye fil med Front Matter ---
+            front_matter = f"""---
+title: "{recipe_title}"
 date: {datetime.now().strftime('%Y-%m-%d')}
-lastmod: {datetime.now().strftime('%Y-%m-%d')}
 draft: false
----
-
-## Nøgle-tal for Opskriften
-| Kalorier i alt | FPDF | MSNF % | Protein i alt |
-|:---|:---|:---|:---|
-| **{total_row.iloc[2]:.0f} kcal** | **{fpdf_row.iloc[1]:.2f}** | **{msnf_row.iloc[1]:.1f}%** | **{total_row.iloc[6]:.1f}g** |
-
-## Ingredienser
-| Ingrediens | Mængde (g) |
-|:---|---:|
 """
-            for index, row in recipe_df.iterrows():
-                if not row.iloc[0].startswith(('Næringsindhold', 'Samlet FPDF', 'MSNF %')):
-                    markdown_content += f"| {row.iloc[0]} | {row.iloc[1]:.1f}g |\n"
-
-            markdown_content += """
-## Fremgangsmåde
-*Dette er en standard-skabelon. Juster den efter behov.*
-
-1.  Blend alle ingredienser grundigt.
-2.  Hæld i bøtten og frys i minimum 24 timer.
-3.  Kør på det relevante program.
-"""
-            output_dir = os.path.join(RECIPE_CONTENT_DIR, recipe_name.replace(' ', '_'))
-            output_path = os.path.join(output_dir, 'index.md')
             
-            write_if_changed(output_path, markdown_content)
-            generated_count += 1
+            # Tilføj billeder til front matter
+            if len(found_images) == 1:
+                # Kun ét billede - brug den gamle måde
+                front_matter += f'image: "{found_images[0]}"\n'
+            elif len(found_images) > 1:
+                # Flere billeder - brug array
+                front_matter += 'images:\n'
+                for img in found_images:
+                    front_matter += f'  - "{img}"\n'
+            
+            front_matter += "---\n"
+
+            final_content = front_matter + recipe_content
+
+            # --- Trin 4: Opret mappe og gem den nye index.md ---
+            clean_title = recipe_title.split('(')[0].strip()
+            recipe_slug = clean_title.lower().replace(' ', '_').replace('æ', 'ae').replace('ø', 'oe').replace('å', 'aa')
+            new_recipe_dir = os.path.join(RECIPE_CONTENT_DIR, recipe_slug)
+            os.makedirs(new_recipe_dir, exist_ok=True)
+
+            destination_md_path = os.path.join(new_recipe_dir, 'index.md')
+            with open(destination_md_path, 'w', encoding='utf-8') as f:
+                f.write(final_content)
+
+            # --- Trin 5: Flyt ALLE billeder og slet den gamle .md ---
+            for image_filename in found_images:
+                source_image_path = os.path.join(pending_dir, image_filename)
+                destination_image_path = os.path.join(new_recipe_dir, image_filename)
+                shutil.move(source_image_path, destination_image_path)
+                print(f"     -> Fandt og flytter billede: '{image_filename}'")
+
+            os.remove(md_file_path)
+            
+            if found_images:
+                print(f"  -> Behandlet: '{clean_title}' (med {len(found_images)} billede(r))")
+            else:
+                print(f"  -> Behandlet: '{clean_title}' (ingen billeder)")
+            processed_count += 1
 
         except Exception as e:
-            print(f"❌ FEJL! '{recipe_name}': {e}")
+            print(f"❌ FEJL under behandling af '{os.path.basename(md_file_path)}': {e}")
 
-    print(f"✅ Success! {generated_count} opskrift(er) er blevet genereret!")
-
+    if processed_count > 0:
+        print(f"✅ Success! {processed_count} ny(e) opskrift(er) er blevet publiceret.")
 
 # ---- HOVEDPROGRAM ----
 if __name__ == "__main__":
     generate_ingredients_page()
     generate_stabilizer_page() 
     generate_ingredients_json()
-    generate_all_recipe_pages()
-    print("\n✅ Alle sider er klar! Du kan nu køre 'hugo server'.")
+    process_pending_recipes()  
+    
+    print("\n✅ Alle opgaver er fuldført! Du kan nu køre 'hugo server'.")
