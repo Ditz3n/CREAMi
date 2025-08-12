@@ -562,6 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Check if there's any description content
         const description = document.getElementById('recipe-description-input')?.value.trim();
+        markdown += `## Beskrivelse\n`;
         if (description) {
             markdown += `${description}\n\n`;
         } else {
