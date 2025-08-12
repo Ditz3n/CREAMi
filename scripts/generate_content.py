@@ -183,6 +183,18 @@ def generate_stabilizer_page():
         print(f"❌ FEJL! Stabilizer Mix: {e}")
         return
 
+     # --- LOGIK TIL AT FINDE BILLEDE ---
+    image_filename = None
+    static_images_dir = os.path.join(BASE_DIR, 'static', 'images')
+    
+    # Tjek om mappen 'static/images' findes, opret den hvis ikke
+    os.makedirs(static_images_dir, exist_ok=True)
+
+    if os.path.exists(os.path.join(static_images_dir, 'stabilizer.jpg')):
+        image_filename = 'stabilizer.jpg'
+    elif os.path.exists(os.path.join(static_images_dir, 'stabilizer.png')):
+        image_filename = 'stabilizer.png'
+
     # Hent den eksisterende oprettelsesdato, hvis filen findes
     existing_date = get_existing_date(STABILIZER_PAGE_PATH)
     now_date = datetime.now().strftime('%Y-%m-%d')
@@ -190,14 +202,22 @@ def generate_stabilizer_page():
     # Brug den gamle dato, hvis den findes, ellers brug dags dato
     creation_date = existing_date if existing_date else now_date
 
-    markdown_content = f"""---
+    # Byg front matter dynamisk
+    front_matter = f"""---
 title: "Ditz3n Stabilizer Mix"
 date: {creation_date}
 lastmod: {now_date}
 showReadingTime: false
 layout: "stabilizer"
----
+"""
+    # Tilføj kun billedet til front matter, hvis det blev fundet
+    if image_filename:
+        front_matter += f'image: "{image_filename}"\n'
+    
+    front_matter += "---\n"
 
+    # Byg resten af sidens indhold
+    markdown_content = front_matter + f"""
 At lave denne blanding handler om præcision og om at undgå klumper. Følg disse trin, og du vil have succes hver gang.
 
 ### Ingredienser

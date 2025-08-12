@@ -114,6 +114,7 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | Arla Cultura® Drikkeyoghurt Jordbær | 55 | 1 | 7.5 | 7.1 | 3.1 | 0.1 | 13.5 | 10.6 | 0.9 | Laktosefri! |
 | Arla® PROTEIN Drikkemåltid Vanilje/Hasselnød | 77 | 2 | 7.3 | 7 | 6.2 | 0.2 | 13.3 | 13.5 | 1.8 | Laktosefri! |
 | Arla® PROTEIN Drikkemåltid Chokolade/Karamel | 78 | 2.1 | 7.3 | 7 | 6.2 | 0.2 | 13.3 | 13.5 | 1.9 | Laktosefri! |
+| Milbona High Protein Vanilla Cottage Cheese | 78 | 1.3 | 5.6 | 4.3 | 11 | 0.71 | 13.139 | 6.6 | 1.3 | Laktosefri! |
 | Crushed Ice m. vanilje | 103 | 3.2 | 15 | 13 | 3.6 | 0.12 | 13 | 18.6 | 2.9 | Alt-i-én base. |
 | Matilde® Kakaomælk Premium | 89 | 2.7 | 12 | 12 | 3.5 | 0.11 | 12 | 15.5 | 2.4 | Den klassiske, fyldige kakaomælk. |
 | Crushed Ice Classic (Chokolade) | 103 | 3.2 | 14 | 12 | 4 | 0.12 | 12 | 18 | 2.9 |  |

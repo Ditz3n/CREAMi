@@ -901,3 +901,108 @@ body.dark .warning-footer {
     color: var(--secondary);
     text-align: right;
 }
+
+/*
+====================================
+CUSTOM TABLE STYLING - REVIDERET VERSION
+====================================
+*/
+
+/* --- STANDARD TABEL STYLING (for alle tabeller som standard) --- */
+.post-content table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+    margin: 1.5em auto;
+    border-radius: 6px;
+}
+
+/* --- SPECIEL STYLING FOR OPSKRIFTSSIDER (smalle, centrerede tabeller) --- */
+.recipe-content table {
+    /* Fjern display: block for at muliggøre korrekt centrering */
+    display: table;
+    
+    /* Gør tabellerne bredere - justér disse værdier efter behov */
+    width: 85%;
+    min-width: 600px;
+    max-width: 100%;
+    
+    /* Centrér tabellen */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    
+    /* Fjern horizontal scroll for disse tabeller */
+    overflow-x: visible;
+}
+
+/* --- SPECIEL STYLING FOR DATABASER (kun farver og scroll) --- */
+/* Lad tabellerne bruge deres naturlige bredde og scroll når nødvendigt */
+div.post-content.database-content {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Ingen bredde-begrænsninger - lad tabellerne være deres naturlige størrelse */
+
+/* Ekstra fallback - hvis ovenstående ikke virker */
+
+/* --- GENEREL STYLING FOR CELLER (INGEN ÆNDRINGER HER) --- */
+.post-content th,
+.post-content td {
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* --- HEADER STYLING (LIGHT MODE - INGEN ÆNDRINGER HER) --- */
+.post-content thead th {
+    background-color: #222222;
+    color: #f1f1f1;
+    font-weight: 600;
+    border-color: #333;
+}
+
+/* --- BODY STYLING (LIGHT MODE - INGEN ÆNDRINGER HER) --- */
+.post-content tbody tr:nth-of-type(even) {
+    background-color: var(--code-bg);
+}
+
+/* --- HEADER STYLING (DARK MODE - INGEN ÆNDRINGER HER) --- */
+body.dark .post-content thead th {
+    background-color: #f1f1f1;
+    color: #111111;
+    border-color: #333;
+    font-weight: 600;
+}
+
+/* --- BODY STYLING (DARK MODE - INGEN ÆNDRINGER HER) --- */
+body.dark .post-content tbody tr:nth-of-type(even) {
+    background-color: var(--code-bg);
+}
+
+/* --- RESPONSIV STYLING FOR MOBILE ENHEDER --- */
+@media (max-width: 768px) {
+    /* Opskriftssider på mobile */
+    .recipe-content table {
+        width: 100%;
+        min-width: 500px;
+        font-size: 14px;
+    }
+    
+    /* Database sider på mobile */
+    div.post-content.database-content table {
+        min-width: 800px !important;
+        font-size: 13px;
+    }
+    
+    .post-content th,
+    .post-content td {
+        padding: 8px 10px;
+    }
+}

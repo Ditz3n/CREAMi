@@ -9,7 +9,17 @@
     </div>
   </header>
 
-  <div class="post-content">
+  {{- if .Params.image }}
+    {{- /* Brug en unik klasse for at undgå konflikt med temaets CSS */ -}}
+    <div class="stabilizer-featured-image">
+      <img loading="lazy" 
+           src="{{ (printf "images/%s" .Params.image) | absURL }}" 
+           alt="{{ .Title }}" />
+    </div>
+  {{- end }}
+
+  <!-- TILFØJ DATABASE-SPECIFIC KLASSE HER -->
+  <div class="post-content database-content">
     {{ .Content }}
   </div>
 

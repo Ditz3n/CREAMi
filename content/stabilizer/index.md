@@ -1,9 +1,10 @@
 ---
 title: "Ditz3n Stabilizer Mix"
-date: 2025-08-11
+date: 2025-08-12
 lastmod: 2025-08-12
 showReadingTime: false
 layout: "stabilizer"
+image: "stabilizer.jpg"
 ---
 
 At lave denne blanding handler om præcision og om at undgå klumper. Følg disse trin, og du vil have succes hver gang.
