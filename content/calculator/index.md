@@ -1,10 +1,8 @@
 ---
 title: "Interaktiv Opskrift Udregner"
-draft: false
-showReadingTime: false
-showDate: false
-showLastMod: false
-layout: "calculator" 
+date: 2025-08-10
+lastmod: 2025-08-12
+layout: "calculator"
 ---
 
 Velkommen til siden hvor du kan bygge dine egne Ninja CREAMi-opskrifter fra bunden!

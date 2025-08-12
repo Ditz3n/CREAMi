@@ -19,14 +19,9 @@
       {{ .Description }}
     </div>
     {{- end }}
-    {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
-      {{- partial "post_canonical.html" . -}}
+      <span>Oprettet: {{ .Date.Format "January 2, 2006" }}</span>
     </div>
-    {{- end }}
   </header>
 
   {{- /* Håndter flere billeder (ny system) */ -}}
@@ -59,6 +54,11 @@
   </div>
   {{- end }}
 
+  {{- if .Lastmod.After .Date }}
+  <div class="post-last-modified">
+      <p>Sidst ændret: {{ .Lastmod.Format "January 2, 2006" }}</p>
+  </div>
+  {{- end }}
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">

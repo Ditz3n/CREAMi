@@ -1,0 +1,18 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    
+    <div class="post-meta">
+        <span>Sidst ændret: {{ .Lastmod.Format "January 2, 2006" }}</span>
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+</article>
+
+{{- end }}

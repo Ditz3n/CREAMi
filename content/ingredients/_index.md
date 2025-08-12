@@ -2,7 +2,6 @@
 title: "Den Komplette Ingrediensdatabase"
 date: 2025-08-12
 lastmod: 2025-08-12
-draft: false
 ---
 
 Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er den centrale kilde, hvorfra "Opskrift Udregneren" henter al sin viden.

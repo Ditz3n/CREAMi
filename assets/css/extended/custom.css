@@ -33,6 +33,7 @@ body.dark .header {
 }
 
 .calculator-container input[type="number"] {
+    appearance: textfield; /* Standard property for compatibility */
     -moz-appearance: textfield; /* Firefox */
 }
 
@@ -906,4 +907,13 @@ body.dark .ingredient-name-display {
 /* Dark theme adjustments */
 body.dark .warning-footer {
     background-color: rgba(255, 255, 255, 0.02);
+}
+
+.post-last-modified {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-align: right;
 }

@@ -3,6 +3,7 @@ import os
 import glob
 import hashlib
 import shutil
+import re
 from datetime import datetime
 
 # ---- KONFIGURATION ----
@@ -13,10 +14,11 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 EXCEL_FILE_PATH = os.path.join(DATA_DIR, 'laboratorie_data.xlsx')
 
 # Output paths
+CALCULATOR_PAGE_PATH = os.path.join(CONTENT_DIR, 'calculator', 'index.md')
+STABILIZER_PAGE_PATH = os.path.join(CONTENT_DIR, 'stabilizer', 'index.md')
 INGREDIENTS_PAGE_PATH = os.path.join(CONTENT_DIR, 'ingredients', '_index.md')
-RECIPE_CONTENT_DIR = os.path.join(CONTENT_DIR, 'recipes')
-STABILIZER_PAGE_PATH = os.path.join(CONTENT_DIR, 'stabilizer-mix', 'index.md')
 JSON_OUTPUT_PATH = os.path.join(BASE_DIR, 'static', 'ingredients.json')
+RECIPE_CONTENT_DIR = os.path.join(CONTENT_DIR, 'recipes')
 
 # ---- HJÆLPEFUNKTION TIL AT SKRIVE FILER KUN VED ÆNDRINGER ----
 def write_if_changed(filepath, new_content):
@@ -35,10 +37,69 @@ def write_if_changed(filepath, new_content):
     print(f"✅ Success! '{os.path.basename(filepath)}' er blevet genereret/opdateret!")
     return True
 
+# ---- HJÆLPEFUNKTION TIL AT HENTE EXISTING DATE ----
+def get_existing_date(filepath):
+    """
+    Læser en markdown-fil og returnerer 'date'-værdien fra front matter, hvis den findes.
+    Returnerer None, hvis filen ikke findes, eller datoen ikke kan findes.
+    """
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        lines = content.split('\n')
+        in_front_matter = False
+        
+        for i, line in enumerate(lines):
+            if i == 0 and line.strip() == '---':
+                in_front_matter = True
+                continue
+            elif line.strip() == '---' and in_front_matter:
+                # Vi har nået slutningen af front matter
+                break
+            elif in_front_matter:
+                # Finder linjen, der starter med 'date:'
+                match = re.match(r'^date:\s*"?([^"\s]+)"?', line)
+                if match:
+                    return match.group(1)
+    except FileNotFoundError:
+        return None
+    return None
+
+# ---- GENERER UDREGNER-SIDEN ----
+def generate_calculator_page():
+    """
+    Genererer den statiske side for den interaktive udregner.
+    """
+    print("\nGenererer Interaktiv Udregner side...")
+    
+    # Hent den eksisterende oprettelsesdato, hvis filen findes
+    existing_date = get_existing_date(CALCULATOR_PAGE_PATH)
+    now_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Brug den gamle dato, hvis den findes, ellers brug dags dato
+    creation_date = existing_date if existing_date else now_date
+    
+    # Byg indholdet med den korrekte dato
+    markdown_content = f"""---
+title: "Interaktiv Opskrift Udregner"
+date: {creation_date}
+lastmod: {now_date}
+layout: "calculator"
+---
+
+Velkommen til siden hvor du kan bygge dine egne Ninja CREAMi-opskrifter fra bunden!
+
+Vælg ingredienser fra databasen, indtast mængder, og se øjeblikkeligt hvordan det påvirker FPDF og MSNF. Samtidigt kan du også få et overblik over præcis det næringsindhold din bøtte indeholder.
+
+God fornøjelse i is-laboratoriet!
+"""
+    write_if_changed(CALCULATOR_PAGE_PATH, markdown_content)
+    print("✅ Success! Interaktiv Udregner siden er blevet genereret!")
 
 # ---- INGREDIENS-SIDEN ----
 def generate_ingredients_page():
-    print("Genererer Ingrediens-siden fra Excel...")
+    print("\nGenererer Ingrediens-siden fra Excel...")
     try:
         df = pd.read_excel(EXCEL_FILE_PATH, sheet_name='Ingrediensdatabase', skiprows=11, header=None)
         df.dropna(how='all', inplace=True)
@@ -46,11 +107,17 @@ def generate_ingredients_page():
         print(f"❌ FEJL! {e}")
         return
 
+    # Hent den eksisterende oprettelsesdato, hvis filen findes
+    existing_date = get_existing_date(INGREDIENTS_PAGE_PATH)
+    now_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Brug den gamle dato, hvis den findes, ellers brug dags dato
+    creation_date = existing_date if existing_date else now_date
+
     markdown_content = f"""---
 title: "Den Komplette Ingrediensdatabase"
-date: {datetime.now().strftime('%Y-%m-%d')}
-lastmod: {datetime.now().strftime('%Y-%m-%d')}
-draft: false
+date: {creation_date}
+lastmod: {now_date}
 ---
 
 Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er den centrale kilde, hvorfra "Opskrift Udregneren" henter al sin viden.
@@ -73,8 +140,7 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
     write_if_changed(INGREDIENTS_PAGE_PATH, markdown_content)
     print("✅ Success! Ingrediens-siden er blevet genereret!")
 
-
-# ---- STABILIZER MIX SIDEN ----
+# ---- STABILIZER SIDEN ----
 def generate_stabilizer_page():
     print("\nGenererer Stabilizer Mix side fra Excel...")
     try:
@@ -100,12 +166,19 @@ def generate_stabilizer_page():
         print(f"❌ FEJL! Stabilizer Mix: {e}")
         return
 
+    # Hent den eksisterende oprettelsesdato, hvis filen findes
+    existing_date = get_existing_date(STABILIZER_PAGE_PATH)
+    now_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Brug den gamle dato, hvis den findes, ellers brug dags dato
+    creation_date = existing_date if existing_date else now_date
+
     markdown_content = f"""---
 title: "Ditz3n Stabilizer Mix"
-date: {datetime.now().strftime('%Y-%m-%d')}
-lastmod: {datetime.now().strftime('%Y-%m-%d')}
-draft: false
+date: {creation_date}
+lastmod: {now_date}
 showReadingTime: false
+layout: "stabilizer"
 ---
 
 At lave denne blanding handler om præcision og om at undgå klumper. Følg disse trin, og du vil have succes hver gang.
@@ -136,7 +209,6 @@ Når din Ninja CREAMi-opskrift kræver sødning og stabilisering, skal du blot a
     
     write_if_changed(STABILIZER_PAGE_PATH, markdown_content)
     print("✅ Success! Stabilizer Mix siden er blevet genereret!")
-
 
 # ---- JSON DATABASE ----
 def generate_ingredients_json():
@@ -179,7 +251,7 @@ def generate_ingredients_json():
     except Exception as e:
         print(f"❌ FEJL! JSON generering: {e}")
 
-# ---- NY FUNKTION: PROCES PENDING OPSKRIFTER ----
+# ---- PROCES PENDING OPSKRIFTER ----
 def process_pending_recipes():
     """
     Finder, behandler og publicerer nye opskrifter fra 'pending_recipes'-mappen.
@@ -246,10 +318,12 @@ def process_pending_recipes():
                 image_counter += 1
             
             # --- Trin 3: Byg den nye fil med Front Matter ---
+            now_date = datetime.now().strftime('%Y-%m-%d')
             front_matter = f"""---
 title: "{recipe_title}"
-date: {datetime.now().strftime('%Y-%m-%d')}
-draft: false
+date: {now_date}
+lastmod: {now_date}
+layout: "recipes"
 """
             
             # Tilføj billeder til front matter
@@ -299,8 +373,9 @@ draft: false
 
 # ---- HOVEDPROGRAM ----
 if __name__ == "__main__":
+    generate_calculator_page()
+    generate_stabilizer_page()
     generate_ingredients_page()
-    generate_stabilizer_page() 
     generate_ingredients_json()
     process_pending_recipes()  
     

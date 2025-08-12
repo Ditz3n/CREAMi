@@ -23,8 +23,8 @@ contentDir = "content"
     weight = 15
   [[menu.main]]
     identifier = "stabilizer"
-    name = "Stabilizer Mix"
-    url = "/stabilizer-mix/"
+    name = "Stabilizer"
+    url = "/stabilizer/"
     weight = 20
   [[menu.main]]
     identifier = "ingredients"

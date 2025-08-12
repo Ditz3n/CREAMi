@@ -157,7 +157,9 @@
     <!-- Trin 2: Hent selve script-filen -->
     <script src="{{ .Site.BaseURL }}js/calculator.js"></script>
 
-    </article>
+    <div class="post-last-modified">
+        <p>Sidst ændret: {{ .Lastmod.Format "January 2, 2006" }}</p>
+    </div>
 </article>
 
 {{ end }}
