@@ -31,6 +31,11 @@ contentDir = "content"
     name = "Ingrediensdatabase"
     url = "/ingredients/"
     weight = 25
+  [[menu.main]]
+  identifier = "glossary"
+  name = "Ordliste"
+  url = "/glossary/"
+  weight = 30
 
 [markup]
   [markup.goldmark]

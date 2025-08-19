@@ -13,14 +13,13 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 
 EXCEL_FILE_PATH = os.path.join(DATA_DIR, 'laboratorie_data.xlsx')
 
-# Output paths
 CALCULATOR_PAGE_PATH = os.path.join(CONTENT_DIR, 'calculator', 'index.md')
 STABILIZER_PAGE_PATH = os.path.join(CONTENT_DIR, 'stabilizer', 'index.md')
 INGREDIENTS_PAGE_PATH = os.path.join(CONTENT_DIR, 'ingredients', '_index.md')
 JSON_OUTPUT_PATH = os.path.join(BASE_DIR, 'static', 'ingredients.json')
 RECIPE_CONTENT_DIR = os.path.join(CONTENT_DIR, 'recipes')
 
-# ---- HJÆLPEFUNKTION TIL AT SKRIVE FILER KUN VED ÆNDRINGER ----
+# ---- HJÆLPEFUNKTIONER ----
 def write_if_changed(filepath, new_content):
     """Skriver kun til filen, hvis indholdet er ændret."""
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -34,15 +33,11 @@ def write_if_changed(filepath, new_content):
 
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(new_content)
-    print(f"✅ Success! '{os.path.basename(filepath)}' er blevet genereret/opdateret!")
+    print(f"  ✅ Success! '{os.path.basename(filepath)}' er blevet genereret/opdateret!")
     return True
 
-# ---- HJÆLPEFUNKTION TIL AT HENTE EXISTING DATE ----
 def get_existing_date(filepath):
-    """
-    Læser en markdown-fil og returnerer 'date'-værdien fra front matter, hvis den findes.
-    Returnerer None, hvis filen ikke findes, eller datoen ikke kan findes.
-    """
+    """Læser en markdown-fil og returnerer 'date'-værdien fra front matter."""
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -55,10 +50,8 @@ def get_existing_date(filepath):
                 in_front_matter = True
                 continue
             elif line.strip() == '---' and in_front_matter:
-                # Vi har nået slutningen af front matter
                 break
             elif in_front_matter:
-                # Finder linjen, der starter med 'date:'
                 match = re.match(r'^date:\s*"?([^"\s]+)"?', line)
                 if match:
                     return match.group(1)
@@ -66,15 +59,15 @@ def get_existing_date(filepath):
         return None
     return None
 
-# ---- GENERER FORSIDE ----
+# ---- FORSIDE GENERATOR ----
 def generate_homepage():
     """Genererer forsiden med dynamisk indhold som seneste opskrift."""
-    print("\nGenererer Forside...")
+    print("Genererer Forside...")
     
     homepage_path = os.path.join(CONTENT_DIR, '_index.md')
     now_date = datetime.now().strftime('%Y-%m-%d')
 
-    # --- Find seneste opskrift ---
+    # Find seneste opskrift
     latest_recipe = None
     latest_date = datetime.min
     
@@ -92,26 +85,26 @@ def generate_homepage():
                 recipe_date = datetime.strptime(date_match.group(1), '%Y-%m-%d')
                 if recipe_date > latest_date:
                     latest_date = recipe_date
-                    recipe_title = title_match.group(1)
+                    recipe_title = title_match.group(1).replace('"', '').replace('"', '').replace('"', '')
                     recipe_slug = os.path.basename(os.path.dirname(recipe_file))
                     latest_recipe = {
                         'title': recipe_title,
-                        'url': f'/recipes/{recipe_slug}/',
+                        'slug': recipe_slug,
                         'date': latest_date.strftime('%d. %B %Y')
                     }
         except Exception as e:
             print(f"  -> Advarsel: Kunne ikke læse data fra '{os.path.basename(recipe_file)}': {e}")
 
-    # --- Håndter ental/flertal for opskrifter ---
+    # Håndter ental/flertal for opskrifter
     num_recipes = len(recipe_files)
     recipe_text = "opskrift" if num_recipes == 1 else "opskrifter"
     recipe_count_string = f"Siden indeholder i øjeblikket **{num_recipes} {recipe_text}**."
     
-    # --- Byg Markdown-indholdet ---
+    # Byg Markdown-indholdet
     markdown_content = f"""---
 title: "Ditz3n's Ninja CREAMi Laboratorium"
-date: 2025-08-19
-lastmod: {now_date}
+date: "2025-08-19"
+lastmod: "{now_date}"
 layout: "home"
 hero_image: "front_page.png"
 ---
@@ -122,23 +115,17 @@ En samling af mine personligt testede og godkendte Ninja CREAMi-opskrifter. Mål
 {recipe_count_string}
 """
 
+    # Shortcode generering
     if latest_recipe:
-        markdown_content += f"""
-<a href="{latest_recipe['url']}" class="latest-recipe-link">
-    <div class="latest-recipe-box">
-        <span class="latest-recipe-icon">🗓️</span>
-        <div class="latest-recipe-content">
-            <strong>Seneste Opskrift:</strong>
-            <span class="latest-recipe-title">{latest_recipe['title']}</span>
-            <small>(Publiceret {latest_recipe['date']})</small>
-        </div>
-    </div>
-</a>
-"""
+        slug = latest_recipe['slug']
+        title = latest_recipe['title']
+        date = latest_recipe['date']
+        
+        markdown_content += f'\n{{{{< latestRecipe slug="{slug}" title="{title}" date="{date}" >}}}}\n'
 
     markdown_content += """
 ## Hvordan Siden Bruges
-Brug menuen i toppen til at navigere til **Opskrifter**, den interaktive **Udregner**, **Stabilizer**-blandingen eller den komplette **Ingrediensdatabase**. Hver sektion er designet til at give dig de værktøjer og den viden, du skal bruge i dit eget is-laboratorium.
+Brug menuen i toppen til at navigere til **Opskrifter**, den interaktive **Udregner**, **Stabilizer**-blandingen eller den komplette **Ingrediensdatabase**. Hver sektion er designet til at give dig de værktøjer og den viden, du skal bruge i dit eget is-laboratorium. Hvis du støder på tekniske termer, du ikke kender, kan du finde en fuld forklaring i vores nye [**Ordliste**](/glossary/).
 
 ## Hvordan Den Er Bygget
 Denne hjemmeside er bygget med **Hugo**, et lynhurtigt værktøj til at generere statiske sider. Kernen i siden er en centraliseret Excel-fil (`laboratorie_data.xlsx`), som indeholder al data om ingredienser.
@@ -146,24 +133,99 @@ Denne hjemmeside er bygget med **Hugo**, et lynhurtigt værktøj til at generere
 Et specialskrevet **Python-script** (med `pandas`) læser denne data og genererer automatisk alle kernesiderne, inklusiv den `ingredients.json`-fil, som den interaktive udregner bruger. Hele processen – fra opdatering af data til publicering af nye opskrifter – er fuldt automatiseret via **GitHub Actions**.
 """
 
-    write_if_changed(homepage_path, markdown_content)
-    print("✅ Success! Forsiden er blevet genereret/opdateret!")
+    changed = write_if_changed(homepage_path, markdown_content)
+    if not changed:
+        print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
 
-# ---- GENERER UDREGNER-SIDEN ----
-def generate_calculator_page():
-    """
-    Genererer den statiske side for den interaktive udregner.
-    """
-    print("\nGenererer Interaktiv Udregner side...")
+# ---- ORDLISTE GENERATOR ----
+def generate_glossary_page():
+    """Genererer den statiske side for Ordlisten."""
+    print("\nGenererer Ordliste side...")
     
-    # Hent den eksisterende oprettelsesdato, hvis filen findes
-    existing_date = get_existing_date(CALCULATOR_PAGE_PATH)
+    glossary_page_path = os.path.join(CONTENT_DIR, 'glossary', 'index.md')
     now_date = datetime.now().strftime('%Y-%m-%d')
 
-    # Brug den gamle dato, hvis den findes, ellers brug dags dato
+    existing_date = get_existing_date(glossary_page_path)
+    creation_date = existing_date if existing_date else now_date
+
+    markdown_content = f"""---
+title: "Ordliste"
+date: {creation_date}
+lastmod: {now_date}
+layout: "glossary"
+toc: true
+---
+
+En oversigt over de vigtigste tekniske termer og koncepter, der bruges på denne side til at opnå de perfekte is.
+
+## MSNF (Milk Solids-Not-Fat)
+**Mælketørstof uden fedt**
+
+MSNF, også kendt som "fedtfrit mælketørstof", dækker over alle de faste komponenter i mælk, undtagen fedt og vand. Dette inkluderer primært proteiner (kasein og valle) og laktose (mælkesukker) samt mineraler. MSNF er afgørende for isens tekstur, krop og modstandsdygtighed over for smeltning.
+
+For lidt MSNF kan give en is, der føles tynd, vandet og iset. For meget kan føre til en sandet tekstur på grund af krystallisering af laktose.
+
+#### Retningslinjer for MSNF %
+Den optimale procentdel af MSNF afhænger af istypen og dens fedtindhold. Her er nogle generelle retningslinjer, du kan sigte efter baseret på de **samlede procenter** i din færdige opskrift:
+
+| Istype | Typisk Fedt %<sup>1</sup> | Anbefalet MSNF %<sup>2</sup> | Noter |
+|:---|:---:|:---:|:---|
+| Sorbet | 0% | 0 - 2% | Typisk ingen mælkeprodukter. Lidt MSNF kan forbedre teksturen. |
+| Fedtfattig Is / Protein-is | 0 - 4% | 10 - 14% | Højere MSNF er nødvendigt for at kompensere for den manglende struktur fra fedt. |
+| Klassisk Is / Gelato | 4 - 9% | 8 - 11% | Den gyldne standard, der balancerer cremethed og tekstur. |
+| Fedtrig Is (Premium) | 10 - 16%+ | 7 - 9% | Lavere MSNF er nødvendigt for at undgå sandethed, da det høje fedtindhold allerede giver masser af krop. |
+
+<div class="footnote-container">
+
+1.  **Typisk Fedt %:** Procentdelen af fedt i den **samlede opskrift**.  
+    *Formel:* `(Total Fedt (g) / Total Vægt (g)) * 100`  
+    *Eksempel:* `(15g fedt / 500g total) * 100 = 3%`
+
+2.  **Anbefalet MSNF %:** Procentdelen af MSNF i den **samlede opskrift**.  
+    *Formel:* `((Total Kulhydrater (g) + Total Protein (g)) / Total Vægt (g)) * 100`  
+    *Eksempel:* `((80g kulhydrat + 40g protein) / 500g total) * 100 = 24%`
+
+</div>
+
+## PAC / FPDF (Potere Anti Congelante / Freezing Point Depression Factor)
+**Frysepunktsnedsættende Faktor**
+
+PAC (italiensk) og FPDF (engelsk) er to navne for det samme: et mål for, hvor meget en ingrediens sænker vands frysepunkt. Alle opløselige stoffer (især sukkerarter, salte og alkoholer) bidrager til at sænke frysepunktet.
+
+Dette er den vigtigste faktor for isens "scoopabilitet" direkte fra fryseren. En højere samlet PAC-værdi giver en blødere is ved en given temperatur.
+
+- **Sukrose (alm. sukker)** har en referenceværdi på **100**.
+- **Dextrose** er næsten dobbelt så effektiv (PAC **~175**).
+- **Salt** er ekstremt potent (PAC **~590**).
+
+For en standard fryser ved -18°C sigtes der typisk efter en samlet PAC-værdi på **24-28** for mælkebaseret is og **30-36** for sorbet for at opnå en god konsistens.
+
+## POD (Potere Dolcificante)
+**Sødningskraft**
+
+POD er et mål for en ingrediens' sødme relativt til sukrose (alm. sukker), som har en referenceværdi på **100**. For eksempel har dextrose en POD på ca. **70**, hvilket betyder, at den er mindre sød end sukker. Ved at kombinere forskellige sukkerarter kan man justere PAC (blødhed) og POD (sødme) uafhængigt af hinanden.
+
+## Dextrose-ækvivalent (DE)
+Et mål for mængden af reducerende sukkerarter i et sukkerprodukt (f.eks. glukosesirup), udtrykt som en procentdel i forhold til ren dextrose. En høj DE-værdi (tæt på 100) indikerer en sirup, der primært består af simple sukkerarter (som dextrose), hvilket giver høj PAC og sødme. En lav DE-værdi indikerer en sirup med flere komplekse kulhydrater (stivelse), som bidrager mere til krop og tekstur end til blødhed og sødme.
+
+## Emulgatorer & Stabilisatorer
+- **Emulgatorer** (f.eks. æggeblomme, lecithin, GMS) er stoffer, der hjælper med at binde fedt og vand sammen. Dette skaber en mere homogen og stabil emulsion, hvilket resulterer i en glattere tekstur og forhindrer fedtet i at klumpe sammen under frysning.
+- **Stabilisatorer** (f.eks. guargummi, xanthangummi, LBG) er hydrokolloider, der er ekstremt gode til at binde vand. De forhindrer dannelsen af store iskrystaller under frysning og genfrysning, hvilket giver en mere cremet mundfølelse og forbedrer isens holdbarhed.
+"""
+
+    changed = write_if_changed(glossary_page_path, markdown_content)
+    if not changed:
+        print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
+
+# ---- UDREGNER GENERATOR ----
+def generate_calculator_page():
+    """Genererer den statiske side for den interaktive udregner."""
+    print("\nGenererer Interaktiv Udregner side...")
+    
+    existing_date = get_existing_date(CALCULATOR_PAGE_PATH)
+    now_date = datetime.now().strftime('%Y-%m-%d')
     creation_date = existing_date if existing_date else now_date
     
-    # Byg indholdet med den korrekte dato
     markdown_content = f"""---
 title: "Interaktiv Opskrift Udregner"
 date: {creation_date}
@@ -177,24 +239,24 @@ Vælg ingredienser fra databasen, indtast mængder, og se øjeblikkeligt hvordan
 
 God fornøjelse i is-laboratoriet!
 """
-    write_if_changed(CALCULATOR_PAGE_PATH, markdown_content)
-    print("✅ Success! Interaktiv Udregner siden er blevet genereret!")
+    
+    changed = write_if_changed(CALCULATOR_PAGE_PATH, markdown_content)
+    if not changed:
+        print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
 
-# ---- INGREDIENS-SIDEN ----
+# ---- INGREDIENS GENERATOR ----
 def generate_ingredients_page():
+    """Genererer Ingrediens-siden fra Excel."""
     print("\nGenererer Ingrediens-siden fra Excel...")
     try:
         df = pd.read_excel(EXCEL_FILE_PATH, sheet_name='Ingrediensdatabase', skiprows=11, header=None)
         df.dropna(how='all', inplace=True)
     except Exception as e:
-        print(f"❌ FEJL! {e}")
+        print(f"  ❌ FEJL! {e}")
         return
 
-    # Hent den eksisterende oprettelsesdato, hvis filen findes
     existing_date = get_existing_date(INGREDIENTS_PAGE_PATH)
     now_date = datetime.now().strftime('%Y-%m-%d')
-
-    # Brug den gamle dato, hvis den findes, ellers brug dags dato
     creation_date = existing_date if existing_date else now_date
 
     markdown_content = f"""---
@@ -220,11 +282,13 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
                 f"{row.iloc[8]} | {row.iloc[9]} | {row.iloc[10]} |\n"
             )
 
-    write_if_changed(INGREDIENTS_PAGE_PATH, markdown_content)
-    print("✅ Success! Ingrediens-siden er blevet genereret!")
+    changed = write_if_changed(INGREDIENTS_PAGE_PATH, markdown_content)
+    if not changed:
+        print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
 
-# ---- STABILIZER SIDEN ----
+# ---- STABILIZER GENERATOR ----
 def generate_stabilizer_page():
+    """Genererer Stabilizer Mix side fra Excel."""
     print("\nGenererer Stabilizer Mix side fra Excel...")
     try:
         df = pd.read_excel(EXCEL_FILE_PATH, sheet_name='Stabilizer Mix', skiprows=20)
@@ -240,17 +304,15 @@ def generate_stabilizer_page():
             for _, row in dataframe.iterrows():
                 processed_row = []
                 for i, cell in enumerate(row):
-                    if i == 0:  # First column (Ingrediens) - keep as string
+                    if i == 0:
                         processed_row.append(str(cell).replace('nan', ''))
-                    else:  # Numeric columns - format to 1 decimal place
+                    else:
                         if pd.isna(cell) or cell == '' or str(cell) == 'nan':
                             processed_row.append('')
                         else:
                             try:
-                                # Convert to float and format to 1 decimal place
                                 num_value = float(str(cell).replace(',', '.'))
                                 formatted_value = f"{num_value:.1f}"
-                                # Remove trailing .0 for whole numbers
                                 if formatted_value.endswith('.0'):
                                     formatted_value = formatted_value[:-2]
                                 processed_row.append(formatted_value)
@@ -263,14 +325,12 @@ def generate_stabilizer_page():
         total_table = build_markdown_table(total_df)
 
     except Exception as e:
-        print(f"❌ FEJL! Stabilizer Mix: {e}")
+        print(f"  ❌ FEJL! Stabilizer Mix: {e}")
         return
 
-     # --- LOGIK TIL AT FINDE BILLEDE ---
+    # Tjek for billede
     image_filename = None
     static_images_dir = os.path.join(BASE_DIR, 'static', 'images')
-    
-    # Tjek om mappen 'static/images' findes, opret den hvis ikke
     os.makedirs(static_images_dir, exist_ok=True)
 
     if os.path.exists(os.path.join(static_images_dir, 'stabilizer.jpg')):
@@ -278,14 +338,10 @@ def generate_stabilizer_page():
     elif os.path.exists(os.path.join(static_images_dir, 'stabilizer.png')):
         image_filename = 'stabilizer.png'
 
-    # Hent den eksisterende oprettelsesdato, hvis filen findes
     existing_date = get_existing_date(STABILIZER_PAGE_PATH)
     now_date = datetime.now().strftime('%Y-%m-%d')
-
-    # Brug den gamle dato, hvis den findes, ellers brug dags dato
     creation_date = existing_date if existing_date else now_date
 
-    # Byg front matter dynamisk
     front_matter = f"""---
 title: "Ditz3n Stabilizer Mix"
 date: {creation_date}
@@ -293,13 +349,12 @@ lastmod: {now_date}
 showReadingTime: false
 layout: "stabilizer"
 """
-    # Tilføj kun billedet til front matter, hvis det blev fundet
+    
     if image_filename:
         front_matter += f'image: "{image_filename}"\n'
     
     front_matter += "---\n"
 
-    # Byg resten af sidens indhold
     markdown_content = front_matter + f"""
 At lave denne blanding handler om præcision og om at undgå klumper. Følg disse trin, og du vil have succes hver gang.
 
@@ -327,18 +382,19 @@ Når din Ninja CREAMi-opskrift kræver sødning og stabilisering, skal du blot a
 Ved at lave denne blanding på forhånd, har du fjernet besværet og usikkerheden ved at skulle afveje små, flyvske mængder gummi hver eneste gang. Det gør hele processen hurtigere, nemmere og langt mere præcis. 😇
 """
     
-    write_if_changed(STABILIZER_PAGE_PATH, markdown_content)
-    print("✅ Success! Stabilizer Mix siden er blevet genereret!")
+    changed = write_if_changed(STABILIZER_PAGE_PATH, markdown_content)
+    if not changed:
+        print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
 
-# ---- JSON DATABASE ----
+# ---- JSON DATABASE GENERATOR ----
 def generate_ingredients_json():
+    """Genererer ingrediens JSON-database fra Excel."""
     print("\nGenererer ingrediens JSON-database fra Excel...")
     try:
-        # Read raw data
         df = pd.read_excel(EXCEL_FILE_PATH, sheet_name='Ingrediensdatabase', skiprows=11, header=None)
         df.dropna(how='all', inplace=True)
         
-        # Find header row containing "Ingrediens"
+        # Find header row
         header_row_index = None
         for i, row in df.iterrows():
             if 'Ingrediens' in str(row.iloc[0]):
@@ -349,14 +405,14 @@ def generate_ingredients_json():
             print("❌ FEJL! Kunne ikke finde header-rækken")
             return
         
-        # Set column names and remove header rows
+        # Set column names og fjern header rows
         df.columns = df.iloc[header_row_index].fillna('').astype(str).str.strip().tolist()
         df = df.iloc[header_row_index + 1:].reset_index(drop=True)
         
         # Clean up data
         df.dropna(how='all', inplace=True)
-        df = df[~df.iloc[:, 1:].isnull().all(axis=1)]  # Remove section headers
-        df = df[df['Ingrediens'].astype(str).str.strip() != '']  # Remove empty ingredients
+        df = df[~df.iloc[:, 1:].isnull().all(axis=1)]
+        df = df[df['Ingrediens'].astype(str).str.strip() != '']
         
         # Convert numeric columns
         numeric_cols = ['Energi (kcal)', 'Fedt', 'Kulhydrater', 'Sukker', 'Protein', 'Salt', 'PAC', 'MSNF', 'HF']
@@ -364,35 +420,54 @@ def generate_ingredients_json():
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '.', regex=False), errors='coerce').fillna(0)
         
-        # Save to JSON
+        # Tjek om filen allerede eksisterer og sammenlign
+        old_ingredient_count = 0
+        if os.path.exists(JSON_OUTPUT_PATH):
+            try:
+                with open(JSON_OUTPUT_PATH, 'r', encoding='utf-8') as f:
+                    import json
+                    old_data = json.load(f)
+                    old_ingredient_count = len(old_data)
+            except:
+                old_ingredient_count = 0
+        
+        # Gem ny JSON
         df.to_json(JSON_OUTPUT_PATH, orient='records', indent=2, force_ascii=False)
-        print(f"✅ Success! 'ingredients.json' genereret med {len(df)} ingredienser.")
+        
+        new_ingredient_count = len(df)
+        
+        if old_ingredient_count == 0:
+            ingredient_text = "ingrediens" if new_ingredient_count == 1 else "ingredienser"
+            print(f"  ✅ Success! 'ingredients.json' genereret med {new_ingredient_count} {ingredient_text}.")
+        elif new_ingredient_count == old_ingredient_count:
+            print("  -> Ingen ændringer påkrævet. Alt er up-to-date.")
+        else:
+            added_count = new_ingredient_count - old_ingredient_count
+            if added_count > 0:
+                ingredient_text = "ingrediens" if added_count == 1 else "ingredienser"
+                ny_text = "ny" if added_count == 1 else "nye"
+                print(f"  ✅ Success! 'ingredients.json' opdateret - {added_count} {ny_text} {ingredient_text} tilføjet (total: {new_ingredient_count}).")
+            else:
+                removed_count = abs(added_count)
+                ingredient_text = "ingrediens" if removed_count == 1 else "ingredienser"
+                print(f"  ✅ Success! 'ingredients.json' opdateret - {removed_count} {ingredient_text} fjernet (total: {new_ingredient_count}).")
 
     except Exception as e:
-        print(f"❌ FEJL! JSON generering: {e}")
+        print(f"  ❌ FEJL! JSON generering: {e}")
 
-# ---- PROCES PENDING OPSKRIFTER ----
+# ---- OPSKRIFT PROCESSOR ----
 def process_pending_recipes():
-    """
-    Finder, behandler og publicerer nye opskrifter fra 'pending_recipes'-mappen.
-    Nu med support for flere billeder (image1.png, image2.jpg, etc.)
-    """
+    """Finder, behandler og publicerer nye opskrifter fra 'pending_recipes'-mappen."""
     print("\nScanner efter nye opskrifter i 'pending_recipes'...")
     
     pending_dir = os.path.join(BASE_DIR, 'scripts', 'pending_recipes')
     os.makedirs(pending_dir, exist_ok=True)
 
     pending_files = glob.glob(os.path.join(pending_dir, '*.md'))
-
-    if not pending_files:
-        print("Ingen nye opskrifter fundet. Alt er up-to-date.")
-        return
-
-    # Filtrer README.md fra listen, før vi tæller
     actual_recipe_files = [f for f in pending_files if os.path.basename(f).lower() != 'readme.md']
 
     if not actual_recipe_files:
-        print("Ingen nye opskrifter fundet (kun README.md). Alt er up-to-date.")
+        print("  -> Ingen nye opskrifter fundet (kun README.md). Alt er up-to-date.")
         return
 
     print(f"Fandt {len(actual_recipe_files)} ny(e) opskrift(er). Starter publicering...")
@@ -400,29 +475,29 @@ def process_pending_recipes():
 
     for md_file_path in actual_recipe_files:
         try:
-            # --- Trin 1: Læs indhold og find titel ---
+            # Læs indhold og find titel
             with open(md_file_path, 'r', encoding='utf-8') as f:
                 lines = f.readlines()
             
             if not lines or not lines[0].startswith('# '):
-                print(f"⚠️ ADVARSEL: Filen '{os.path.basename(md_file_path)}' har ikke en valid titel. Springer over.")
+                print(f"  ⚠️ ADVARSEL: Filen '{os.path.basename(md_file_path)}' har ikke en valid titel. Springer over.")
                 continue
 
             recipe_title = lines[0].replace('# ', '').strip()
             recipe_content = "".join(lines[1:])
 
-            # --- Trin 2: Find ALLE tilhørende billeder ---
+            # Find ALLE tilhørende billeder
             base_filename = os.path.splitext(os.path.basename(md_file_path))[0]
             found_images = []
             
-            # Først: søg efter hovedbillede (uden nummer)
+            # Søg efter hovedbillede
             for ext in ['jpg', 'jpeg', 'png', 'webp']:
                 potential_image = os.path.join(pending_dir, f"{base_filename}.{ext}")
                 if os.path.exists(potential_image):
                     found_images.append(os.path.basename(potential_image))
                     break
             
-            # Derefter: søg efter nummererede billeder (1, 2, 3, etc.)
+            # Søg efter nummererede billeder
             image_counter = 1
             while True:
                 found_numbered = False
@@ -437,7 +512,7 @@ def process_pending_recipes():
                     break
                 image_counter += 1
             
-            # --- Trin 3: Byg den nye fil med Front Matter ---
+            # Byg den nye fil med Front Matter
             now_date = datetime.now().strftime('%Y-%m-%d')
             front_matter = f"""---
 title: "{recipe_title}"
@@ -448,19 +523,16 @@ layout: "recipes"
             
             # Tilføj billeder til front matter
             if len(found_images) == 1:
-                # Kun ét billede - brug den gamle måde
                 front_matter += f'image: "{found_images[0]}"\n'
             elif len(found_images) > 1:
-                # Flere billeder - brug array
                 front_matter += 'images:\n'
                 for img in found_images:
                     front_matter += f'  - "{img}"\n'
             
             front_matter += "---\n"
-
             final_content = front_matter + recipe_content
 
-            # --- Trin 4: Opret mappe og gem den nye index.md ---
+            # Opret mappe og gem den nye index.md
             clean_title = recipe_title.split('(')[0].strip()
             recipe_slug = clean_title.lower().replace(' ', '_').replace('æ', 'ae').replace('ø', 'oe').replace('å', 'aa')
             new_recipe_dir = os.path.join(RECIPE_CONTENT_DIR, recipe_slug)
@@ -470,7 +542,7 @@ layout: "recipes"
             with open(destination_md_path, 'w', encoding='utf-8') as f:
                 f.write(final_content)
 
-            # --- Trin 5: Flyt ALLE billeder og slet den gamle .md ---
+            # Flyt ALLE billeder og slet den gamle .md
             for image_filename in found_images:
                 source_image_path = os.path.join(pending_dir, image_filename)
                 destination_image_path = os.path.join(new_recipe_dir, image_filename)
@@ -486,14 +558,15 @@ layout: "recipes"
             processed_count += 1
 
         except Exception as e:
-            print(f"❌ FEJL under behandling af '{os.path.basename(md_file_path)}': {e}")
+            print(f"  ❌ FEJL under behandling af '{os.path.basename(md_file_path)}': {e}")
 
     if processed_count > 0:
-        print(f"✅ Success! {processed_count} ny(e) opskrift(er) er blevet publiceret.")
+        print(f"  ✅ Success! {processed_count} ny(e) opskrift(er) er blevet publiceret.")
 
 # ---- HOVEDPROGRAM ----
 if __name__ == "__main__":
     generate_homepage()
+    generate_glossary_page()
     generate_calculator_page()
     generate_stabilizer_page()
     generate_ingredients_page()

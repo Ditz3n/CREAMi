@@ -11,7 +11,7 @@
 
   {{- /* Indholdet genereret fra Python-scriptet */ -}}
   <div class="post-content homepage-content">
-    {{ .Content }}
+    {{ .RawContent | markdownify }}
   </div>
 
   {{- /* Viser "Sidst ændret"-datoen i bunden */ -}}

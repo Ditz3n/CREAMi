@@ -1,0 +1,51 @@
+/* ====================================
+// PARTIAL: _glossary.scss
+// Styling specifikt for Ordliste-siden.
+// ==================================== */
+
+.toc {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.toc-title {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+}
+
+.toc nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.toc nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+.toc nav ul li a {
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: 500;
+}
+
+.footnote-container {
+    margin-top: 0.75rem;
+    padding-left: 0.5rem; 
+    font-size: 0.85rem; 
+    color: var(--secondary); 
+    line-height: 1.5; 
+}
+
+.footnote-container ol {
+    margin: 0;
+    padding-left: 1.2rem; 
+}
+
+.footnote-container li {
+    margin-bottom: 0.25rem;
+}

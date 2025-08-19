@@ -1,0 +1,20 @@
+{{- /*
+  Shortcode: latestRecipe
+  Formål: Viser en klikbar boks med den seneste opskrift.
+  Parametre: slug, title, date
+  Eksempel: {{< latestRecipe slug="min-opskrift" title="Min Gode Opskrift" date="1. Januar 2025" >}}
+*/ -}}
+
+{{- with .Get "slug" -}}
+  {{- $url := printf "recipes/%s" . | relLangURL -}}
+  <a href="{{ $url }}" class="latest-recipe-link">
+    <div class="latest-recipe-box">
+        <span class="latest-recipe-icon">🗓️</span>
+        <div class="latest-recipe-content">
+            <strong>Seneste Opskrift:</strong>
+            <span class="latest-recipe-title">{{ $.Get "title" }}</span>
+            <small>(Publiceret {{ $.Get "date" }})</small>
+        </div>
+    </div>
+  </a>
+{{- end -}}
