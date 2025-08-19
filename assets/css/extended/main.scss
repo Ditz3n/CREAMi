@@ -1,0 +1,13 @@
+/* Main custom stylesheet */
+
+// General styling for header, etc.
+@import "partials/general";
+
+// Styling for Markdown-generated tables
+@import "partials/tables";
+
+// All styling for the interactive calculator page
+@import "partials/calculator";
+
+// Styling for the stabilizer page image
+@import "partials/stabilizer";

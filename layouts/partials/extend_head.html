@@ -1,0 +1,6 @@
+{{- /* Load custom SCSS and process it with Hugo's built-in SASS compiler */ -}}
+{{- $scss := resources.Get "css/extended/main.scss" | css.Sass }}
+{{- if not hugo.IsServer }}
+  {{- $scss = $scss | minify | fingerprint }}
+{{- end }}
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}" />

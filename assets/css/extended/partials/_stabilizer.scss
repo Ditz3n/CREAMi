@@ -1,0 +1,17 @@
+/* ====================================
+// PARTIAL: _stabilizer.css
+// Indeholder styling specifikt for Stabilizer-siden.
+// ==================================== */
+
+/* --- FREMHÆVET BILLEDE PÅ STABILIZER-SIDEN --- */
+.stabilizer-featured-image {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.stabilizer-featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}

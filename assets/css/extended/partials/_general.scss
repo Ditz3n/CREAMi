@@ -1,0 +1,18 @@
+/* ====================================
+// PARTIAL: _general.scss
+// General site-wide styling.
+// ==================================== */
+
+.header {
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.post-last-modified {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-align: right;
+}

@@ -1,0 +1,172 @@
+/* ====================================
+// PARTIAL: _calculator.scss
+// All styling for the interactive calculator page.
+// ==================================== */
+
+/* --- FJERN NUMBER INPUT SPINNERS --- */
+.calculator-container input[type="number"]::-webkit-outer-spin-button,
+.calculator-container input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.calculator-container input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* --- FULD BREDDE ELEMENTER --- */
+.calculator-container h3,
+.calculator-container hr,
+.calculator-container textarea {
+    margin-left: auto;
+    margin-right: auto;
+}
+.calculator-container h3 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.calculator-container hr { margin-top: 2.5rem; margin-bottom: 2.5rem; border: none; border-top: 1px solid var(--border); }
+.calculator-container textarea {
+    display: block; width: 100%; max-width: 550px; box-sizing: border-box;
+    min-height: 100px; background: var(--theme); color: var(--content);
+    border: 2px solid var(--border); padding: 12px 16px; border-radius: 8px;
+    font-size: 14px; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.calculator-container textarea:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
+
+/* --- WRAPPER TIL CENTRERET INDHOLD --- */
+.table-wrapper, .button-container { max-width: 550px; margin-left: auto; margin-right: auto; }
+
+/* --- TABELLER & INPUTS --- */
+.table-wrapper table { width: 100%; border-collapse: collapse; margin: 0 auto; }
+.table-wrapper th, .table-wrapper td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+.table-wrapper input {
+    width: 100%; box-sizing: border-box; background: var(--theme);
+    color: var(--content); border: 1px solid var(--border);
+    padding: 8px; border-radius: 4px;
+}
+
+/* --- KNAPPER --- */
+.button-container { text-align: center; margin-top: 1.5rem; }
+.calculator-container button {
+    padding: 10px 18px; border: none; background-color: #5a67d8;
+    color: #fff; cursor: pointer; border-radius: 5px;
+    font-weight: bold; transition: background-color 0.2s ease-in-out;
+}
+.calculator-container button:hover { background-color: #434190; }
+#ingredients-table .button-cell { border: none !important; text-align: center; padding-top: 1rem !important; }
+#ingredients-table tfoot tr td { text-align: center; }
+.calculator-container .table-wrapper { display: flex; justify-content: center; }
+.calculator-container .table-wrapper table { display: table; }
+
+/* --- OPSKRIFTSNAVN & BESKRIVELSE --- */
+.recipe-name-wrapper { max-width: 550px; margin: 0 auto 2rem auto; }
+.recipe-name-wrapper input {
+    width: 100%; box-sizing: border-box; padding: 12px 16px;
+    font-size: 16px; font-weight: 600; background: var(--theme);
+    color: var(--content); border: 2px solid var(--border);
+    border-radius: 8px; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.recipe-name-wrapper input:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
+.calculator-container textarea { resize: none; overflow: hidden; min-height: 100px; }
+.recipe-description-wrapper { max-width: 550px; margin: 0 auto 2rem auto; }
+.recipe-description-wrapper textarea {
+    width: 100%; box-sizing: border-box; padding: 12px 16px;
+    font-size: 14px; background: var(--theme); color: var(--content);
+    border: 2px solid var(--border); border-radius: 8px;
+    resize: none; overflow: hidden; min-height: 80px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.recipe-description-wrapper textarea:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
+
+/* --- MANUEL INDTASTNING --- */
+.ingredient-input-container { display: flex; align-items: center; gap: 8px; }
+.ingredient-input-container input { flex: 1; }
+.manual-input-btn {
+    width: 36px; height: 36px; border-radius: 50%; background-color: #5a67d8;
+    color: white; border: none; cursor: pointer; font-weight: bold;
+    font-size: 20px; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; position: relative; transition: all 0.2s;
+}
+.manual-input-btn:hover { background-color: #434190; }
+.manual-input-btn.hidden { display: none; }
+.lactose-free-option { margin-bottom: 20px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background-color: var(--theme); }
+body.dark .lactose-free-option { border-color: var(--border); }
+.lactose-free-option label { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: var(--content); cursor: pointer; margin: 0; }
+.lactose-free-checkbox { width: 16px; height: 16px; accent-color: #5a67d8; }
+.calculated-values { padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
+body.dark .calculated-values { border-color: var(--border); }
+.calculated-values h4 { margin: 0 0 10px 0; color: var(--content); font-size: 14px; }
+.calculated-values p { margin: 3px 0; font-size: 13px; color: var(--content); }
+.calculated-values span { font-weight: bold; color: #5a67d8; }
+.calculator-container h4 { margin-top: 2.5rem !important; margin-bottom: 1.5rem !important; }
+.calculator-container hr + h3 + h4, .calculator-container hr + h4 { margin-top: 1rem !important; }
+
+/* --- DISABLED STATE --- */
+.calculator-sections.disabled { opacity: 0.4; pointer-events: none; transition: opacity 0.3s ease; user-select: none; }
+.calculator-sections.disabled input, .calculator-sections.disabled textarea, .calculator-sections.disabled button { cursor: not-allowed !important; background-color: var(--border) !important; color: rgba(var(--content), 0.5) !important; }
+.calculator-sections.disabled .table-wrapper { opacity: 0.6; }
+
+/* --- CONTAINER TOGGLE & VOLUME COUNTER --- */
+.container-size-toggle { max-width: 550px; margin: 0 auto 2rem auto; display: flex; gap: 20px; justify-content: center; padding: 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--theme); }
+.toggle-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--content); }
+.toggle-label input[type="radio"] { width: 18px; height: 18px; accent-color: #5a67d8; }
+.toggle-label:hover .toggle-option { color: #5a67d8; }
+.volume-counter { max-width: 550px; margin: 0 auto 1rem auto; text-align: center; padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 500; background: var(--theme); border: 1px solid var(--border); transition: all 0.2s; }
+.volume-value { font-weight: bold; color: #5a67d8; }
+.volume-limit { color: var(--content); opacity: 0.7; }
+.volume-counter.volume-warning { border-color: #f6ad55; background-color: rgba(246, 173, 85, 0.1); }
+.volume-counter.volume-warning .volume-value { color: #f6ad55; }
+.volume-counter.volume-danger { border-color: #e53e3e; background-color: rgba(229, 62, 62, 0.1); }
+.volume-counter.volume-danger .volume-value { color: #e53e3e; }
+.volume-counter.volume-perfect { border-color: #48bb78; background-color: rgba(72, 187, 120, 0.1); }
+.volume-counter.volume-perfect .volume-value { color: #48bb78; }
+
+/* --- MODAL STYLING --- */
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
+.modal-content { background: var(--theme); border-radius: 12px; width: 100%; max-width: 500px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border: 1px solid var(--border); }
+.modal-header { padding: 20px 20px 0 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.modal-header h3 { margin: 0; color: var(--content); font-size: 18px; }
+.modal-close { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--content); padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background-color 0.2s; }
+.modal-close:hover { background-color: var(--border); }
+.modal-body { padding: 0 20px 20px 20px; }
+.ingredient-name-display { margin-bottom: 20px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); }
+body.dark .ingredient-name-display { background-color: var(--dark-background); border-color: var(--border); }
+.nutrition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+.nutrition-row { display: flex; flex-direction: column; gap: 5px; }
+.nutrition-row label { font-size: 13px; font-weight: 600; color: var(--content); }
+.nutrition-row input { padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--theme); color: var(--content); font-size: 14px; transition: border-color 0.2s; }
+.nutrition-row input:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; padding: 6px; }
+.calc-grid div { font-size: 13px; color: var(--content); }
+.calc-grid strong { color: #5a67d8; font-size: 16px; }
+.modal-footer { padding: 0 20px 20px 20px; display: flex; gap: 12px; justify-content: flex-end; }
+.save-btn { padding: 10px 20px; background-color: #5a67d8; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+.save-btn:hover { background-color: #4c51bf; }
+.cancel-btn { padding: 10px 20px; background-color: #e53e3e; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+.cancel-btn:hover { background-color: #c53030; }
+
+/* --- ADVARSELSDIALOG --- */
+.warning-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1100; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
+.warning-content { background: var(--theme); border-radius: 12px; width: 100%; max-width: 500px; min-width: 400px; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); border: 2px solid #f6ad55; display: flex; flex-direction: column; }
+.warning-header { padding: 20px 20px 15px 20px; border-bottom: 1px solid #f6ad55; background-color: rgba(246, 173, 85, 0.1); border-radius: 10px 10px 0 0; flex-shrink: 0; }
+.warning-header h3 { margin: 0; color: #f6ad55; font-size: 18px; display: flex; align-items: center; gap: 8px; line-height: 1.3; }
+.warning-body { padding: 20px; color: var(--content); line-height: 1.6; flex: 1; overflow-y: auto; }
+.warning-body p { margin: 0 0 15px 0; }
+.warning-body p:last-child { margin-bottom: 0; }
+.warning-body ul { margin: 10px 0 15px 0; padding-left: 20px; }
+.warning-body li { margin-bottom: 8px; line-height: 1.5; }
+.warning-body strong { color: #f6ad55; }
+.warning-footer { padding: 15px 20px 20px 20px; display: flex; gap: 12px; justify-content: flex-end; border-top: 1px solid var(--border); background-color: rgba(0, 0, 0, 0.02); border-radius: 0 0 10px 10px; flex-shrink: 0; }
+.warning-btn { padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; min-width: 100px; transition: all 0.2s; white-space: nowrap; }
+.warning-continue { background-color: #f6ad55; color: white; }
+.warning-continue:hover { background-color: #ed8936; }
+.warning-cancel { background-color: #e53e3e; color: white; }
+.warning-cancel:hover { background-color: #c53030; }
+@media (max-width: 768px) {
+    .warning-overlay { padding: 10px; }
+    .warning-content { min-width: unset; max-width: 100%; max-height: 90vh; }
+    .warning-header { padding: 15px; }
+    .warning-header h3 { font-size: 16px; }
+    .warning-body { padding: 15px; }
+    .warning-footer { padding: 15px; flex-direction: column; }
+    .warning-btn { width: 100%; min-width: unset; }
+}
+body.dark .warning-footer { background-color: rgba(255, 255, 255, 0.02); }
