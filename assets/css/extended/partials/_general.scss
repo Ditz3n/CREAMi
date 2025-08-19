@@ -3,6 +3,16 @@
 // General site-wide styling.
 // ==================================== */
 
+body,
+main.main {
+    background-color: #fcfcfc !important; /* Google's light mode farve */
+}
+
+body.dark,
+body.dark main.main {
+    background-color: #191919 !important; /* Google's dark mode farve */
+}
+
 .header {
     border-bottom: 1px solid var(--border);
     transition: background-color 0.3s, border-color 0.3s;

@@ -157,9 +157,9 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | Arla® PROTEIN Hindbær Yoghurtdrik | 53 | 0.5 | 7.5 | 7.2 | 4.1 | 0.1 | 7.2 | 11.6 | 0.5 |  |
 | Arla Cultura® Laktosefri Kefir Naturel | 54 | 2.5 | 3.7 | 3.7 | 3.4 | 0.1 | 7 | 7.1 | 2.3 | Laktosefri! |
 | Arla® LactoFREE Yoghurt Naturel 1,5% | 48 | 1.5 | 3.6 | 3.6 | 4.3 | 0.11 | 6.8 | 7.9 | 1.4 | Laktosefri! |
-| heasy | 42 | 1.2 | 3.7 | 3.5 | 3.4 | 0.1 | 6.7 | 7.1 | 1.1 | Laktosefri! |
 | Stay Strong Protein Koldskål | 48 | 1.4 | 3.8 | 3.3 | 5 | 0.1 | 6.3 | 8.8 | 1.3 | Laktosefri! |
 | Arla® LactoFREE Friskost 16% | 190 | 16 | 3.3 | 3.3 | 7.8 | 0.8 | 6.3 | 11.1 | 14.4 | Laktosefri! |
+| Milbona High Protein Chocolate Flavour Drink | 67 | 0.3 | 5.3 | 5.2 | 10.6 | 0.13 | 6.0 | 15.9 | 0.3 | God base. Højt protein/MSNF, lavt fedt, moderat PAC. |
 | Arla® LactoFREE Piskefløde 36% | 345 | 36 | 2.9 | 2.9 | 2.3 | 0.06 | 5.5 | 5.2 | 32.4 | Laktosefri! |
 | Stay Strong Skyr Mango & Passionsfrugt | 60 | 0.2 | 3.2 | 2.9 | 12 | 0.1 | 5.5 | 15.2 | 0.2 | Laktosefri! |
 | Stay Strong Skyr Jordbær & Lime | 48 | 0.3 | 3.2 | 2.9 | 8 | 0.13 | 5.5 | 11.2 | 0.3 | Laktosefri! |

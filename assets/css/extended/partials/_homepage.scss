@@ -1,0 +1,71 @@
+/* ====================================
+// PARTIAL: _homepage.scss
+// Styling specifikt for forsiden.
+// ==================================== */
+
+.homepage-hero-image {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.homepage-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.homepage-content h2 {
+    margin-top: 2.5rem;
+}
+
+.latest-recipe-link,
+.latest-recipe-link:hover {
+    display: block;
+    text-decoration: none !important;
+    color: inherit;
+    margin: 1.5rem 0;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.latest-recipe-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: border-color 0.15s ease-in-out;
+}
+
+body.dark .latest-recipe-box {
+    background-color: var(--code-bg);
+}
+
+@media (hover: hover) {
+    .latest-recipe-link:hover .latest-recipe-box {
+        border-color: var(--primary);
+    }
+}
+
+.latest-recipe-icon {
+    font-size: 24px;
+}
+
+.latest-recipe-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.latest-recipe-title {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.latest-recipe-content small {
+    opacity: 0.7;
+    font-size: 0.85em;
+}

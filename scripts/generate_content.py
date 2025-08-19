@@ -66,6 +66,89 @@ def get_existing_date(filepath):
         return None
     return None
 
+# ---- GENERER FORSIDE ----
+def generate_homepage():
+    """Genererer forsiden med dynamisk indhold som seneste opskrift."""
+    print("\nGenererer Forside...")
+    
+    homepage_path = os.path.join(CONTENT_DIR, '_index.md')
+    now_date = datetime.now().strftime('%Y-%m-%d')
+
+    # --- Find seneste opskrift ---
+    latest_recipe = None
+    latest_date = datetime.min
+    
+    recipe_files = glob.glob(os.path.join(RECIPE_CONTENT_DIR, '*', 'index.md'))
+    
+    for recipe_file in recipe_files:
+        try:
+            with open(recipe_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            date_match = re.search(r'^date:\s*"?([^"\s]+)"?', content, re.MULTILINE)
+            title_match = re.search(r'^title:\s*"?([^"]+)"?', content, re.MULTILINE)
+            
+            if date_match and title_match:
+                recipe_date = datetime.strptime(date_match.group(1), '%Y-%m-%d')
+                if recipe_date > latest_date:
+                    latest_date = recipe_date
+                    recipe_title = title_match.group(1)
+                    recipe_slug = os.path.basename(os.path.dirname(recipe_file))
+                    latest_recipe = {
+                        'title': recipe_title,
+                        'url': f'/recipes/{recipe_slug}/',
+                        'date': latest_date.strftime('%d. %B %Y')
+                    }
+        except Exception as e:
+            print(f"  -> Advarsel: Kunne ikke læse data fra '{os.path.basename(recipe_file)}': {e}")
+
+    # --- Håndter ental/flertal for opskrifter ---
+    num_recipes = len(recipe_files)
+    recipe_text = "opskrift" if num_recipes == 1 else "opskrifter"
+    recipe_count_string = f"Siden indeholder i øjeblikket **{num_recipes} {recipe_text}**."
+    
+    # --- Byg Markdown-indholdet ---
+    markdown_content = f"""---
+title: "Ditz3n's Ninja CREAMi Laboratorium"
+date: 2025-08-19
+lastmod: {now_date}
+layout: "home"
+hero_image: "front_page.png"
+---
+
+## Om Siden
+En samling af mine personligt testede og godkendte Ninja CREAMi-opskrifter. Målet er at bygge en database af teknisk velfunderede opskrifter, der fokuserer på de vigtige metrikker som FPDF og MSNF for at sikre et perfekt resultat hver gang.
+
+{recipe_count_string}
+"""
+
+    if latest_recipe:
+        markdown_content += f"""
+<a href="{latest_recipe['url']}" class="latest-recipe-link">
+    <div class="latest-recipe-box">
+        <span class="latest-recipe-icon">🗓️</span>
+        <div class="latest-recipe-content">
+            <strong>Seneste Opskrift:</strong>
+            <span class="latest-recipe-title">{latest_recipe['title']}</span>
+            <small>(Publiceret {latest_recipe['date']})</small>
+        </div>
+    </div>
+</a>
+"""
+
+    markdown_content += """
+## Hvordan Siden Bruges
+Brug menuen i toppen til at navigere til **Opskrifter**, den interaktive **Udregner**, **Stabilizer**-blandingen eller den komplette **Ingrediensdatabase**. Hver sektion er designet til at give dig de værktøjer og den viden, du skal bruge i dit eget is-laboratorium.
+
+## Hvordan Den Er Bygget
+Denne hjemmeside er bygget med **Hugo**, et lynhurtigt værktøj til at generere statiske sider. Kernen i siden er en centraliseret Excel-fil (`laboratorie_data.xlsx`), som indeholder al data om ingredienser.
+
+Et specialskrevet **Python-script** (med `pandas`) læser denne data og genererer automatisk alle kernesiderne, inklusiv den `ingredients.json`-fil, som den interaktive udregner bruger. Hele processen – fra opdatering af data til publicering af nye opskrifter – er fuldt automatiseret via **GitHub Actions**.
+"""
+
+    write_if_changed(homepage_path, markdown_content)
+    print("✅ Success! Forsiden er blevet genereret/opdateret!")
+
 # ---- GENERER UDREGNER-SIDEN ----
 def generate_calculator_page():
     """
@@ -410,6 +493,7 @@ layout: "recipes"
 
 # ---- HOVEDPROGRAM ----
 if __name__ == "__main__":
+    generate_homepage()
     generate_calculator_page()
     generate_stabilizer_page()
     generate_ingredients_page()

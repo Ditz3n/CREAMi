@@ -1,0 +1,26 @@
+{{- define "main" }}
+
+<article class="post-single">
+  
+  {{- /* Forsidebillede */ -}}
+  {{- if .Params.hero_image }}
+  <div class="homepage-hero-image">
+    <img src="{{ (printf "images/%s" .Params.hero_image) | absURL }}" alt="Forsidebillede for Ditz3n's Ninja CREAMi Laboratorium" />
+  </div>
+  {{- end }}
+
+  {{- /* Indholdet genereret fra Python-scriptet */ -}}
+  <div class="post-content homepage-content">
+    {{ .Content }}
+  </div>
+
+  {{- /* Viser "Sidst ændret"-datoen i bunden */ -}}
+  {{- if .Lastmod.After .Date }}
+  <div class="post-last-modified">
+      <p>Sidst ændret: {{ .Lastmod.Format "January 2, 2006" }}</p>
+  </div>
+  {{- end }}
+
+</article>
+
+{{- end }}
