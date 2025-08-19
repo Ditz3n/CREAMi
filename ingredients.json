@@ -1638,19 +1638,6 @@
     "Kommentar":"Laktosefri!"
   },
   {
-    "Ingrediens":"heasy",
-    "Energi (kcal)":42.0,
-    "Fedt":1.2,
-    "Kulhydrater":3.7,
-    "Sukker":3.5,
-    "Protein":3.4,
-    "Salt":0.1,
-    "PAC":6.7,
-    "MSNF":7.1,
-    "HF":1.1,
-    "Kommentar":"Laktosefri!"
-  },
-  {
     "Ingrediens":"Stay Strong Protein Koldskål",
     "Energi (kcal)":48.0,
     "Fedt":1.4,
@@ -1675,6 +1662,19 @@
     "MSNF":11.1,
     "HF":14.4,
     "Kommentar":"Laktosefri!"
+  },
+  {
+    "Ingrediens":"Milbona High Protein Chocolate Flavour Drink",
+    "Energi (kcal)":67.0,
+    "Fedt":0.3,
+    "Kulhydrater":5.3,
+    "Sukker":5.2,
+    "Protein":10.6,
+    "Salt":0.13,
+    "PAC":6.0,
+    "MSNF":15.9,
+    "HF":0.3,
+    "Kommentar":"God base. Højt protein\/MSNF, lavt fedt, moderat PAC."
   },
   {
     "Ingrediens":"Arla® LactoFREE Piskefløde 36%",
