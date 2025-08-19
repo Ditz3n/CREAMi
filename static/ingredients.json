@@ -299,19 +299,6 @@
     "Kommentar":null
   },
   {
-    "Ingrediens":"Test Ingrediens",
-    "Energi (kcal)":10.0,
-    "Fedt":1.0,
-    "Kulhydrater":2.0,
-    "Sukker":3.0,
-    "Protein":4.0,
-    "Salt":5.0,
-    "PAC":6.0,
-    "MSNF":7.0,
-    "HF":8.0,
-    "Kommentar":"Test"
-  },
-  {
     "Ingrediens":"Ingrediens",
     "Energi (kcal)":0.0,
     "Fedt":0.0,

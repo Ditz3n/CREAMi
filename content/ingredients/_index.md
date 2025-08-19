@@ -1,7 +1,7 @@
 ---
 title: "Den Komplette Ingrediensdatabase"
 date: 2025-08-12
-lastmod: 2025-08-12
+lastmod: 2025-08-19
 ---
 
 Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er den centrale kilde, hvorfra "Opskrift Udregneren" henter al sin viden.
@@ -34,9 +34,6 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 | Carboxymethyl Cellulose (CMC) | 333 | 0 | 66.7 | 0 | 0 | 20 | 0 | 66.7 | 0 |  |
 | GMS (Glycerol Monostearate) | 700 | 80 | 20 | 0 | 0 | 0 | 0 | 20 | 0 | Professionel emulgator. Skaber ekstremt glat tekstur. |
 | Cremodan Coldline | 710 | 78 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |  |
-
-| Ingrediens | Energi (kcal) | Fedt | Kulh. | Sukker | Protein | Salt | PAC | MSNF | HF | Kommentar |
-|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
 
 ## Proteinpulvere
 

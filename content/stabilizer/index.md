@@ -1,7 +1,7 @@
 ---
 title: "Ditz3n Stabilizer Mix"
 date: 2025-08-12
-lastmod: 2025-08-12
+lastmod: 2025-08-19
 showReadingTime: false
 layout: "stabilizer"
 image: "stabilizer.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Interaktiv Opskrift Udregner"
 date: 2025-08-10
-lastmod: 2025-08-12
+lastmod: 2025-08-19
 layout: "calculator"
 ---
 

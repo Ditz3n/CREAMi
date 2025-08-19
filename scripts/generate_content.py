@@ -124,7 +124,7 @@ Dette ark er hjertet og den absolutte grundsten i dit is-laboratorium. Det er de
 """
     
     for index, row in df.iterrows():
-        if 'Ingrediens' in str(row.iloc[0]):
+        if str(row.iloc[0]).strip() == 'Ingrediens':
             markdown_content += "\n| Ingrediens | Energi (kcal) | Fedt | Kulh. | Sukker | Protein | Salt | PAC | MSNF | HF | Kommentar |\n"
             markdown_content += "|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|\n"
         elif pd.notna(row.iloc[0]) and row.iloc[1:].isnull().all():
