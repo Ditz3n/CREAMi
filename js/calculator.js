@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- STATE & DOM REFERENCES ---
     let ingredientsData = [];
-    let customIngredients = {}; // Opbevar brugerdefinerede ingredienser
+    let customIngredients = {};
     const ingredientsTbody = document.getElementById('ingredients-tbody');
+    const mixinsTbody = document.getElementById('mixins-tbody');
     const datalist = document.getElementById('ingredient-options');
+    const showMixinsBtn = document.getElementById('show-mixins-btn');
+    const mixinsTableWrapper = document.getElementById('mixins-table-wrapper');
 
-    // Initialiseringsfunktion
+    // --- INITIALIZATION ---
     async function init() {
         try {
             const response = await fetch(siteBaseURL + 'ingredients.json');
@@ -12,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             populateDatalist();
             setupInitialRows();
             setupEventListeners();
-            createModal(); // Opret modal når siden indlæses
+            createModal();
         } catch (error) {
             console.error('Kunne ikke indlæse ingrediens-database:', error);
         }
@@ -26,18 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function createRow() {
+    function setupInitialRows() {
+        for (let i = 0; i < 5; i++) createRow(ingredientsTbody);
+    }
+
+    // --- UI & EVENT HANDLING ---
+    function createRow(tbody) {
         const tr = document.createElement('tr');
+        const placeholder = tbody === ingredientsTbody ? "Søg efter ingrediens..." : "Søg efter mix-in...";
         tr.innerHTML = `
             <td>
                 <div class="ingredient-input-container">
-                    <input type="text" list="ingredient-options" class="ingredient-input" placeholder="Søg efter ingrediens...">
+                    <input type="text" list="ingredient-options" class="ingredient-input" placeholder="${placeholder}">
                     <button type="button" class="manual-input-btn hidden" title="Indtast næringsværdier manuelt">!</button>
                 </div>
             </td>
             <td><input type="number" class="quantity-input" placeholder="0" min="0"></td>
         `;
-        ingredientsTbody.appendChild(tr);
+        tbody.appendChild(tr);
         setupRowEventListeners(tr);
     }
 
@@ -45,24 +55,133 @@ document.addEventListener('DOMContentLoaded', () => {
         const ingredientInput = row.querySelector('.ingredient-input');
         const manualBtn = row.querySelector('.manual-input-btn');
 
-        // Vis/skjul manual knap baseret på om ingrediensen findes
         ingredientInput.addEventListener('input', () => {
             const value = ingredientInput.value.trim();
             const exists = ingredientsData.some(ing => ing.Ingrediens === value) || customIngredients[value];
-            
-            if (value && !exists) {
-                manualBtn.style.display = 'flex';
-            } else {
-                manualBtn.style.display = 'none';
-            }
+            manualBtn.style.display = (value && !exists) ? 'flex' : 'none';
         });
 
-        // Åbn modal når der klikkes på udråbstegnet
-        manualBtn.addEventListener('click', () => {
-            openModal(row);
-        });
+        manualBtn.addEventListener('click', () => openModal(row));
     }
 
+    function setupEventListeners() {
+        document.getElementById('add-row-btn').addEventListener('click', () => createRow(ingredientsTbody));
+        document.getElementById('add-mixin-btn').addEventListener('click', () => createRow(mixinsTbody));
+        
+        showMixinsBtn.addEventListener('click', () => {
+            showMixinsBtn.parentElement.style.display = 'none';
+            mixinsTableWrapper.style.display = 'flex';
+
+            if (mixinsTbody.children.length === 0) {
+                createRow(mixinsTbody);
+            }
+        });
+        
+        ingredientsTbody.addEventListener('input', calculateAll);
+        mixinsTbody.addEventListener('input', calculateAll);
+
+        document.getElementById('download-btn').addEventListener('click', downloadMarkdown);
+        setupAutoResize();
+        
+        const sizeInputs = document.querySelectorAll('input[name="container-size"]');
+        sizeInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                updateContainerSize();
+                updateCalculatorState();
+            });
+        });
+        
+        updateContainerSize();
+        updateCalculatorState();
+    }
+
+    // --- CORE CALCULATION LOGIC ---
+    function calculateAll() {
+        const baseTotals = calculateTableTotals(ingredientsTbody, true);
+        const mixinTotals = calculateTableTotals(mixinsTbody, false);
+
+        const combinedTotals = {
+            weight: baseTotals.weight + mixinTotals.weight,
+            kcal: baseTotals.kcal + mixinTotals.kcal,
+            fat: baseTotals.fat + mixinTotals.fat,
+            carbs: baseTotals.carbs + mixinTotals.carbs,
+            sugar: baseTotals.sugar + mixinTotals.sugar,
+            protein: baseTotals.protein + mixinTotals.protein,
+            salt: baseTotals.salt + mixinTotals.salt,
+            volume: baseTotals.volume
+        };
+
+        const fpdf = baseTotals.weight > 0 ? ((baseTotals.pac - baseTotals.hf) / baseTotals.weight) * 100 : 0;
+        const msnfPerc = baseTotals.weight > 0 ? (baseTotals.msnf / baseTotals.weight) * 100 : 0;
+
+        updateNutritionUI(combinedTotals);
+        updateTechnicalUI(fpdf, msnfPerc);
+        updateVolumeCounter(combinedTotals.volume);
+    }
+
+    function calculateTableTotals(tbody, isBase) {
+        const totals = { weight: 0, kcal: 0, fat: 0, carbs: 0, sugar: 0, protein: 0, salt: 0, pac: 0, msnf: 0, hf: 0, volume: 0 };
+        const rows = tbody.querySelectorAll('tr');
+
+        rows.forEach(row => {
+            const nameInput = row.querySelector('.ingredient-input').value;
+            const quantity = parseFloat(row.querySelector('.quantity-input').value) || 0;
+
+            if (nameInput && quantity > 0) {
+                const ingredient = ingredientsData.find(ing => ing.Ingrediens === nameInput) || customIngredients[nameInput];
+                if (ingredient) {
+                    totals.weight += quantity;
+                    totals.volume += quantity;
+                    totals.kcal += (ingredient['Energi (kcal)'] / 100) * quantity;
+                    totals.fat += (ingredient.Fedt / 100) * quantity;
+                    totals.carbs += (ingredient.Kulhydrater / 100) * quantity;
+                    totals.sugar += (ingredient.Sukker / 100) * quantity;
+                    totals.protein += (ingredient.Protein / 100) * quantity;
+                    totals.salt += (ingredient.Salt / 100) * quantity;
+
+                    if (isBase) {
+                        totals.msnf += (ingredient.MSNF / 100) * quantity;
+                        if (ingredient.PAC > 0) {
+                            totals.pac += (ingredient.PAC / 100) * quantity;
+                        } else {
+                            const calculatedPac = (ingredient.Sukker * 1.0) + ((ingredient.Kulhydrater - ingredient.Sukker) * 0.5) + (ingredient.Salt * 5.9);
+                            totals.pac += (calculatedPac / 100) * quantity;
+                        }
+                        if (ingredient.HF > 0) {
+                            totals.hf += (ingredient.HF / 100) * quantity;
+                        } else {
+                            totals.hf += (ingredient.Fedt / 100) * quantity;
+                        }
+                    }
+                }
+            }
+        });
+        return totals;
+    }
+
+    function updateNutritionUI(totals) {
+        document.getElementById('total-kcal').textContent = totals.kcal.toFixed(1) + ' kcal';
+        document.getElementById('total-fat').textContent = totals.fat.toFixed(1) + 'g';
+        document.getElementById('total-carbs').textContent = totals.carbs.toFixed(1) + 'g';
+        document.getElementById('total-sugar').textContent = totals.sugar.toFixed(1) + 'g';
+        document.getElementById('total-protein').textContent = totals.protein.toFixed(1) + 'g';
+        document.getElementById('total-salt').textContent = totals.salt.toFixed(1) + 'g';
+
+        const per100Factor = totals.weight > 0 ? 100 / totals.weight : 0;
+        document.getElementById('per100-kcal').textContent = (totals.kcal * per100Factor).toFixed(1) + ' kcal';
+        document.getElementById('per100-fat').textContent = (totals.fat * per100Factor).toFixed(1) + 'g';
+        document.getElementById('per100-carbs').textContent = (totals.carbs * per100Factor).toFixed(1) + 'g';
+        document.getElementById('per100-sugar').textContent = (totals.sugar * per100Factor).toFixed(1) + 'g';
+        document.getElementById('per100-protein').textContent = (totals.protein * per100Factor).toFixed(1) + 'g';
+        document.getElementById('per100-salt').textContent = (totals.salt * per100Factor).toFixed(1) + 'g';
+    }
+
+    function updateTechnicalUI(fpdf, msnfPerc) {
+        document.getElementById('total-fpdf').textContent = fpdf.toFixed(1);
+        document.getElementById('total-msnf-perc').textContent = `${msnfPerc.toFixed(1)}%`;
+    }
+
+    // --- MODAL LOGIC ---
     function createModal() {
         const modalHTML = `
             <div id="nutrition-modal" class="modal-overlay" style="display: none;">
@@ -75,41 +194,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="ingredient-name-display">
                             <strong>Ingrediens:</strong> <span id="modal-ingredient-name"></span>
                         </div>
-                        
                         <div class="lactose-free-option">
                             <label>
                                 <input type="checkbox" id="modal-lactose-free-checkbox"> 
                                 Laktosefrit produkt (højere PAC-værdi)
                             </label>
                         </div>
-
                         <div class="nutrition-grid">
-                            <div class="nutrition-row">
-                                <label>Energi (kcal):</label>
-                                <input type="number" id="modal-energy" min="0" placeholder="0">
-                            </div>
-                            <div class="nutrition-row">
-                                <label>Fedt (g):</label>
-                                <input type="number" id="modal-fat" min="0" step="0.1" placeholder="0">
-                            </div>
-                            <div class="nutrition-row">
-                                <label>Kulhydrater (g):</label>
-                                <input type="number" id="modal-carbs" min="0" step="0.1" placeholder="0">
-                            </div>
-                            <div class="nutrition-row">
-                                <label>Sukker (g):</label>
-                                <input type="number" id="modal-sugar" min="0" step="0.1" placeholder="0">
-                            </div>
-                            <div class="nutrition-row">
-                                <label>Protein (g):</label>
-                                <input type="number" id="modal-protein" min="0" step="0.1" placeholder="0">
-                            </div>
-                            <div class="nutrition-row">
-                                <label>Salt (g):</label>
-                                <input type="number" id="modal-salt" min="0" step="0.1" placeholder="0">
-                            </div>
+                            <div class="nutrition-row"><label>Energi (kcal):</label><input type="number" id="modal-energy" min="0" placeholder="0"></div>
+                            <div class="nutrition-row"><label>Fedt (g):</label><input type="number" id="modal-fat" min="0" step="0.1" placeholder="0"></div>
+                            <div class="nutrition-row"><label>Kulhydrater (g):</label><input type="number" id="modal-carbs" min="0" step="0.1" placeholder="0"></div>
+                            <div class="nutrition-row"><label>Sukker (g):</label><input type="number" id="modal-sugar" min="0" step="0.1" placeholder="0"></div>
+                            <div class="nutrition-row"><label>Protein (g):</label><input type="number" id="modal-protein" min="0" step="0.1" placeholder="0"></div>
+                            <div class="nutrition-row"><label>Salt (g):</label><input type="number" id="modal-salt" min="0" step="0.1" placeholder="0"></div>
                         </div>
-
                         <div class="calculated-values">
                             <h4>Beregnede værdier:</h4>
                             <div class="calc-grid">
@@ -119,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
                     </div>
-                    
                     <div class="modal-footer">
                         <button type="button" id="modal-save-btn" class="save-btn">Gem Ingrediens</button>
                         <button type="button" id="modal-cancel-btn" class="cancel-btn">Annuller</button>
@@ -136,33 +233,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = document.querySelector('.modal-close');
         const cancelBtn = document.getElementById('modal-cancel-btn');
         const saveBtn = document.getElementById('modal-save-btn');
-        const inputs = modal.querySelectorAll('input[type="number"]');
-        const lactoseFreeCheckbox = document.getElementById('modal-lactose-free-checkbox');
+        const inputs = modal.querySelectorAll('input[type="number"], #modal-lactose-free-checkbox');
 
-        // Luk modal ved klik på X eller Annuller
         closeBtn.addEventListener('click', closeModal);
         cancelBtn.addEventListener('click', closeModal);
-        
-        // Luk modal ved klik udenfor
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.style.display !== 'none') closeModal(); });
 
-        // Luk modal med Escape-tasten
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.style.display !== 'none') {
-                closeModal();
-            }
-        });
-
-        // Auto-beregning når værdier ændres
-        inputs.forEach(input => {
-            input.addEventListener('input', updateModalCalculations);
-        });
-        
-        lactoseFreeCheckbox.addEventListener('change', updateModalCalculations);
-
-        // Gem ingrediens
+        inputs.forEach(input => input.addEventListener('input', updateModalCalculations));
         saveBtn.addEventListener('click', saveFromModal);
     }
 
@@ -170,35 +248,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('nutrition-modal');
         const ingredientName = row.querySelector('.ingredient-input').value.trim();
         
-        // Sæt ingrediensnavn
         document.getElementById('modal-ingredient-name').textContent = ingredientName;
-        
-        // Nulstil alle felter
         modal.querySelectorAll('input[type="number"]').forEach(input => input.value = '');
         document.getElementById('modal-lactose-free-checkbox').checked = false;
         
-        // Nulstil beregnede værdier
-        document.getElementById('modal-calc-pac').textContent = '0.0';
-        document.getElementById('modal-calc-msnf').textContent = '0.0';
-        document.getElementById('modal-calc-hf').textContent = '0.0';
+        updateModalCalculations();
         
-        // Gem reference til den aktuelle række
-        modal.dataset.currentRow = Array.from(ingredientsTbody.querySelectorAll('tr')).indexOf(row);
+        modal.dataset.currentRow = Array.from(row.parentElement.children).indexOf(row);
+        modal.dataset.currentTbody = row.parentElement.id;
         
-        // Vis modal
         modal.style.display = 'flex';
-        
-        // Focus på første input
         document.getElementById('modal-energy').focus();
     }
 
     function closeModal() {
-        const modal = document.getElementById('nutrition-modal');
-        modal.style.display = 'none';
+        document.getElementById('nutrition-modal').style.display = 'none';
     }
 
     function updateModalCalculations() {
-        const energy = parseFloat(document.getElementById('modal-energy').value) || 0;
         const fat = parseFloat(document.getElementById('modal-fat').value) || 0;
         const carbs = parseFloat(document.getElementById('modal-carbs').value) || 0;
         const sugar = parseFloat(document.getElementById('modal-sugar').value) || 0;
@@ -206,38 +273,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const salt = parseFloat(document.getElementById('modal-salt').value) || 0;
         const isLactoseFree = document.getElementById('modal-lactose-free-checkbox').checked;
 
-        // Beregn PAC baseret på videnskabelige værdier
-        let pac;
-        if (isLactoseFree) {
-            // Laktosefrie produkter: højere PAC pga. alternativ sukkersammensætning
-            pac = sugar * 1.9 + (carbs - sugar) * 0.6 + salt * 5.9;
-        } else {
-            // Standard beregning
-            pac = sugar * 1.0 + (carbs - sugar) * 0.5 + salt * 5.9;
-        }
+        let pac = isLactoseFree
+            ? sugar * 1.9 + (carbs - sugar) * 0.6 + salt * 5.9
+            : sugar * 1.0 + (carbs - sugar) * 0.5 + salt * 5.9;
 
-        // Beregn MSNF og HF
-        const msnf = carbs + protein;
-        const hf = fat;
-
-        // Opdater visning
         document.getElementById('modal-calc-pac').textContent = pac.toFixed(1);
-        document.getElementById('modal-calc-msnf').textContent = msnf.toFixed(1);
-        document.getElementById('modal-calc-hf').textContent = hf.toFixed(1);
+        document.getElementById('modal-calc-msnf').textContent = (carbs + protein).toFixed(1);
+        document.getElementById('modal-calc-hf').textContent = fat.toFixed(1);
     }
 
     function saveFromModal() {
         const modal = document.getElementById('nutrition-modal');
         const ingredientName = document.getElementById('modal-ingredient-name').textContent;
         const rowIndex = parseInt(modal.dataset.currentRow);
-        const row = ingredientsTbody.querySelectorAll('tr')[rowIndex];
+        const tbodyId = modal.dataset.currentTbody;
+        const tbody = document.getElementById(tbodyId);
+        const row = tbody.querySelectorAll('tr')[rowIndex];
 
         if (!ingredientName.trim()) {
             alert('Ingrediensnavn mangler');
             return;
         }
 
-        // Hent værdier fra modal
         const energy = parseFloat(document.getElementById('modal-energy').value) || 0;
         const fat = parseFloat(document.getElementById('modal-fat').value) || 0;
         const carbs = parseFloat(document.getElementById('modal-carbs').value) || 0;
@@ -246,61 +303,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const salt = parseFloat(document.getElementById('modal-salt').value) || 0;
         const isLactoseFree = document.getElementById('modal-lactose-free-checkbox').checked;
 
-        // Beregn værdier
-        let pac;
-        if (isLactoseFree) {
-            pac = sugar * 1.9 + (carbs - sugar) * 0.6 + salt * 5.9;
-        } else {
-            pac = sugar * 1.0 + (carbs - sugar) * 0.5 + salt * 5.9;
-        }
-        const msnf = carbs + protein;
-        const hf = fat;
+        let pac = isLactoseFree
+            ? sugar * 1.9 + (carbs - sugar) * 0.6 + salt * 5.9
+            : sugar * 1.0 + (carbs - sugar) * 0.5 + salt * 5.9;
 
-        // Gem i brugerdefinerede ingredienser
         customIngredients[ingredientName] = {
             'Ingrediens': ingredientName,
-            'Energi (kcal)': energy,
-            'Fedt': fat,
-            'Kulhydrater': carbs,
-            'Sukker': sugar,
-            'Protein': protein,
-            'Salt': salt,
-            'PAC': pac,
-            'MSNF': msnf,
-            'HF': hf,
+            'Energi (kcal)': energy, 'Fedt': fat, 'Kulhydrater': carbs,
+            'Sukker': sugar, 'Protein': protein, 'Salt': salt,
+            'PAC': pac, 'MSNF': carbs + protein, 'HF': fat,
             'Kommentar': `Brugerdefineret${isLactoseFree ? ' (laktosefri)' : ''}`
         };
 
-        // Tilføj til datalist hvis den ikke allerede findes
         if (!Array.from(datalist.options).some(option => option.value === ingredientName)) {
             const option = document.createElement('option');
             option.value = ingredientName;
             datalist.appendChild(option);
         }
 
-        // Skjul udråbstegn-knappen nu hvor ingrediensen er gemt
         row.querySelector('.manual-input-btn').style.display = 'none';
-
-        // Luk modal
         closeModal();
-
-        // Genberegn totaler
         calculateAll();
-
-        // Vis success-besked
         alert(`"${ingredientName}" er blevet gemt som brugerdefineret ingrediens!`);
     }
 
-    function setupInitialRows() {
-        for (let i = 0; i < 5; i++) {
-            createRow();
-        }
-    }
-
+    // --- HELPER FUNCTIONS ---
     function setupAutoResize() {
-        // Auto-resize functionality for textareas
-        const textareas = document.querySelectorAll('textarea');
-        textareas.forEach(textarea => {
+        document.querySelectorAll('textarea').forEach(textarea => {
             textarea.addEventListener('input', function() {
                 this.style.height = 'auto';
                 this.style.height = this.scrollHeight + 'px';
@@ -311,108 +340,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCalculatorState() {
         const calculatorSections = document.querySelector('.calculator-sections');
         const hasSelection = document.querySelector('input[name="container-size"]:checked');
-        
-        if (hasSelection) {
-            calculatorSections.classList.remove('disabled');
-        } else {
-            calculatorSections.classList.add('disabled');
-        }
-    }
-
-    function setupEventListeners() {
-        document.getElementById('add-row-btn').addEventListener('click', createRow);
-        ingredientsTbody.addEventListener('input', calculateAll);
-        document.getElementById('download-btn').addEventListener('click', downloadMarkdown);
-        setupAutoResize(); // Tilføj denne linje
-        
-        // Event listener for container størrelse toggle
-        const sizeInputs = document.querySelectorAll('input[name="container-size"]');
-        sizeInputs.forEach(input => {
-            input.addEventListener('change', () => {
-                updateContainerSize();
-                updateCalculatorState(); // Add this line
-            });
-        });
-        
-        // Initial setup
-        updateContainerSize();
-        updateCalculatorState(); // Add this line
+        calculatorSections.classList.toggle('disabled', !hasSelection);
     }
 
     function updateContainerSize() {
         const selectedSize = document.querySelector('input[name="container-size"]:checked')?.value || 'regular';
-        const maxVolumeSpan = document.getElementById('max-volume');
-        
-        if (selectedSize === 'deluxe') {
-            maxVolumeSpan.textContent = '710ml';
-        } else {
-            maxVolumeSpan.textContent = '473ml';
-        }
-        
-        // Genberegn alt for at opdatere volume counter
+        document.getElementById('max-volume').textContent = selectedSize === 'deluxe' ? '710ml' : '473ml';
         calculateAll();
-    }
-
-    function calculateAll() {
-        const totals = {
-            weight: 0, kcal: 0, fat: 0, carbs: 0, sugar: 0, 
-            protein: 0, salt: 0, pac: 0, msnf: 0, hf: 0, volume: 0
-        };
-
-        const rows = ingredientsTbody.querySelectorAll('tr');
-        rows.forEach(row => {
-            const nameInput = row.querySelector('.ingredient-input').value;
-            const quantity = parseFloat(row.querySelector('.quantity-input').value) || 0;
-
-            if (nameInput && quantity > 0) {
-                // Tjek først database, derefter brugerdefinerede ingredienser
-                let ingredient = ingredientsData.find(ing => ing.Ingrediens === nameInput);
-                if (!ingredient && customIngredients[nameInput]) {
-                    ingredient = customIngredients[nameInput];
-                }
-
-                if (ingredient) {
-                    totals.weight += quantity;
-                    totals.volume += quantity; // Antager 1g = 1ml for de fleste ingredienser
-                    totals.kcal += (ingredient['Energi (kcal)'] / 100) * quantity;
-                    totals.fat += (ingredient.Fedt / 100) * quantity;
-                    totals.carbs += (ingredient.Kulhydrater / 100) * quantity;
-                    totals.sugar += (ingredient.Sukker / 100) * quantity;
-                    totals.protein += (ingredient.Protein / 100) * quantity;
-                    totals.salt += (ingredient.Salt / 100) * quantity;
-                    totals.pac += (ingredient.PAC / 100) * quantity;
-                    totals.msnf += (ingredient.MSNF / 100) * quantity;
-                    totals.hf += (ingredient.HF / 100) * quantity;
-                }
-            }
-        });
-        
-        const fpdf = totals.weight > 0 ? ((totals.pac - totals.hf) / totals.weight) * 100 : 0;
-        const msnfPerc = totals.weight > 0 ? (totals.msnf / totals.weight) * 100 : 0;
-
-        // Opdater total værdier
-        document.getElementById('total-kcal').textContent = totals.kcal.toFixed(1) + ' kcal';
-        document.getElementById('total-fat').textContent = totals.fat.toFixed(1) + 'g';
-        document.getElementById('total-carbs').textContent = totals.carbs.toFixed(1) + 'g';
-        document.getElementById('total-sugar').textContent = totals.sugar.toFixed(1) + 'g';
-        document.getElementById('total-protein').textContent = totals.protein.toFixed(1) + 'g';
-        document.getElementById('total-salt').textContent = totals.salt.toFixed(1) + 'g';
-        
-        // Beregn per 100g/ml værdier
-        const per100Factor = totals.weight > 0 ? 100 / totals.weight : 0;
-        document.getElementById('per100-kcal').textContent = (totals.kcal * per100Factor).toFixed(1) + ' kcal';
-        document.getElementById('per100-fat').textContent = (totals.fat * per100Factor).toFixed(1) + 'g';
-        document.getElementById('per100-carbs').textContent = (totals.carbs * per100Factor).toFixed(1) + 'g';
-        document.getElementById('per100-sugar').textContent = (totals.sugar * per100Factor).toFixed(1) + 'g';
-        document.getElementById('per100-protein').textContent = (totals.protein * per100Factor).toFixed(1) + 'g';
-        document.getElementById('per100-salt').textContent = (totals.salt * per100Factor).toFixed(1) + 'g';
-        
-        // Tekniske værdier
-        document.getElementById('total-fpdf').textContent = fpdf.toFixed(1);
-        document.getElementById('total-msnf-perc').textContent = `${msnfPerc.toFixed(1)}%`;
-        
-        // Opdater volume counter
-        updateVolumeCounter(totals.volume);
     }
     
     function updateVolumeCounter(currentVolume) {
@@ -423,232 +357,142 @@ document.addEventListener('DOMContentLoaded', () => {
         
         volumeSpan.textContent = `${Math.round(currentVolume)}ml`;
         
-        // Fjern eksisterende klasser
-        volumeCounter.classList.remove('volume-warning', 'volume-danger');
-        
-        // Tilføj advarsel/fare klasser baseret på procent fyldt
-        if (volumeCounter) {
-            // Fjern eksisterende klasser
-            volumeCounter.classList.remove('volume-warning', 'volume-danger', 'volume-perfect');
-            
-            // Tilføj klasser baseret på volumen
-            if (currentVolume === maxVolume) {
-                volumeCounter.classList.add('volume-perfect');
-            } else if (currentVolume > maxVolume) {
-                volumeCounter.classList.add('volume-danger');
-            } else if (currentVolume > maxVolume * 0.9) {
-                volumeCounter.classList.add('volume-warning');
-            }
+        volumeCounter.classList.remove('volume-warning', 'volume-danger', 'volume-perfect');
+        if (currentVolume === maxVolume) {
+            volumeCounter.classList.add('volume-perfect');
+        } else if (currentVolume > maxVolume) {
+            volumeCounter.classList.add('volume-danger');
+        } else if (currentVolume > maxVolume * 0.9) {
+            volumeCounter.classList.add('volume-warning');
         }
     }
     
-    // Hjælpefunktion til formatering af instruktioner som nummereret liste
-    function formatInstructions(instructionsText) {
-        if (!instructionsText.trim()) return '';
-        
-        const lines = instructionsText.split('\n')
-            .map(line => line.trim())
-            .filter(line => line.length > 0);
-        
-        if (lines.length === 0) return '';
-        
-        return lines.map((line, index) => `${index + 1}. ${line}`).join('\n');
+    function formatInstructions(text) {
+        return text.split('\n').map(line => line.trim()).filter(line => line).map((line, index) => `${index + 1}. ${line}`).join('\n');
     }
     
-    // Hjælpefunktion til formatering af noter som punktliste
-    function formatNotes(notesText) {
-        if (!notesText.trim()) return '';
-        
-        const lines = notesText.split('\n')
-            .map(line => line.trim())
-            .filter(line => line.length > 0);
-        
-        if (lines.length === 0) return '';
-        
-        return lines.map(line => `- ${line}`).join('\n');
+    function formatNotes(text) {
+        return text.split('\n').map(line => line.trim()).filter(line => line).map(line => `- ${line}`).join('\n');
     }
     
+    // --- MARKDOWN EXPORT ---
     function downloadMarkdown() {
-        // Check if container size is selected
         const selectedSize = document.querySelector('input[name="container-size"]:checked');
         if (!selectedSize) {
             alert('Vælg venligst en container størrelse først.');
             return;
         }
 
-        // Check for volume overflow
-        const currentVolume = parseInt(document.getElementById('total-volume').textContent.replace('ml', ''));
+        const { volume } = calculateTableTotals(ingredientsTbody, true);
         const maxVolume = selectedSize.value === 'deluxe' ? 710 : 473;
         const sizeText = selectedSize.value === 'deluxe' ? 'Deluxe' : 'Regular';
 
-        if (currentVolume > maxVolume) {
-            showOverflowWarning(currentVolume, maxVolume, sizeText, () => {
-                proceedWithDownload(selectedSize, sizeText);
-            });
-            return;
+        if (volume > maxVolume) {
+            showOverflowWarning(volume, maxVolume, sizeText, () => proceedWithDownload(selectedSize, sizeText));
+        } else {
+            proceedWithDownload(selectedSize, sizeText);
         }
-
-        // Proceed normally if no overflow
-        proceedWithDownload(selectedSize, sizeText);
     }
 
     function showOverflowWarning(currentVolume, maxVolume, sizeText, onContinue) {
         const warningHTML = `
             <div class="warning-overlay" id="overflow-warning">
                 <div class="warning-content">
-                    <div class="warning-header">
-                        <h3>Opskrift Overstiger Container Kapacitet</h3>
-                    </div>
+                    <div class="warning-header"><h3>Opskrift Overstiger Container Kapacitet</h3></div>
                     <div class="warning-body">
                         <p><strong>Din opskrift er for stor til den valgte container:</strong></p>
                         <ul>
-                            <li>Opskriftens volumen: <strong>${currentVolume}ml</strong></li>
+                            <li>Opskriftens volumen: <strong>${Math.round(currentVolume)}ml</strong></li>
                             <li>Container kapacitet (${sizeText}): <strong>${maxVolume}ml</strong></li>
-                            <li>Overskydende: <strong>${currentVolume - maxVolume}ml</strong></li>
+                            <li>Overskydende: <strong>${Math.round(currentVolume - maxVolume)}ml</strong></li>
                         </ul>
                         <p>Du kan enten justere opskriften eller fortsætte med at downloade den som den er.</p>
                     </div>
                     <div class="warning-footer">
-                        <button class="warning-btn warning-continue" id="warning-continue">
-                            Download Alligevel
-                        </button>
-                        <button class="warning-btn warning-cancel" id="warning-cancel">
-                            Annuller
-                        </button>
+                        <button class="warning-btn warning-continue">Download Alligevel</button>
+                        <button class="warning-btn warning-cancel">Annuller</button>
                     </div>
                 </div>
-            </div>
-        `;
-
+            </div>`;
         document.body.insertAdjacentHTML('beforeend', warningHTML);
 
         const warningElement = document.getElementById('overflow-warning');
-        const continueBtn = document.getElementById('warning-continue');
-        const cancelBtn = document.getElementById('warning-cancel');
+        const continueBtn = warningElement.querySelector('.warning-continue');
+        const cancelBtn = warningElement.querySelector('.warning-cancel');
 
-        // Event listeners
-        continueBtn.addEventListener('click', () => {
-            warningElement.remove();
-            onContinue();
-        });
-
-        cancelBtn.addEventListener('click', () => {
-            warningElement.remove();
-        });
-
-        // Close on escape key
-        const escapeHandler = (e) => {
+        const closeWarning = () => warningElement.remove();
+        continueBtn.addEventListener('click', () => { closeWarning(); onContinue(); });
+        cancelBtn.addEventListener('click', closeWarning);
+        warningElement.addEventListener('click', (e) => { if (e.target === warningElement) closeWarning(); });
+        document.addEventListener('keydown', function escapeHandler(e) {
             if (e.key === 'Escape') {
-                warningElement.remove();
+                closeWarning();
                 document.removeEventListener('keydown', escapeHandler);
-            }
-        };
-        document.addEventListener('keydown', escapeHandler);
-
-        // Close on overlay click
-        warningElement.addEventListener('click', (e) => {
-            if (e.target === warningElement) {
-                warningElement.remove();
             }
         });
     }
 
     function proceedWithDownload(selectedSize, sizeText) {
-        // Get recipe name and add size suffix
         const baseName = document.getElementById('recipe-name-input').value.trim() || 'Unavngivet Opskrift';
         const recipeName = `${baseName} (${sizeText})`;
-        
         let markdown = `# ${recipeName}\n\n`;
-        
-        // Check if there's any description content
+
         const description = document.getElementById('recipe-description-input')?.value.trim();
-        markdown += `## Beskrivelse\n`;
-        if (description) {
-            markdown += `${description}\n\n`;
-        } else {
-            markdown += `*Ingen beskrivelse tilføjet.*\n\n`;
-        }
-        
-        // Check for ingredients
-        const rows = ingredientsTbody.querySelectorAll('tr');
-        let hasIngredients = false;
-        let ingredientsTable = '';
-        
-        rows.forEach(row => {
-            const name = row.querySelector('.ingredient-input').value;
-            const quantity = row.querySelector('.quantity-input').value;
-            if (name && quantity) {
-                if (!hasIngredients) {
-                    hasIngredients = true;
-                    ingredientsTable = `| Ingrediens | Mængde (g) |\n|:---|---:|\n`;
+        markdown += `## Beskrivelse\n${description || '*Ingen beskrivelse tilføjet.*'}\n\n`;
+
+        const buildTable = (tbody, header) => {
+            let tableMd = '';
+            let hasRows = false;
+            tbody.querySelectorAll('tr').forEach(row => {
+                const name = row.querySelector('.ingredient-input').value;
+                const quantity = row.querySelector('.quantity-input').value;
+                if (name && quantity) {
+                    if (!hasRows) {
+                        hasRows = true;
+                        tableMd += `| ${header} | Mængde (g) |\n|:---|---:|\n`;
+                    }
+                    tableMd += `| ${name} | ${quantity}g |\n`;
                 }
-                ingredientsTable += `| ${name} | ${quantity}g |\n`;
-            }
-        });
+            });
+            return hasRows ? tableMd : '*Ingen tilføjet.*\n';
+        };
 
-        markdown += `## Ingredienser\n`;
-        if (hasIngredients) {
-            markdown += ingredientsTable;
-        } else {
-            markdown += `*Ingen ingredienser tilføjet.*\n`;
-        }
+        markdown += `## Ingredienser (Is-base)\n`;
+        markdown += buildTable(ingredientsTbody, 'Ingrediens');
 
-        // Instructions
+        markdown += `\n## Mix-Ins\n`;
+        markdown += buildTable(mixinsTbody, 'Mix-In');
+
         const instructions = document.getElementById('instructions-box').value;
-        markdown += `\n## Fremgangsmåde\n`;
-        if (instructions.trim()) {
-            const formattedInstructions = formatInstructions(instructions);
-            markdown += `${formattedInstructions}\n`;
-        } else {
-            markdown += `*Ingen fremgangsmåde beskrevet.*\n`;
-        }
+        markdown += `\n## Fremgangsmåde\n${instructions.trim() ? formatInstructions(instructions) : '*Ingen fremgangsmåde beskrevet.*'}\n`;
 
-        // Nutrition info
         markdown += `\n## Næringsindhold\n`;
-        if (hasIngredients) {
-            // Total nutrition
-            markdown += `### Per Total Opskrift (${document.getElementById('total-volume').textContent})\n`;
-            markdown += `| Næringsemne | Værdi |\n`;
-            markdown += `|:---|---:|\n`;
-            markdown += `| Energi | ${document.getElementById('total-kcal').textContent} |\n`;
-            markdown += `| Fedt | ${document.getElementById('total-fat').textContent} |\n`;
-            markdown += `| Kulhydrater | ${document.getElementById('total-carbs').textContent} |\n`;
-            markdown += `| Sukker | ${document.getElementById('total-sugar').textContent} |\n`;
-            markdown += `| Protein | ${document.getElementById('total-protein').textContent} |\n`;
-            markdown += `| Salt | ${document.getElementById('total-salt').textContent} |\n`;
+        markdown += `### Per Total Opskrift (${document.getElementById('total-volume').textContent})\n`;
+        markdown += `| Næringsemne | Værdi |\n|:---|---:|\n`;
+        markdown += `| Energi | ${document.getElementById('total-kcal').textContent} |\n`;
+        markdown += `| Fedt | ${document.getElementById('total-fat').textContent} |\n`;
+        markdown += `| Kulhydrater | ${document.getElementById('total-carbs').textContent} |\n`;
+        markdown += `| Sukker | ${document.getElementById('total-sugar').textContent} |\n`;
+        markdown += `| Protein | ${document.getElementById('total-protein').textContent} |\n`;
+        markdown += `| Salt | ${document.getElementById('total-salt').textContent} |\n`;
 
-            // Per 100g/ml nutrition
-            markdown += `\n### Per 100g/ml\n`;
-            markdown += `| Næringsemne | Værdi |\n`;
-            markdown += `|:---|---:|\n`;
-            markdown += `| Energi | ${document.getElementById('per100-kcal').textContent} |\n`;
-            markdown += `| Fedt | ${document.getElementById('per100-fat').textContent} |\n`;
-            markdown += `| Kulhydrater | ${document.getElementById('per100-carbs').textContent} |\n`;
-            markdown += `| Sukker | ${document.getElementById('per100-sugar').textContent} |\n`;
-            markdown += `| Protein | ${document.getElementById('per100-protein').textContent} |\n`;
-            markdown += `| Salt | ${document.getElementById('per100-salt').textContent} |\n`;
+        markdown += `\n### Per 100g/ml\n`;
+        markdown += `| Næringsemne | Værdi |\n|:---|---:|\n`;
+        markdown += `| Energi | ${document.getElementById('per100-kcal').textContent} |\n`;
+        markdown += `| Fedt | ${document.getElementById('per100-fat').textContent} |\n`;
+        markdown += `| Kulhydrater | ${document.getElementById('per100-carbs').textContent} |\n`;
+        markdown += `| Sukker | ${document.getElementById('per100-sugar').textContent} |\n`;
+        markdown += `| Protein | ${document.getElementById('per100-protein').textContent} |\n`;
+        markdown += `| Salt | ${document.getElementById('per100-salt').textContent} |\n`;
 
-            // Technical values
-            markdown += `\n### Tekniske Værdier\n`;
-            markdown += `| Parameter | Værdi |\n`;
-            markdown += `|:---|---:|\n`;
-            markdown += `| **FPDF** | **${document.getElementById('total-fpdf').textContent}** |\n`;
-            markdown += `| **MSNF %** | **${document.getElementById('total-msnf-perc').textContent}** |\n`;
-        } else {
-            markdown += `*Ingen næringsindhold at beregne - tilføj ingredienser først.*\n`;
-        }
+        markdown += `\n### Tekniske Værdier (Kun Is-base)\n`;
+        markdown += `| Parameter | Værdi |\n|:---|---:|\n`;
+        markdown += `| **FPDF** | **${document.getElementById('total-fpdf').textContent}** |\n`;
+        markdown += `| **MSNF %** | **${document.getElementById('total-msnf-perc').textContent}** |\n`;
 
-        // Notes
         const notes = document.getElementById('notes-box').value;
-        markdown += `\n## Noter\n`;
-        if (notes.trim()) {
-            const formattedNotes = formatNotes(notes);
-            markdown += `${formattedNotes}\n`;
-        } else {
-            markdown += `*Ingen noter tilføjet.*\n`;
-        }
+        markdown += `\n## Noter\n${notes.trim() ? formatNotes(notes) : '*Ingen noter tilføjet.*'}\n`;
         
-        // Download with size in filename
         const filename = baseName.toLowerCase().replace(/[^a-z0-9æøåäöü]/g, '_') + `_${sizeText.toLowerCase()}.md`;
         const blob = new Blob([markdown], { type: 'text/markdown' });
         const url = URL.createObjectURL(blob);
@@ -660,6 +504,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(a);
     }
 
-    // Start applikationen
+    // --- APPLICATION START ---
     init();
 });
