@@ -1,7 +1,7 @@
 ---
 title: "Ordliste"
 date: 2025-08-19
-lastmod: 2025-08-19
+lastmod: 2025-09-05
 layout: "glossary"
 toc: true
 ---

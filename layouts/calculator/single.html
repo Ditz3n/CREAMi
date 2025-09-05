@@ -27,18 +27,20 @@
         <div class="calculator-sections disabled">
             <!-- Opskriftsnavn felt -->
             <h3>Opskriftsnavn</h3>
+            <p class="section-description">Navnet på din opskrift. Størrelsen (Deluxe el. Regular) tilføjes automatisk ved download.</p>
             <div class="recipe-name-wrapper">
-                <input type="text" id="recipe-name-input" placeholder="Indtast navnet på din opskrift...">
+                <input type="text" id="recipe-name-input" placeholder="F.eks. Dobbelt Chokolade Protein-is">
             </div>
 
             <!-- Beskrivelse felt -->
             <h3>Beskrivelse</h3>
+            <p class="section-description">En kort, fængende beskrivelse af din opskrift, der vises øverst på siden.</p>
             <div class="recipe-description-wrapper">
-                <textarea id="recipe-description-input" placeholder="Indtast en kort, fængende beskrivelse af din opskrift..."></textarea>
+                <textarea id="recipe-description-input" placeholder="F.eks. En rig og cremet chokoladeis, spækket med protein og en intens kakaosmag..."></textarea>
             </div>
 
-            <h3>Ingredienser</h3>
-            <!-- Volume counter under ingredienser -->
+            <h3>Ingredienser (Is-base)</h3>
+            <p class="section-description">Ingredienser tilføjet her påvirker både næringsindhold og de tekniske værdier (FPDF & MSNF).</p>
             <div class="volume-counter">
                 <span>Total volumen: </span>
                 <span id="total-volume" class="volume-value">0ml</span>
@@ -66,11 +68,38 @@
                 </table>
             </div>
 
+            <h3 class="mixins-header">Mix-Ins</h3>
+            <p class="section-description">Ingredienser tilføjet her påvirker kun det samlede næringsindhold, ikke de tekniske værdier.</p>
+            
+            <div class="button-container" id="show-mixins-container">
+                <button id="show-mixins-btn">+ Tilføj Mix-Ins</button>
+            </div>
+
+            <div class="table-wrapper" id="mixins-table-wrapper" style="display: none;">
+                <table id="mixins-table">
+                    <thead>
+                        <tr>
+                            <th>Mix-In</th>
+                            <th>Mængde (g)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mixins-tbody">
+                        <!-- Rækker tilføjes af JavaScript -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="button-cell">
+                                <button id="add-mixin-btn">+ Tilføj Mix-In</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
             <hr>
 
             <h3>Næringsindhold</h3>
             
-            <!-- Næringsindhold Total -->
             <h4>Per Total Opskrift</h4>
             <div class="table-wrapper">
                 <table id="results-table">
@@ -91,7 +120,6 @@
                 </table>
             </div>
 
-            <!-- Næringsindhold per 100g/ml -->
             <h4>Per 100g/ml</h4>
             <div class="table-wrapper">
                 <table id="per100-table">
@@ -112,8 +140,7 @@
                 </table>
             </div>
 
-            <!-- FPDF og MSNF værdier -->
-            <h4>Tekniske Værdier</h4>
+            <h4>Tekniske Værdier (Kun Is-base)</h4>
             <div class="table-wrapper">
                 <table id="technical-table">
                     <thead>
@@ -133,11 +160,13 @@
 
             <!-- Fremgangsmåde -->
             <h3>Fremgangsmåde</h3>
-            <textarea id="instructions-box" placeholder="Skriv hver instruktion på en ny linje&#10;De bliver automatisk til en nummereret liste"></textarea>
+            <p class="section-description">Skriv hvert trin på en ny linje. De bliver automatisk omdannet til en nummereret liste.</p>
+            <textarea id="instructions-box" placeholder="F.eks. Blend alle ingredienser til is-basen i en blender i 60 sekunder."></textarea>
 
             <!-- Noter -->
             <h3>Noter</h3>
-            <textarea id="notes-box" placeholder="Skriv hver note på en ny linje&#10;De bliver automatisk til punkter"></textarea>
+            <p class="section-description">Tilføj eventuelle tips, tricks eller variationer her. Hver linje bliver til et punkt.</p>
+            <textarea id="notes-box" placeholder="F.eks. For en endnu mere intens smag, lad basen modne i køleskabet i 4-6 timer før frysning."></textarea>
 
             <!-- Download knap -->
             <div class="button-container">
@@ -149,12 +178,9 @@
 
     <datalist id="ingredient-options"></datalist>
 
-    <!-- Trin 1: Definer en global JavaScript variabel med den korrekte sti fra Hugo -->
     <script>
         const siteBaseURL = "{{ .Site.BaseURL }}";
     </script>
-
-    <!-- Trin 2: Hent selve script-filen -->
     <script src="{{ .Site.BaseURL }}js/calculator.js"></script>
 
     <div class="post-last-modified">

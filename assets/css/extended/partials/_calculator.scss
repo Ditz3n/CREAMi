@@ -14,28 +14,48 @@
     -moz-appearance: textfield;
 }
 
-/* --- FULD BREDDE ELEMENTER --- */
-.calculator-container h3,
-.calculator-container hr,
-.calculator-container textarea {
+/* --- GENEREL LAYOUT & CENTRERING --- */
+.calculator-container textarea,
+.table-wrapper, 
+.button-container,
+.recipe-name-wrapper,
+.recipe-description-wrapper,
+.volume-counter,
+.container-size-toggle {
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
-.calculator-container h3 { margin-top: 2.5rem; margin-bottom: 1rem; }
-.calculator-container hr { margin-top: 2.5rem; margin-bottom: 2.5rem; border: none; border-top: 1px solid var(--border); }
+
+.calculator-container h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.section-description {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-align: left;
+}
+
+.calculator-container hr {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
 .calculator-container textarea {
-    display: block; width: 100%; max-width: 550px; box-sizing: border-box;
+    display: block; width: 100%; box-sizing: border-box;
     min-height: 100px; background: var(--theme); color: var(--content);
     border: 2px solid var(--border); padding: 12px 16px; border-radius: 8px;
     font-size: 14px; transition: border-color 0.2s, box-shadow 0.2s;
 }
 .calculator-container textarea:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
 
-/* --- WRAPPER TIL CENTRERET INDHOLD --- */
-.table-wrapper, .button-container { max-width: 550px; margin-left: auto; margin-right: auto; }
-
 /* --- TABELLER & INPUTS --- */
-.table-wrapper table { width: 100%; border-collapse: collapse; margin: 0 auto; }
+.table-wrapper table { width: 100%; border-collapse: collapse; }
 .table-wrapper th, .table-wrapper td { border: 1px solid var(--border); padding: 8px; text-align: left; }
 .table-wrapper input {
     width: 100%; box-sizing: border-box; background: var(--theme);
@@ -51,13 +71,13 @@
     font-weight: bold; transition: background-color 0.2s ease-in-out;
 }
 .calculator-container button:hover { background-color: #434190; }
-#ingredients-table .button-cell { border: none !important; text-align: center; padding-top: 1rem !important; }
-#ingredients-table tfoot tr td { text-align: center; }
+#ingredients-table .button-cell, #mixins-table .button-cell { border: none !important; text-align: center; padding-top: 1rem !important; }
+#ingredients-table tfoot tr td, #mixins-table tfoot tr td { text-align: center; }
 .calculator-container .table-wrapper { display: flex; justify-content: center; }
 .calculator-container .table-wrapper table { display: table; }
 
 /* --- OPSKRIFTSNAVN & BESKRIVELSE --- */
-.recipe-name-wrapper { max-width: 550px; margin: 0 auto 2rem auto; }
+.recipe-name-wrapper { margin-bottom: 2rem; }
 .recipe-name-wrapper input {
     width: 100%; box-sizing: border-box; padding: 12px 16px;
     font-size: 16px; font-weight: 600; background: var(--theme);
@@ -66,7 +86,7 @@
 }
 .recipe-name-wrapper input:focus { outline: none; border-color: #5a67d8; box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1); }
 .calculator-container textarea { resize: none; overflow: hidden; min-height: 100px; }
-.recipe-description-wrapper { max-width: 550px; margin: 0 auto 2rem auto; }
+.recipe-description-wrapper { margin-bottom: 2rem; }
 .recipe-description-wrapper textarea {
     width: 100%; box-sizing: border-box; padding: 12px 16px;
     font-size: 14px; background: var(--theme); color: var(--content);
@@ -86,6 +106,7 @@
     flex-shrink: 0; position: relative; transition: all 0.2s;
 }
 .manual-input-btn:hover { background-color: #434190; }
+/* KORREKTION: !important er fjernet, så JavaScript kan overskrive denne regel. */
 .manual-input-btn.hidden { display: none; }
 .lactose-free-option { margin-bottom: 20px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background-color: var(--theme); }
 body.dark .lactose-free-option { border-color: var(--border); }
@@ -105,11 +126,11 @@ body.dark .calculated-values { border-color: var(--border); }
 .calculator-sections.disabled .table-wrapper { opacity: 0.6; }
 
 /* --- CONTAINER TOGGLE & VOLUME COUNTER --- */
-.container-size-toggle { max-width: 550px; margin: 0 auto 2rem auto; display: flex; gap: 20px; justify-content: center; padding: 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--theme); }
+.container-size-toggle { margin-bottom: 2rem; display: flex; gap: 20px; justify-content: center; padding: 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--theme); }
 .toggle-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--content); }
 .toggle-label input[type="radio"] { width: 18px; height: 18px; accent-color: #5a67d8; }
 .toggle-label:hover .toggle-option { color: #5a67d8; }
-.volume-counter { max-width: 550px; margin: 0 auto 1rem auto; text-align: center; padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 500; background: var(--theme); border: 1px solid var(--border); transition: all 0.2s; }
+.volume-counter { margin-bottom: 1rem; text-align: center; padding: 8px 12px; border-radius: 6px; font-size: 14px; font-weight: 500; background: var(--theme); border: 1px solid var(--border); transition: all 0.2s; }
 .volume-value { font-weight: bold; color: #5a67d8; }
 .volume-limit { color: var(--content); opacity: 0.7; }
 .volume-counter.volume-warning { border-color: #f6ad55; background-color: rgba(246, 173, 85, 0.1); }
@@ -170,3 +191,15 @@ body.dark .ingredient-name-display { background-color: var(--dark-background); b
     .warning-btn { width: 100%; min-width: unset; }
 }
 body.dark .warning-footer { background-color: rgba(255, 255, 255, 0.02); }
+
+/* --- MIX-IN SEKTION --- */
+.mixins-header {
+    margin-top: 2.5rem !important;
+}
+
+#show-mixins-btn {
+    background-color: #6b7280;
+}
+#show-mixins-btn:hover {
+    background-color: #4b5563;
+}
