@@ -11,6 +11,9 @@
 
     <div class="calculator-container">
 
+        <!-- Autocomplete for ingrediens søgning -->
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+
         <!-- Container størrelse valg -->
         <h3>Størrelse</h3>
         <div class="container-size-toggle">
@@ -175,8 +178,6 @@
         </div>
 
     </div>
-
-    <datalist id="ingredient-options"></datalist>
 
     <script>
         const siteBaseURL = "{{ .Site.BaseURL }}";
