@@ -4,30 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let customIngredients = {};
     const ingredientsTbody = document.getElementById('ingredients-tbody');
     const mixinsTbody = document.getElementById('mixins-tbody');
-    const datalist = document.getElementById('ingredient-options');
     const showMixinsBtn = document.getElementById('show-mixins-btn');
     const mixinsTableWrapper = document.getElementById('mixins-table-wrapper');
+    let currentFocus = -1;
 
     // --- INITIALIZATION ---
     async function init() {
         try {
             const response = await fetch(siteBaseURL + 'ingredients.json');
             ingredientsData = await response.json();
-            populateDatalist();
             setupInitialRows();
             setupEventListeners();
             createModal();
         } catch (error) {
             console.error('Kunne ikke indlæse ingrediens-database:', error);
         }
-    }
-
-    function populateDatalist() {
-        ingredientsData.forEach(ing => {
-            const option = document.createElement('option');
-            option.value = ing.Ingrediens;
-            datalist.appendChild(option);
-        });
     }
 
     function setupInitialRows() {
@@ -41,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tr.innerHTML = `
             <td>
                 <div class="ingredient-input-container">
-                    <input type="text" list="ingredient-options" class="ingredient-input" placeholder="${placeholder}">
+                    <input type="text" class="ingredient-input" placeholder="${placeholder}" autocomplete="off">
                     <button type="button" class="manual-input-btn hidden" title="Indtast næringsværdier manuelt">!</button>
                 </div>
             </td>
@@ -51,19 +42,156 @@ document.addEventListener('DOMContentLoaded', () => {
         setupRowEventListeners(tr);
     }
 
+    // Updated setupRowEventListeners function with proper container-based autocomplete
     function setupRowEventListeners(row) {
         const ingredientInput = row.querySelector('.ingredient-input');
         const manualBtn = row.querySelector('.manual-input-btn');
+        const container = row.querySelector('.ingredient-input-container');
+        let currentAutocomplete = null;
 
-        ingredientInput.addEventListener('input', () => {
-            const value = ingredientInput.value.trim();
+        // --- AUTOCOMPLETE LOGIC ---
+        ingredientInput.addEventListener('input', function() {
+            const searchTerm = this.value;
+            closeAutocomplete();
+            
+            if (!searchTerm) {
+                manualBtn.style.display = 'none';
+                manualBtn.classList.add('hidden');
+                return;
+            }
+
+            currentFocus = -1;
+            
+            // Create autocomplete dropdown for this specific input
+            currentAutocomplete = createAutocompleteDropdown(container);
+            
+            // Filter ingredients based on the search term, including custom ones.
+            const allIngredients = [...ingredientsData, ...Object.values(customIngredients)];
+            const uniqueSuggestions = new Map();
+
+            allIngredients.filter(ing => 
+                ing.Ingrediens.toLowerCase().includes(searchTerm.toLowerCase())
+            ).forEach(ing => {
+                if (!uniqueSuggestions.has(ing.Ingrediens)) {
+                    uniqueSuggestions.set(ing.Ingrediens, ing);
+                }
+            });
+
+            uniqueSuggestions.forEach(ing => {
+                const item = document.createElement('div');
+                item.classList.add('autocomplete-item');
+                item.innerHTML = ing.Ingrediens.replace(new RegExp(searchTerm, 'gi'), (match) => `<strong>${match}</strong>`);
+                
+                item.addEventListener('click', () => {
+                    ingredientInput.value = ing.Ingrediens;
+                    closeAutocomplete();
+                    calculateAll();
+                    // Hide manual button when valid ingredient is selected
+                    manualBtn.style.display = 'none';
+                    manualBtn.classList.add('hidden');
+                });
+                currentAutocomplete.appendChild(item);
+            });
+
+            // Show manual button check - Reset styles first, then check
+            const value = searchTerm.trim();
             const exists = ingredientsData.some(ing => ing.Ingrediens === value) || customIngredients[value];
-            manualBtn.style.display = (value && !exists) ? 'flex' : 'none';
+            
+            if (value && !exists) {
+                // Reset any previous hiding and show the button
+                manualBtn.style.visibility = '';
+                manualBtn.style.display = 'flex';
+                manualBtn.classList.remove('hidden');
+            } else {
+                manualBtn.style.display = 'none';
+                manualBtn.classList.add('hidden');
+            }
         });
+
+        // --- KEYBOARD NAVIGATION ---
+        ingredientInput.addEventListener('keydown', function(e) {
+            if (!currentAutocomplete) return;
+            
+            let items = currentAutocomplete.getElementsByTagName('div');
+            if (e.key === 'ArrowDown') {
+                currentFocus++;
+                addActive(items);
+            } else if (e.key === 'ArrowUp') {
+                currentFocus--;
+                addActive(items);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (currentFocus > -1 && items) {
+                    items[currentFocus].click();
+                }
+            } else if (e.key === 'Escape') {
+                closeAutocomplete();
+            }
+        });
+
+        // Close autocomplete when input loses focus (with small delay for clicks)
+        ingredientInput.addEventListener('blur', function() {
+            setTimeout(() => {
+                if (currentAutocomplete && !currentAutocomplete.contains(document.activeElement)) {
+                    closeAutocomplete();
+                }
+            }, 150);
+        });
+
+        function closeAutocomplete() {
+            if (currentAutocomplete) {
+                currentAutocomplete.remove();
+                currentAutocomplete = null;
+            }
+            currentFocus = -1;
+        }
 
         manualBtn.addEventListener('click', () => openModal(row));
     }
 
+    // Create autocomplete dropdown within the specific container
+    function createAutocompleteDropdown(container) {
+        const dropdown = document.createElement('div');
+        dropdown.classList.add('autocomplete-items');
+        container.appendChild(dropdown);
+        
+        // Position based on screen size
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            dropdown.style.left = '0';
+            dropdown.style.right = '0';
+            dropdown.style.width = 'auto';
+            dropdown.style.maxWidth = 'none';
+        }
+        
+        return dropdown;
+    }
+
+    // Updated helper functions for the new approach
+    function addActive(items) {
+        if (!items || items.length === 0) return;
+        removeActive(items);
+        if (currentFocus >= items.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (items.length - 1);
+        items[currentFocus].classList.add("autocomplete-active");
+        items[currentFocus].scrollIntoView({ block: 'nearest' });
+    }
+
+    function removeActive(items) {
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.remove("autocomplete-active");
+        }
+    }
+
+    // Close all autocomplete dropdowns (global function)
+    function closeAllLists() {
+        document.querySelectorAll('.autocomplete-items').forEach(dropdown => {
+            dropdown.remove();
+        });
+        currentFocus = -1;
+    }
+
+    // setupEventListeners function to handle global clicks
     function setupEventListeners() {
         document.getElementById('add-row-btn').addEventListener('click', () => createRow(ingredientsTbody));
         document.getElementById('add-mixin-btn').addEventListener('click', () => createRow(mixinsTbody));
@@ -89,6 +217,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateContainerSize();
                 updateCalculatorState();
             });
+        });
+        
+        // Close autocomplete lists if user clicks elsewhere
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest('.ingredient-input-container')) {
+                closeAllLists();
+            }
         });
         
         updateContainerSize();
@@ -314,12 +449,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'PAC': pac, 'MSNF': carbs + protein, 'HF': fat,
             'Kommentar': `Brugerdefineret${isLactoseFree ? ' (laktosefri)' : ''}`
         };
-
-        if (!Array.from(datalist.options).some(option => option.value === ingredientName)) {
-            const option = document.createElement('option');
-            option.value = ingredientName;
-            datalist.appendChild(option);
-        }
 
         row.querySelector('.manual-input-btn').style.display = 'none';
         closeModal();
